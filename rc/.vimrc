@@ -36,5 +36,5 @@ let g:syntastic_check_on_wq = 1
 
 let g:syntastic_python_checkers = ['pylint']
 
-let g:airline_theme='simple'
+let g:airline_theme='kolor'
 
