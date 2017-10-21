@@ -7,7 +7,10 @@ set autoindent
 set textwidth=80
 
 set nocompatible
-filetype off
+
+set number
+
+filetype plugin indent on
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -20,7 +23,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
-filetype plugin indent on
 
 syntax enable
 colorscheme inkpot 
