@@ -1,8 +1,12 @@
 
-# Add local binaries to PATH
-# This is duplicated from .profile (TODO: fix hacky solution)
-if [ -d "$HOME/.local/bin" ]; then
-	PATH="$HOME/.local/bin:$PATH"
+# If we are using a non-login shell, .profile won't be loaded
+# This means powerline won't be recognized by bash.
+# To get around this, we add .local/bin to $PATH if we know
+# that we are using a non-login shell
+if [ $(echo $0) = "bash" ]; then
+  if [ -d "$HOME/.local/bin" ]; then
+	  PATH="$HOME/.local/bin:$PATH"
+  fi 
 fi
 
 # Set terminal color format
