@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Install powerline for the current user 
-# pip install --user git+git://github.com/powerline/powerline
-git clone https://github.com/powerline/powerline.git
-cd powerline
-python setup.py install --user
-cd ..
-rm -rf powerline
+pip install --user git+git://github.com/powerline/powerline
+# git clone https://github.com/powerline/powerline.git
+# cd powerline
+# python setup.py install --user
+# cd ..
+# rm -rf powerline
 if [ -e ~/.profiledankfiles ]; then 
   echo "Mod file found: ~/.local/bin already added to .profile"  
 else
