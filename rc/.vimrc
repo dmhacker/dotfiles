@@ -1,15 +1,26 @@
-set expandtab
+
+" Use 2 as the default spacing for tabs 
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set expandtab
+set shiftround
 
+" Proper indenting
 set autoindent
-set textwidth=80
+set smartindent
 
+" Set line size to be 80 (extra characters in a line are marked as errors)
+set textwidth=80
+match Error /\%81v.\+/
+
+" Disable turning off vim and defaulting to vi
 set nocompatible
 
+" Enable line numbers on the left hand side
 set number
 
+" Vundle magic/plugins begin here
 filetype plugin indent on
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -26,8 +37,12 @@ Plugin 'ervandew/supertab'
 
 call vundle#end()
 
+" Use inkpot as the colorscheme and enable syntax highlighting
 syntax enable
 colorscheme inkpot 
 
+" Set our airline theme
 let g:airline_theme='kolor'
+
+
 
