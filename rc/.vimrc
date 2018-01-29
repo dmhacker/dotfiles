@@ -40,10 +40,10 @@ call vundle#end()
 
 " Use inkpot as the colorscheme and enable syntax highlighting
 syntax enable
-colorscheme inkpot 
+colorscheme badwolf 
 
 " Set our airline theme
-let g:airline_theme='kolor'
+let g:airline_theme='badwolf'
 
 
 
