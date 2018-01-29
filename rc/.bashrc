@@ -10,7 +10,7 @@ if [ $(echo $0) = "bash" ]; then
 fi
 
 # Set terminal color format
-export TERM="xterm-256color"
+export TERM="screen-256color"
 export LANG="en_US.UTF-8" 
 
 # Configure powerline for the user
