@@ -1,5 +1,5 @@
 
-" Use 2 as the default spacing for tabs 
+" Use 2 as the default spacing for tabs
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -38,9 +38,9 @@ Plugin 'ervandew/supertab'
 
 call vundle#end()
 
-" Use inkpot as the colorscheme and enable syntax highlighting
+" Enable syntax highlighting and use colorscheme
 syntax enable
-colorscheme badwolf 
+colorscheme badwolf
 
 " Set our airline theme
 let g:airline_theme='badwolf'
