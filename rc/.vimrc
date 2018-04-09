@@ -1,4 +1,3 @@
-
 " Use 2 as the default spacing for tabs
 set tabstop=2
 set softtabstop=2
