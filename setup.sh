@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install powerline if running as root
-if [ $EUID -eq 0 ]; then
+if [ "$EUID" -eq 0 ]; then
   sudo apt-get install powerline
   sudo apt-get install fonts-powerline
 else
@@ -10,7 +10,7 @@ fi
 
 # Copy configuration files from rc/ to $HOME
 shopt -s dotglob # Enable bash to read hidden files
-for filepath in $PWD/rc/*
+for filepath in "$PWD/rc/*"
 do
   # The full path to a configuration file in rc/
   fullpath="$(realpath $filepath)"
@@ -22,7 +22,7 @@ do
 
   # Copy file if its counterpart on the home directly does not exist
   # If the overwrite flag (-o) is provided, overwrite the file
-  if [ ! -f $mainpath ] || [ $1 = "-o" ]; then
+  if [ ! -f "$mainpath" ] || [ "$1" = "-o" ]; then
     echo "Writing to ... $mainpath"
     cp -f $fullpath $mainpath
   else
