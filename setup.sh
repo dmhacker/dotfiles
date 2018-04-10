@@ -1,16 +1,22 @@
 #!/bin/bash
 
+# Home directory of current user (will have to be re-configured for root)
+homedir=$HOME
+
+# Current directory that this script is in
+sourcedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # Install powerline if running as root
 if [ "$EUID" -eq 0 ]; then
   sudo apt-get install powerline
   sudo apt-get install fonts-powerline
-else
-  echo "Installation script is not being run as root. Cannot install powerline."
+  echo "Where do you want to install your configuration files?"
+  read -p "Enter directory: " sourcedir
 fi
 
 # Copy configuration files from rc/ to $HOME
 shopt -s dotglob # Enable bash to read hidden files
-for filepath in $PWD/rc/*
+for filepath in $source_dir/rc/*
 do
   # The full path to a configuration file in rc/
   fullpath="$(realpath $filepath)"
