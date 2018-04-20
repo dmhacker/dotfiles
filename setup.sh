@@ -13,7 +13,7 @@ if [ "$EUID" -eq 0 ]; then
   sudo apt-get install fonts-powerline
 
   # Prompt user if we should proceed with root installation
-  echo "You are running this script as the root user."
+  echo "\nYou are running this script as the root user."
   echo "If you proceed, configuration files will be installed for root."
   read -p "Do you want to continue? [Y/n] " confirm
 
@@ -36,7 +36,8 @@ do
   # The installation path of the configuration file
   mainpath="$HOME/$(basename $filepath)"
 
-  echo "------------------------------------ $filepath ------------------------------------"
+  echo "------------------------------------------------------------------------------------"
+  echo "Installing ... $filepath"
 
   # Copy file if its counterpart on the home directly does not exist
   # If the overwrite flag (-o) is provided, overwrite the file
