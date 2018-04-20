@@ -10,8 +10,13 @@ sourcedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ "$EUID" -eq 0 ]; then
   sudo apt-get install powerline
   sudo apt-get install fonts-powerline
-  echo "Where do you want to install your configuration files?"
-  read -p "Enter directory: " sourcedir
+  read -p "Install config files for root (y/n)?" sourcedir
+  shopt -s nocasematch
+  if [ "$confirm" = "y" ] || [ "$confirm" = "yes" ]; then
+    shopt -u nocasematch
+  else
+    exit 0
+  fi
 fi
 
 # Copy configuration files from rc/ to $HOME
@@ -49,4 +54,3 @@ fi
 
 # Install Vundle plugins
 vim +PluginInstall +qall
-
