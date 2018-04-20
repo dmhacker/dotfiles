@@ -13,8 +13,8 @@ if [ "$EUID" -eq 0 ]; then
   sudo apt-get install fonts-powerline
 
   # Prompt user if we should proceed with root installation
-  echo "\nYou are running this script as the root user."
-  echo "If you proceed, configuration files will be installed for root."
+  echo "[WARN] You are running this script as the root user."
+  echo "[WARN] If you proceed, configuration files will be installed for root."
   read -p "Do you want to continue? [Y/n] " confirm
 
   # Proceed if answer is "y" or "yes" (case-insensitive), otherwise exit
