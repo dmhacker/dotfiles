@@ -6,11 +6,18 @@ homedir=$HOME
 # Current directory that this script is in
 sourcedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Install powerline if running as root
+# Special case where the script is being run as r oot
 if [ "$EUID" -eq 0 ]; then
+  # Install powerline
   sudo apt-get install powerline
   sudo apt-get install fonts-powerline
-  read -p "Install config files for root (y/n)?" sourcedir
+
+  # Prompt user if we should proceed with root installation
+  echo "You are running this script as the root user."
+  echo "If you proceed, configuration files will be installed for root."
+  read -p "Do you want to continue? [Y/n] " confirm
+
+  # Proceed if answer is "y" or "yes" (case-insensitive), otherwise exit
   shopt -s nocasematch
   if [ "$confirm" = "y" ] || [ "$confirm" = "yes" ]; then
     shopt -u nocasematch
