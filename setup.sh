@@ -26,6 +26,8 @@ if [ "$EUID" -eq 0 ]; then
   fi
 fi
 
+echo "------------------------------------------------------------------------------------"
+
 # Copy configuration files from rc/ to $HOME
 shopt -s dotglob # Enable bash to read hidden files
 for filepath in $sourcedir/rc/*
@@ -36,22 +38,20 @@ do
   # The installation path of the configuration file
   mainpath="$HOME/$(basename $filepath)"
 
-  echo "------------------------------------------------------------------------------------"
-  echo "Installing ... $filepath"
+  echo "Reading ... $filepath"
 
   # Copy file if its counterpart on the home directly does not exist
   # If the overwrite flag (-o) is provided, overwrite the file
   if [ ! -f $mainpath ] || [ "$1" = "-o" ]; then
-    echo "Writing to ... $mainpath"
+    echo "Writing ... $mainpath"
     cp -f $fullpath $mainpath
   else
-    echo "Skipping overwrite ... $mainpath"
+    echo "Skipping ... $mainpath"
     echo "File already exists. Please use the -o flag to overwrite."
   fi
 
+  echo "------------------------------------------------------------------------------------"
 done
-
-echo "------------------------------------------------------------------------------------"
 
 # Clone Vundle into the $HOME directory
 VUNDLE_REPOSITORY="https://github.com/VundleVim/Vundle.vim.git"
