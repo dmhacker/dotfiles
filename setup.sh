@@ -16,7 +16,7 @@ fi
 
 # Copy configuration files from rc/ to $HOME
 shopt -s dotglob # Enable bash to read hidden files
-for filepath in $source_dir/rc/*
+for filepath in $sourcedir/rc/*
 do
   # The full path to a configuration file in rc/
   fullpath="$(realpath $filepath)"
