@@ -34,6 +34,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
+Plugin 'farmergreg/vim-lastplace'
 
 call vundle#end()
 
@@ -42,7 +43,13 @@ syntax enable
 colorscheme badwolf
 
 " Set our airline theme
-let g:airline_theme='badwolf'
+let g:airline_theme = 'badwolf'
+
+" Set file types to ignore for vim-lastplace
+let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
+
+" Set buffer types to ignore for vim-lastplace
+let g:lastplace_ignore_buftype = "quickfix,nofile,help"
 
 
 
