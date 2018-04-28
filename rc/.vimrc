@@ -34,7 +34,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
-Plugin 'farmergreg/vim-lastplace'
+Plugin 'dietsche/vim-lastplace'
 
 call vundle#end()
 
