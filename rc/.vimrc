@@ -36,6 +36,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
 Plugin 'dietsche/vim-lastplace'
 
+Plugin 'ARM9/arm-syntax-vim'
+
 call vundle#end()
 
 " Enable syntax highlighting and use colorscheme
@@ -50,3 +52,6 @@ let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 
 " Set buffer types to ignore for vim-lastplace
 let g:lastplace_ignore_buftype = "quickfix,nofile,help"
+
+" Enable ARM syntax highlighting
+au BufNewFile,BufRead *.s *.S set filetype=arm " arm = armv6/7
