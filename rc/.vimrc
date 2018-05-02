@@ -45,6 +45,8 @@ Plugin 'tpope/vim-surround' " Mappings to edit parentheses, brackets, etc.
 Plugin 'justinmk/vim-sneak' " Fast file jumping
 Plugin 'dietsche/vim-lastplace' " Saves last edit line for a file
 
+Plugin 'takac/vim-hardtime'  " Prevents overuse of hjkl keys
+
 call vundle#end()
 
 " Enable syntax highlighting and use colorscheme
@@ -81,3 +83,6 @@ let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 
 " Set buffer types to ignore for vim-lastplace
 let g:lastplace_ignore_buftype = "quickfix,nofile,help"
+
+" Hardtime should run in every buffer
+let g:hardtime_default_on = 1
