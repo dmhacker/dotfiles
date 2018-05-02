@@ -30,6 +30,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'flazz/vim-colorschemes'
 Plugin 'ARM9/arm-syntax-vim'
+Plugin 'makerj/vim-cpp-enhanced-highlight'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -46,6 +47,10 @@ colorscheme jelleybeans
 
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s *.S set filetype=arm " arm = armv6/7
+
+" Enable C++ highlighting
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
 
 " Set our airline theme
 let g:airline_theme = 'jellybeans'
