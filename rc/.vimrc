@@ -39,7 +39,6 @@ Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
 Plugin 'kshenoy/vim-signature' " Vim marks in the gutter 
 
-Plugin 'ervandew/supertab' " Rudimentary tab completion
 Plugin 'scrooloose/nerdcommenter' " Fast commenting
 Plugin 'tpope/vim-surround' " Mappings to edit parentheses, brackets, etc.
 Plugin 'justinmk/vim-sneak' " Fast file jumping
