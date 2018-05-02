@@ -10,9 +10,9 @@ set autoindent
 set smartindent
 
 " Set line size to be 80 (extra characters in a line are marked as errors)
-set textwidth=80
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\%81v.\+/
+" set textwidth=80
+" highlight ExtraWhitespace ctermbg=red guibg=red
+" match ExtraWhitespace /\%81v.\+/
 
 " Disable turning off vim and defaulting to vi
 set nocompatible
