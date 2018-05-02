@@ -29,6 +29,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'flazz/vim-colorschemes'
+Plugin 'ARM9/arm-syntax-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -36,22 +37,20 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
 Plugin 'dietsche/vim-lastplace'
 
-Plugin 'ARM9/arm-syntax-vim'
-
 call vundle#end()
 
 " Enable syntax highlighting and use colorscheme
 syntax enable
-colorscheme badwolf
+colorscheme jelleybeans 
+
+" Enable ARM syntax highlighting
+au BufNewFile,BufRead *.s *.S set filetype=arm " arm = armv6/7
 
 " Set our airline theme
-let g:airline_theme = 'badwolf'
+let g:airline_theme = 'jellybeans'
 
 " Set file types to ignore for vim-lastplace
 let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 
 " Set buffer types to ignore for vim-lastplace
 let g:lastplace_ignore_buftype = "quickfix,nofile,help"
-
-" Enable ARM syntax highlighting
-au BufNewFile,BufRead *.s *.S set filetype=arm " arm = armv6/7
