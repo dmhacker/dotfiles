@@ -30,6 +30,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'flazz/vim-colorschemes'
 Plugin 'ARM9/arm-syntax-vim'
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
