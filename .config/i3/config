@@ -36,8 +36,8 @@ hide_edge_borders both
 # COLORS #
 # ###### #
 
-set $bg            #1B3752
-set $bg-inactive   #0D1A26
+set $bg            #0D1A26
+set $bg-inactive   #030609
 set $bg-urgent     #3465A4
 
 set $text          #EEEEEE

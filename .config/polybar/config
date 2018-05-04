@@ -37,7 +37,7 @@ font-1 = FontAwesome:size=16;0
 font-2 = Terminus:size=16;0
 
 modules-left = i3
-modules-right = filesystem volume memory cpu wireless-network wired-network battery date powermenu
+modules-right = filesystem volume memory cpu wireless-network wired-network battery date 
 
 tray-position = right
 
@@ -137,7 +137,7 @@ type = internal/memory
 format = <label> <bar-used>
 label = RAM
 
-bar-used-width = 30
+bar-used-width = 20
 bar-used-foreground-0 = #aaff77
 bar-used-foreground-1 = #aaff77
 bar-used-foreground-2 = #9f78e1
