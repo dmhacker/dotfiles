@@ -121,10 +121,10 @@ ramp-coreload-3-font = 2
 ramp-coreload-3-foreground = #aaff77
 ramp-coreload-4 = ▅
 ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = #fba922
+ramp-coreload-4-foreground = #9f78e1
 ramp-coreload-5 = ▆
 ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = #fba922
+ramp-coreload-5-foreground = #9f78e1
 ramp-coreload-6 = ▇
 ramp-coreload-6-font = 2
 ramp-coreload-6-foreground = #ff5555
@@ -140,7 +140,7 @@ label = RAM
 bar-used-width = 30
 bar-used-foreground-0 = #aaff77
 bar-used-foreground-1 = #aaff77
-bar-used-foreground-2 = #fba922
+bar-used-foreground-2 = #9f78e1
 bar-used-foreground-3 = #ff5555
 bar-used-indicator = |
 bar-used-indicator-font = 6
@@ -150,14 +150,6 @@ bar-used-fill-font = 6
 bar-used-empty = ─
 bar-used-empty-font = 6
 bar-used-empty-foreground = #444444
-
-[module/date]
-type = internal/date
-interval = 3
-
-date = %%{F#99}%m-%d-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
-date-alt = %%{F#fff}%A, %B %d, %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
-format-underline = #9f78e1
 
 [module/volume]
 type = internal/volume
@@ -242,6 +234,14 @@ label-connected = %local_ip%
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+[module/date]
+type = internal/date
+interval = 3
+
+date = %%{F#99}%m-%d-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
+date-alt = %%{F#fff}%A, %B %d, %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#9f78e1}%S%%{F-}
+format-underline = #9f78e1
+
 [module/powermenu]
 type = custom/menu
 
@@ -250,13 +250,13 @@ label-close = "  "
 label-separator = "     "
 
 menu-0-0 = Hibernate 
-menu-0-0-foreground = #fba922
+menu-0-0-foreground = #9f78e1 
 menu-0-0-exec = sudo systemctl hibernate
 menu-0-1 = Reboot
-menu-0-1-foreground = #fba922
+menu-0-1-foreground = #9f78e1
 menu-0-1-exec = sudo reboot
 menu-0-2 = Shutdown 
-menu-0-2-foreground = #fba922
+menu-0-2-foreground = #9f78e1
 menu-0-2-exec = sudo shutdown -h now 
 
 ; vim:ft=dosini
