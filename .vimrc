@@ -65,7 +65,7 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 
 " Set our airline theme
-let g:airline_theme = 'jellybeans'
+let g:airline_theme = 'minimalist'
 
 " Add spaces after comment delimiters
 let g:NERDSpaceDelims = 1
