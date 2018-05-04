@@ -52,6 +52,11 @@ call vundle#end()
 syntax enable 
 colorscheme jelleybeans 
 
+" Use terminal background (looks better with compton enabled)
+hi NonText ctermbg=none
+hi Normal guibg=NONE ctermbg=NONE
+hi LineNr ctermbg=NONE
+
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 
