@@ -14,10 +14,13 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec --no-startup-id start-pulseaudio-x11 
 
 # Enable compton (transparency, smooth transitions, etc.) 
-exec --no-startup-id compton 
+exec --no-startup-id compton -f -D 6
 
 # Enable network manager applet (appears in tray)
 exec --no-startup-id nm-applet
+
+# Enable flux to remove blue light at night
+exec --no-startup-id xflux -z 92093
 
 # Enable polybar (top status bar - used instead of i3status)
 exec_always --no-startup-id /home/dmhacker/.config/polybar/launch.sh
@@ -169,6 +172,7 @@ bindsym $mod+r mode "resize"
 # ############# #
 # I3 WORKSPACES #
 # ############# #
+#
 # Switch to workspace 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
