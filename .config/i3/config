@@ -16,8 +16,8 @@ exec --no-startup-id compton -f -D 6
 # Enable network manager applet (appears in tray)
 exec --no-startup-id nm-applet
 
-# Enable flux to remove blue light at night
-exec --no-startup-id xflux -z 92093
+# Enable redshift (flux) to remove blue light at night
+exec --no-startup-id redshift -l 32.8473:-117.2742 
 
 # Enable polybar (top status bar - used instead of i3status)
 exec_always --no-startup-id /home/dmhacker/.config/polybar/launch.sh
