@@ -236,10 +236,10 @@ label-connected = %local_ip%
 
 [module/date]
 type = internal/date
-interval = 3
+interval = 1
 
 date = %%{F#99}%m-%d-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
-date-alt = %%{F#fff}%A, %B %d, %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#9f78e1}%S%%{F-}
+date-alt = %%{F#fff}%A, %B %d, %Y  %%{F#fff}%H:%M:%S%%{F-}
 format-underline = #9f78e1
 
 [module/powermenu]

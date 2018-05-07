@@ -7,9 +7,6 @@ set $mod Mod4
 # Set DPI scaling because Surface Book
 exec xrandr --dpi 100
 
-# Scale terminal correctly on Surface Book
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-
 # Enable audio (otherwise, we won't be able to hear anything)
 exec --no-startup-id start-pulseaudio-x11 
 
@@ -29,7 +26,7 @@ exec_always --no-startup-id /home/dmhacker/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale /home/dmhacker/Pictures/wallpaper.jpg 
 
 # Miscellaneous settings for windows
-font pango:Noto Sans 17
+font pango:Noto Sans 10
 hide_edge_borders both
 
 # ###### #
@@ -172,7 +169,7 @@ bindsym $mod+r mode "resize"
 # ############# #
 # I3 WORKSPACES #
 # ############# #
-#
+
 # Switch to workspace 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
