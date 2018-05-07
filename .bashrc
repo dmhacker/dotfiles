@@ -1,10 +1,6 @@
 # ls should automatically display with color
 alias ls="ls --color"
 
-# Set terminal color format
-export TERM="screen-256color"
-export LANG="en_US.UTF-8"
-
 # Enable powerline if it is installed
 if [ -f `which powerline-daemon` ]; then
   powerline-daemon -q

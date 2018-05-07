@@ -17,7 +17,7 @@ URxvt*scrollTtyKeypress: true
 URxvt*font: xft:monospace:size=11
 URxvt*letterSpace: -1
 
-URxvt*termName: rxvt*unicode 
+URxvt*termName: rxvt-unicode-256color 
 URxvt*scrollBar: false
 URxvt*saveLines: 10000
 
