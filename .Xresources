@@ -1,0 +1,42 @@
+! WINDOW CONFIGURATION
+
+Xft.dpi: 144
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+! URXVT CONFIGURATION
+
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+
+URxvt.font: xft:monospace:size=11
+URxvt.letterSpace: -1
+
+URxvt.termName: rxvt-unicode
+URxvt.scrollBar: false
+URxvt.saveLInes: 1000000
+
+! Colors shamelessly ripped from the aci theme from Gogh
+URxvt.background: #0d1926
+URxvt.foreground: #b4e1fd
+URxvt.color01: #363636
+URxvt.color02: #ff0883
+URxvt.color03: #83ff08
+URxvt.color04: #ff8308
+URxvt.color05: #0883ff
+URxvt.color06: #8308ff
+URxvt.color07: #08ff83
+URxvt.color08: #b6b6b6
+URxvt.color09: #424242
+URxvt.color10: #ff1e8e
+URxvt.color11: #8eff1e
+URxvt.color12: #ff8e1e
+URxvt.color13: #1e8eff
+URxvt.color14: #8e1eff
+URxvt.color15: #1eff8e
+URxvt.colorBD: #c2c2c2
