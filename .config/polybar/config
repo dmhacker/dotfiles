@@ -30,15 +30,15 @@ line-color = #f00
 border-size = 0
 border-color = #000000
 
-module-margin = 2
-padding-right = 4
+module-margin = 3
+padding-right = 6
 
-font-0 = Noto Sans:size=15;1
-font-1 = FontAwesome:size=16;0
-font-2 = Terminus:size=16;0
+font-0 = Source Sans Pro:size=17;0
+font-1 = Source Code Pro:size=17;0
+font-2 = FontAwesome:size=17;0
 
 modules-left = i3
-modules-right = filesystem volume memory cpu wireless-network wired-network battery date 
+modules-right = filesystem volume memory cpu wireless-network wired-network battery date powermenu
 
 tray-position = right
 
@@ -122,10 +122,10 @@ ramp-coreload-3-font = 2
 ramp-coreload-3-foreground = #aaff77
 ramp-coreload-4 = ▅
 ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = #9f78e1
+ramp-coreload-4-foreground = #f5a70a
 ramp-coreload-5 = ▆
 ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = #9f78e1
+ramp-coreload-5-foreground = #f5a70a
 ramp-coreload-6 = ▇
 ramp-coreload-6-font = 2
 ramp-coreload-6-foreground = #ff5555
@@ -141,15 +141,14 @@ label = RAM
 bar-used-width = 20
 bar-used-foreground-0 = #aaff77
 bar-used-foreground-1 = #aaff77
-bar-used-foreground-2 = #9f78e1
+bar-used-foreground-2 = #f5a70a
 bar-used-foreground-3 = #ff5555
 bar-used-indicator = |
-bar-used-indicator-font = 6
-bar-used-indicator-foreground = #ff
+bar-used-indicator-font = 1 
 bar-used-fill = ─
-bar-used-fill-font = 6
+bar-used-fill-font = 1
 bar-used-empty = ─
-bar-used-empty-font = 6
+bar-used-empty-font = 1
 bar-used-empty-foreground = #444444
 
 [module/volume]
@@ -164,21 +163,21 @@ format-muted-foreground = ${colors.foreground-alt}
 label-muted = VOL Muted 
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-0 = #aaff77
+bar-volume-foreground-1 = #aaff77
+bar-volume-foreground-2 = #aaff77
+bar-volume-foreground-3 = #aaff77
+bar-volume-foreground-4 = #aaff77
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
+bar-volume-gradient = false 
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 1
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 1
 bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = #444444 
 
 [module/battery]
 type = internal/battery
