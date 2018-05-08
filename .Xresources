@@ -13,14 +13,18 @@ Xft.rgba: rgb
 URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
+URxvt*scrollBar: false
 
+! Standard fonts
 URxvt*font: xft:monospace:size=11
 URxvt*letterSpace: -1
 
-URxvt*scrollBar: false
+! Save up to the last 10000 lines (you can scroll up to view them)
 URxvt*saveLines: 10000
 
-URxvt*perl-ext-common: default,selection-to-clipboard
+! Disable Perl extension feature
+URxvt*perl-ext:
+URxvt*perl-ext-common:
 
 ! Colors shamelessly ripped from the aci theme from Gogh
 URxvt*background: #0d1926
