@@ -251,12 +251,12 @@ label-separator = "     "
 
 menu-0-0 = Hibernate 
 menu-0-0-foreground = #9f78e1 
-menu-0-0-exec = sudo systemctl hibernate
+menu-0-0-exec = systemctl hibernate
 menu-0-1 = Reboot
 menu-0-1-foreground = #9f78e1
-menu-0-1-exec = sudo reboot
+menu-0-1-exec = reboot
 menu-0-2 = Shutdown 
 menu-0-2-foreground = #9f78e1
-menu-0-2-exec = sudo shutdown -h now 
+menu-0-2-exec = shutdown -h now 
 
 ; vim:ft=dosini
