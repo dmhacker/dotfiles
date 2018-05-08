@@ -16,7 +16,7 @@ URxvt*scrollTtyKeypress: true
 URxvt*scrollBar: false
 
 ! Standard fonts
-URxvt*font: xft:monospace:size=11
+URxvt*font: xft:Source Code Pro:size=12
 URxvt*letterSpace: -1
 
 ! Save up to the last 10000 lines (you can scroll up to view them)
