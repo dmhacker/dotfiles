@@ -68,6 +68,14 @@ let g:airline_theme = 'soda'
 " Allow airline to use powerline fonts
 let g:airline_powerline_fonts = 1
 
+" Fix airline symbols not appearing correctly
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
+
 " Add spaces after comment delimiters
 let g:NERDSpaceDelims = 1
 
