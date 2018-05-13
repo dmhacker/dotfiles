@@ -11,7 +11,7 @@ exec xrandr --dpi 100
 exec --no-startup-id start-pulseaudio-x11 
 
 # Enable compton (transparency, smooth transitions, etc.) 
-exec --no-startup-id compton -f -D 6
+exec --no-startup-id compton -f -D 6 --xrender-sync --xrender-sync-fence
 
 # Enable redshift (flux) to remove blue light at night
 exec --no-startup-id redshift -l 32.8473:-117.2742 
