@@ -1,1 +1,1 @@
-#include "/usr/share/rofi/themes//solarized.theme"
+rofi.theme: /home/dmhacker/.config/rofi/material.rasi 
