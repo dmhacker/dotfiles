@@ -20,6 +20,7 @@ aesthetic (e.g. Source Sans Pro). See above.
 * polybar [improved status bar]
 * compton [window compositor]
 * rofi [replacement for dmenu]
+* ranger [file manager with vim bindings]
 * redshift [flux for Arch Linux]
 * urxvt [terminal emulator]
 * powerline [fancy terminal prompt]
@@ -27,4 +28,4 @@ aesthetic (e.g. Source Sans Pro). See above.
 * adobe-source-sans-pro-fonts [UI font for i3, SDDM, KDE, polybar]
 * adobe-source-code-pro-fonts [terminal font with powerline symbols]
 * adobe-source-serif-pro-fonts [completes the Adobe font suite]
-* Vundle [Vim package manager]
+* vundle [vim package manager]

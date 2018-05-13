@@ -24,7 +24,7 @@ exec_always --no-startup-id feh --bg-scale /home/dmhacker/Pictures/wallpaper.jpg
 
 # Miscellaneous settings for windows
 font pango:Source Sans Pro 12, FontAwesome 12
-hide_edge_borders none 
+hide_edge_borders smart 
 
 # ####### #
 # I3-GAPS #
@@ -93,6 +93,9 @@ bindsym $mod+Shift+q kill
 
 # Start rofi to launch external programs
 bindsym $mod+d exec rofi -show run -lines 25 -font "Hack 24"
+
+# Take screenshot
+bindsym $mod+p exec import -window root /home/dmhacker/Pictures/screenshot.jpg
 
 # Change focus with vim keys
 bindsym $mod+h focus left
