@@ -1,8 +1,8 @@
-# dankfiles
+# dotfiles
 
 <a><img src="https://raw.githubusercontent.com/dmhacker/dankfiles/master/Pictures/screenshot.jpg" align="center"></a>
 
-**Configuration files for my main workstation** (Arch Linux on a Surface Book 2).
+**Configuration files for my main workstation.** I'm running Arch Linux on a 13" Surface Book 2.
 
 Some of the packages are Arch-specific, but there are probably other variants/ways to 
 acquire them if you are using a different distribution. I would also recommend following 
