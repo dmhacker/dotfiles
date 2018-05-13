@@ -63,7 +63,7 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 
 " Set our airline theme
-let g:airline_theme = 'violet'
+let g:airline_theme = 'soda'
 
 " Allow airline to use powerline fonts
 let g:airline_powerline_fonts = 1
