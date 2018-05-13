@@ -13,9 +13,6 @@ exec --no-startup-id start-pulseaudio-x11
 # Enable compton (transparency, smooth transitions, etc.) 
 exec --no-startup-id compton -f -D 6
 
-# Enable network manager applet (appears in tray)
-exec --no-startup-id nm-applet
-
 # Enable redshift (flux) to remove blue light at night
 exec --no-startup-id redshift -l 32.8473:-117.2742 
 
@@ -23,30 +20,44 @@ exec --no-startup-id redshift -l 32.8473:-117.2742
 exec_always --no-startup-id /home/dmhacker/.config/polybar/launch.sh
 
 # Display wallpaper
-exec_always --no-startup-id feh --bg-scale /home/dmhacker/Pictures/wallpaper.jpg 
+exec_always --no-startup-id feh --bg-scale /home/dmhacker/Pictures/wallpaper.jpg
 
 # Miscellaneous settings for windows
-font pango:Noto Sans 10
-hide_edge_borders both
+font pango:Source Sans Pro 12, FontAwesome 12
+hide_edge_borders none 
+
+# ####### #
+# I3-GAPS #
+# ####### #
+
+# Disable title bars but keep borders
+new_window pixel 2
+new_float pixel 2
+
+# Add gaps and enable smart borders
+gaps outer 0 
+gaps inner 20 
+smart_borders on
 
 # ###### #
 # COLORS #
 # ###### #
 
-set $bg            #0D1A26
-set $bg-inactive   #030609
+set $bg            #CDE6FF
+set $bg-inactive   #0D1A26 
 set $bg-urgent     #3465A4
 
 set $text          #EEEEEE
 set $text-inactive #808080
+set $text-urgent   #EEEEEE
 
 set $bar           #222222
 
-#                       border        background   text           indicator
-client.focused          $bg           $bg          $text          $bar
-client.unfocused        $bg-inactive  $bg-inactive $text-inactive $bar
-client.focused_inactive $bg-inactive  $bg-inactive $text-inactive $bar
-client.urgent           $bg-urgent    $bg-urgent   $text          $bar
+#                         border          background    text             indicator
+client.focused            $bg             $bg           $text            $bar
+client.unfocused          $bg-inactive    $bg-inactive  $text-inactive   $bar
+client.focused_inactive   $bg-inactive    $bg-inactive  $text-inactive   $bar
+client.urgent             $bg-urgent      $bg-urgent    $text-urgent     $bar
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
