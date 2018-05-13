@@ -10,38 +10,47 @@ Xft.rgba: rgb
 
 ! URXVT CONFIGURATION
 
-URxvt*scrollTtyOutput: false
-URxvt*scrollWithBuffer: true
-URxvt*scrollTtyKeypress: true
-URxvt*scrollBar: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+URxvt.scrollBar: false
 
 ! Standard fonts
-URxvt*font: xft:Source Code Pro:size=12
-URxvt*letterSpace: -1
+URxvt.font: xft:Source Code Pro:size=12
+URxvt.letterSpace: -1
 
 ! Save up to the last 10000 lines (you can scroll up to view them)
-URxvt*saveLines: 10000
+URxvt.saveLines: 10000
 
-! Disable Perl extension feature
-URxvt*perl-ext:
-URxvt*perl-ext-common:
+! Perl extension features
+URxvt.perl-ext-common: default,clipboard,keyboard-select,resize-font
+URxvt.keyboard-select.clipboard: true
+
+! Keyboard bindings for Perl extensions
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-Up: resize-font:bigger
+URxvt.keysym.M-Down: resize-font:smaller
 
 ! Colors shamelessly ripped from the aci theme from Gogh
-URxvt*background: #0d1926
-URxvt*foreground: #b4e1fd
-URxvt*color01: #363636
-URxvt*color02: #ff0883
-URxvt*color03: #83ff08
-URxvt*color04: #ff8308
-URxvt*color05: #0883ff
-URxvt*color06: #8308ff
-URxvt*color07: #08ff83
-URxvt*color08: #b6b6b6
-URxvt*color09: #424242
-URxvt*color10: #ff1e8e
-URxvt*color11: #8eff1e
-URxvt*color12: #ff8e1e
-URxvt*color13: #1e8eff
-URxvt*color14: #8e1eff
-URxvt*color15: #1eff8e
-URxvt*colorBD: #c2c2c2
+URxvt.background: #0d1926
+URxvt.foreground: #b4e1fd
+URxvt.color01: #363636
+URxvt.color02: #ff0883
+URxvt.color03: #83ff08
+URxvt.color04: #ff8308
+URxvt.color05: #0883ff
+URxvt.color06: #8308ff
+URxvt.color07: #08ff83
+URxvt.color08: #b6b6b6
+URxvt.color09: #424242
+URxvt.color10: #ff1e8e
+URxvt.color11: #8eff1e
+URxvt.color12: #ff8e1e
+URxvt.color13: #1e8eff
+URxvt.color14: #8e1eff
+URxvt.color15: #1eff8e
+URxvt.colorBD: #c2c2c2

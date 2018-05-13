@@ -24,6 +24,8 @@ aesthetic (e.g. Source Sans Pro). See above.
 * ranger [file manager with vim bindings]
 * redshift [flux for Arch Linux]
 * urxvt [terminal emulator]
+* urxvt-perls [clipboard and vim key bindings for the terminal]
+* urxvt-resize-font-git [key bindings for resizing fonts]
 * powerline [fancy terminal prompt]
 * powerline-fonts [symbols used for powerline]
 * adobe-source-sans-pro-fonts [UI font for i3, SDDM, KDE, polybar]
