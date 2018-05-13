@@ -43,7 +43,7 @@ smart_borders on
 # COLORS #
 # ###### #
 
-set $bg            #CDE6FF
+set $bg            #ECF2F8
 set $bg-inactive   #0D1A26 
 set $bg-urgent     #3465A4
 
