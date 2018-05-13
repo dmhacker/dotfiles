@@ -92,7 +92,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # Start rofi to launch external programs
-bindsym $mod+d exec rofi -show run -lines 25 -font "Hack 24"
+bindsym $mod+d exec rofi -show run -lines 25 
 
 # Take screenshot
 bindsym $mod+p exec import -window root /home/dmhacker/Pictures/screenshot.jpg
