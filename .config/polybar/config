@@ -1,15 +1,12 @@
 [colors]
-red = #D24D25
-orange = #E38612
-gold = #FECC53
-blue = #0A6CF5
-purple = #9F78E1
-pink = #D478E1
+base = ${xrdb:color2} 
+medium = ${xrdb:color3}  
+high = ${xrdb:color1} 
 
-background = #0D1A26
-background-alt = #20405E
-foreground = #DFDFDF
-foreground-alt = #555555
+background = ${xrdb:background}
+background-alt = #4c4a4d
+foreground = ${xrdb:foreground} 
+foreground-alt = #777777
 
 [settings]
 screenchange-reload = true
@@ -42,7 +39,7 @@ font-1 = Source Code Pro:size=18;0
 font-2 = FontAwesome:size=18;0
 
 modules-left = i3
-modules-right = filesystem volume memory cpu wireless-network wired-network battery date powermenu
+modules-right = filesystem volume memory cpu wireless-network wihigh-network battery date powermenu
 
 tray-position = right
 
@@ -56,7 +53,7 @@ format = <label-state> <label-mode>
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt} 
-label-focused-underline = ${colors.gold} 
+label-focused-underline = ${colors.base} 
 label-focused-padding = 4
 
 ; unfocused = Inactive workspace on any monitor
@@ -66,12 +63,12 @@ label-unfocused-padding = 4
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${colors.background-alt}
-label-visible-underline = ${colors.gold}
+label-visible-underline = ${colors.base}
 label-visible-padding = 4
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.red}
+label-urgent-background = ${colors.high}
 label-urgent-padding = 4
 
 [module/filesystem]
@@ -96,13 +93,13 @@ format-muted-foreground = ${colors.foreground-alt}
 label-muted = VOL Muted 
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.gold} 
-bar-volume-foreground-1 = ${colors.gold} 
-bar-volume-foreground-2 = ${colors.gold} 
-bar-volume-foreground-3 = ${colors.gold} 
-bar-volume-foreground-4 = ${colors.orange} 
-bar-volume-foreground-5 = ${colors.orange} 
-bar-volume-foreground-6 = ${colors.red} 
+bar-volume-foreground-0 = ${colors.base} 
+bar-volume-foreground-1 = ${colors.base} 
+bar-volume-foreground-2 = ${colors.base} 
+bar-volume-foreground-3 = ${colors.base} 
+bar-volume-foreground-4 = ${colors.medium} 
+bar-volume-foreground-5 = ${colors.medium} 
+bar-volume-foreground-6 = ${colors.high} 
 bar-volume-gradient = false 
 bar-volume-indicator = |
 bar-volume-indicator-font = 1
@@ -120,28 +117,28 @@ label = CPU
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
-ramp-coreload-0-foreground = ${colors.gold} 
+ramp-coreload-0-foreground = ${colors.base} 
 ramp-coreload-1 = ▂
 ramp-coreload-1-font = 2
-ramp-coreload-1-foreground = ${colors.gold} 
+ramp-coreload-1-foreground = ${colors.base} 
 ramp-coreload-2 = ▃
 ramp-coreload-2-font = 2
-ramp-coreload-2-foreground = ${colors.gold} 
+ramp-coreload-2-foreground = ${colors.base} 
 ramp-coreload-3 = ▄
 ramp-coreload-3-font = 2
-ramp-coreload-3-foreground = ${colors.orange} 
+ramp-coreload-3-foreground = ${colors.medium} 
 ramp-coreload-4 = ▅
 ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = ${colors.orange} 
+ramp-coreload-4-foreground = ${colors.medium} 
 ramp-coreload-5 = ▆
 ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = ${colors.orange} 
+ramp-coreload-5-foreground = ${colors.medium} 
 ramp-coreload-6 = ▇
 ramp-coreload-6-font = 2
-ramp-coreload-6-foreground = ${colors.red} 
+ramp-coreload-6-foreground = ${colors.high} 
 ramp-coreload-7 = █
 ramp-coreload-7-font = 2
-ramp-coreload-7-foreground = ${colors.red} 
+ramp-coreload-7-foreground = ${colors.high} 
 
 [module/memory]
 type = internal/memory
@@ -149,10 +146,10 @@ format = <label> <bar-used>
 label = RAM
 
 bar-used-width = 20
-bar-used-foreground-0 = ${colors.gold}
-bar-used-foreground-1 = ${colors.gold}
-bar-used-foreground-2 = ${colors.orange} 
-bar-used-foreground-3 = ${colors.red}
+bar-used-foreground-0 = ${colors.base}
+bar-used-foreground-1 = ${colors.base}
+bar-used-foreground-2 = ${colors.medium} 
+bar-used-foreground-3 = ${colors.high}
 bar-used-indicator = |
 bar-used-indicator-font = 1 
 bar-used-fill = ─
@@ -196,20 +193,20 @@ ping-interval = 10
 
 format-connected = <label-connected>
 format-connected-prefix="  "   
-format-connected-underline = ${colors.gold}
+format-connected-underline = ${colors.base}
 label-connected = %essid%
 
 format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.gold}
+format-disconnected-underline = ${colors.base}
 label-disconnected = Wifi Disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-[module/wired-network]
+[module/wihigh-network]
 type = internal/network
 interface = enp0s20f0u1u1u2
 interval = 3.0
 
-format-connected-underline = ${colors.gold}
+format-connected-underline = ${colors.base}
 format-connected-prefix = "  "
 label-connected = %local_ip%
 
@@ -217,10 +214,10 @@ label-connected = %local_ip%
 type = internal/date
 interval = 1
 
-date = %%{F#99}%m-%d-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
+date = %%{F#777}%m-%d-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
 date-alt = %%{F#fff}%A, %B %d, %Y  %%{F#fff}%H:%M:%S%%{F-}
 
-format-underline = ${colors.gold}
+format-underline = ${colors.base}
 format-prefix = "  "
 
 [module/powermenu]
@@ -231,13 +228,13 @@ label-close = "  "
 label-separator = "     "
 
 menu-0-0 = Hibernate 
-menu-0-0-foreground = ${colors.red}
+menu-0-0-foreground = ${colors.high}
 menu-0-0-exec = systemctl hibernate
 menu-0-1 = Reboot
-menu-0-1-foreground = ${colors.red} 
+menu-0-1-foreground = ${colors.high} 
 menu-0-1-exec = reboot
 menu-0-2 = Shutdown 
-menu-0-2-foreground = ${colors.red} 
+menu-0-2-foreground = ${colors.high} 
 menu-0-2-exec = shutdown -h now 
 
 ; vim:ft=dosini

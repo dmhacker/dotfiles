@@ -20,6 +20,9 @@ set nocompatible
 " Enable line numbers on the left hand side
 set number
 
+" Highlight current line
+set cursorline
+
 " Vundle magic/plugins begin here
 filetype plugin indent on
 
@@ -48,12 +51,7 @@ call vundle#end()
 
 " Enable syntax highlighting and use colorscheme
 syntax enable 
-colorscheme jelleybeans 
-
-" Use terminal background (looks better with compton enabled)
-hi NonText ctermbg=none
-hi Normal guibg=NONE ctermbg=NONE
-hi LineNr ctermbg=NONE
+colorscheme iceberg 
 
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
@@ -63,7 +61,7 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 
 " Set our airline theme
-let g:airline_theme = 'soda'
+let g:airline_theme = 'cobalt2'
 
 " Allow airline to use powerline fonts
 let g:airline_powerline_fonts = 1
