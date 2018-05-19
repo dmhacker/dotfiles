@@ -31,9 +31,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " Vundle package manager 
 
-Plugin 'flazz/vim-colorschemes' " All the colorschemes!
-Plugin 'vim-airline/vim-airline' " Airline at the bottom of the screen
-Plugin 'vim-airline/vim-airline-themes' " Airline colorschemes
+Plugin 'cocopon/iceberg.vim' " Iceberg colorscheme 
+Plugin 'itchyny/lightline.vim' " Airline at the bottom of the screen
 
 Plugin 'ARM9/arm-syntax-vim' " ARM syntax hightlighting
 Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
@@ -53,26 +52,16 @@ call vundle#end()
 syntax enable 
 colorscheme iceberg 
 
+" Enable lightline status and use colorscheme
+set laststatus=2
+let g:lightline = { 'colorscheme': 'iceberg', }
+
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 
 " Enable C++ highlighting
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
-
-" Set our airline theme
-let g:airline_theme = 'cobalt2'
-
-" Allow airline to use powerline fonts
-let g:airline_powerline_fonts = 1
-
-" Fix airline symbols not appearing correctly
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
 
 " Add spaces after comment delimiters
 let g:NERDSpaceDelims = 1
