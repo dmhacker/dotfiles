@@ -27,7 +27,7 @@ aesthetic (e.g. Source Sans Pro). See above.
 * urxvt-perls-git [clipboard and vim key bindings for the terminal]
 * urxvt-resize-font-git [key bindings for resizing fonts]
 * powerline-shell [fancy terminal prompt]
-* powerline-fonts [patched fonts for powerline]
+* nerd-fonts-complete [patched fonts for powerline]
 * adobe-source-sans-pro-fonts [UI font for i3, SDDM, KDE, polybar]
 * adobe-source-code-pro-fonts [terminal font with powerline symbols]
 * adobe-source-serif-pro-fonts [completes the Adobe font suite]
