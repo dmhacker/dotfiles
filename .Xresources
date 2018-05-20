@@ -6,7 +6,7 @@ Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintfull
 Xft.hinting: 1
 Xft.antialias: 1
-Xft.rgba: rgb
+Xft.rgba: rgba
 
 ! URXVT CONFIGURATION
 
@@ -17,7 +17,6 @@ URxvt.scrollBar: false
 
 ! Standard fonts
 URxvt.font: xft:Source Code Pro:size=12
-URxvt.letterSpace: -1
 
 ! Save up to the last 10000 lines (you can scroll up to view them)
 URxvt.saveLines: 10000
@@ -35,22 +34,41 @@ URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keysym.M-Up: resize-font:bigger
 URxvt.keysym.M-Down: resize-font:smaller
 
-! Colors shamelessly ripped from the aci theme from Gogh
-URxvt.background: #0d1926
-URxvt.foreground: #b4e1fd
-URxvt.color01: #363636
-URxvt.color02: #ff0883
-URxvt.color03: #83ff08
-URxvt.color04: #ff8308
-URxvt.color05: #0883ff
-URxvt.color06: #8308ff
-URxvt.color07: #08ff83
-URxvt.color08: #b6b6b6
-URxvt.color09: #424242
-URxvt.color10: #ff1e8e
-URxvt.color11: #8eff1e
-URxvt.color12: #ff8e1e
-URxvt.color13: #1e8eff
-URxvt.color14: #8e1eff
-URxvt.color15: #1eff8e
-URxvt.colorBD: #c2c2c2
+! COLORSCHEME (iceberg)
+
+! Special 
+*.foreground:   #d2d4de
+*.background:   #161821
+*.cursorColor:  #d2d4de
+
+! Black
+*.color0:       #161821
+*.color8:       #6b7089
+
+! Red 
+*.color1:       #e27878
+*.color9:       #e98989
+
+! Green 
+*.color2:       #b4be82
+*.color10:      #c0ca8e
+
+! Yellow 
+*.color3:       #e2a478
+*.color11:      #e9b189
+
+! Blue 
+*.color4:       #84a0c6
+*.color12:      #91acd1
+
+! Magenta 
+*.color5:       #a093c7
+*.color13:      #ada0d3
+
+! Cyan 
+*.color6:       #89b8c2
+*.color14:      #95c4ce
+
+! White 
+*.color7:       #c6c8d1
+*.color15: #d2d4deoin/bash: special: cemmand not found

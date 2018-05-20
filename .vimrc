@@ -14,6 +14,7 @@ set smartindent
 " highlight ExtraWhitespace ctermbg=red guibg=red
 " match ExtraWhitespace /\%81v.\+/
 
+
 " Disable turning off vim and defaulting to vi
 set nocompatible
 
@@ -31,7 +32,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " Vundle package manager 
 
-Plugin 'cocopon/iceberg.vim' " Iceberg colorscheme 
+" http://colorswat.ch/vim/
+Plugin 'arcticicestudio/nord-vim' " Colorscheme 
 Plugin 'itchyny/lightline.vim' " Airline at the bottom of the screen
 
 Plugin 'ARM9/arm-syntax-vim' " ARM syntax hightlighting
@@ -50,11 +52,11 @@ call vundle#end()
 
 " Enable syntax highlighting and use colorscheme
 syntax enable 
-colorscheme iceberg 
+colorscheme nord 
 
 " Enable lightline status and use colorscheme
 set laststatus=2
-let g:lightline = { 'colorscheme': 'iceberg', }
+let g:lightline = { 'colorscheme': 'nord', }
 
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
