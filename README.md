@@ -18,6 +18,7 @@ aesthetic (e.g. Source Sans Pro). See above.
 ## Dependencies
 
 * i3-gaps [window manager]
+* betterlockscreen [pretty i3 locking mechanism]
 * polybar [improved status bar]
 * compton [window compositor]
 * rofi [replacement for dmenu]
