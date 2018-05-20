@@ -35,7 +35,7 @@ new_window pixel 2
 new_float pixel 2
 
 # Add gaps and enable smart borders
-gaps outer 30
+gaps outer 20
 gaps inner 20
 smart_borders on
 
