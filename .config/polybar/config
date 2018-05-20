@@ -1,12 +1,12 @@
 [colors]
-base = ${xrdb:color2} 
+base = ${xrdb:color4} 
 medium = ${xrdb:color3}  
 high = ${xrdb:color1} 
 
 background = ${xrdb:background}
-background-alt = #4c4a4d
+background-alt = #575C66
 foreground = ${xrdb:foreground} 
-foreground-alt = #777777
+foreground-alt = #81858B
 
 [settings]
 screenchange-reload = true
@@ -77,7 +77,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#94daa9}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#81A1C1}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -97,9 +97,11 @@ bar-volume-foreground-0 = ${colors.base}
 bar-volume-foreground-1 = ${colors.base} 
 bar-volume-foreground-2 = ${colors.base} 
 bar-volume-foreground-3 = ${colors.base} 
-bar-volume-foreground-4 = ${colors.medium} 
+bar-volume-foreground-4 = ${colors.base} 
 bar-volume-foreground-5 = ${colors.medium} 
-bar-volume-foreground-6 = ${colors.high} 
+bar-volume-foreground-6 = ${colors.medium} 
+bar-volume-foreground-7 = ${colors.medium} 
+bar-volume-foreground-8 = ${colors.high} 
 bar-volume-gradient = false 
 bar-volume-indicator = |
 bar-volume-indicator-font = 1
