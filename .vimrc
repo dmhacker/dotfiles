@@ -14,7 +14,6 @@ set smartindent
 " highlight ExtraWhitespace ctermbg=red guibg=red
 " match ExtraWhitespace /\%81v.\+/
 
-
 " Disable turning off vim and defaulting to vi
 set nocompatible
 
