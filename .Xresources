@@ -1,6 +1,6 @@
 ! WINDOW CONFIGURATION
 
-Xft.dpi: 144
+Xft.dpi: 170
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintfull
@@ -16,7 +16,7 @@ URxvt.scrollTtyKeypress: true
 URxvt.scrollBar: false
 
 ! Standard fonts
-URxvt.font: xft:Source Code Pro:size=12
+URxvt.font: xft:SauceCodePro Nerd Font:size=11
 
 ! Save up to the last 10000 lines (you can scroll up to view them)
 URxvt.saveLines: 10000

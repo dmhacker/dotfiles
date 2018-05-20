@@ -2,7 +2,15 @@
   "segments": [
     "ssh",
     "cwd",
+    "git",
     "jobs",
     "root"
-  ]
+  ],
+  "theme": "~/.config/powerline-shell/themes/nord.py",
+  "vcs": {
+    "show_symbol": true 
+  },
+  "cwd": {
+    "max_depth": 2
+  }
 }

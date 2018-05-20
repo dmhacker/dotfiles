@@ -2,12 +2,13 @@
 alias ls="ls --color"
 
 # Set terminal type
-export TERM="screen-256color"
+export TERM="rxvt-unicode-256color"
 
-# Enable powerline if it is installed
-if [ -f `which powerline-daemon` ]; then
-  powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  . /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh 
+# Enable powerline-shell 
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
