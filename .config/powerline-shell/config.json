@@ -1,6 +1,7 @@
 {
   "segments": [
     "ssh",
+    "read_only",
     "cwd",
     "git",
     "jobs",
