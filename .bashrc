@@ -2,9 +2,9 @@
 alias ls="ls --color"
 
 # Set terminal type
-export TERM="rxvt-unicode-256color"
+export TERM="screen-256color"
 
-# Enable powerline-shell 
+# Enable powerline-shell prompt 
 function _update_ps1() {
     PS1=$(powerline-shell $?)
 }
