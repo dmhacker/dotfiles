@@ -71,4 +71,4 @@ URxvt.keysym.M-Down: resize-font:smaller
 
 ! White 
 *.color7:       #c6c8d1
-*.color15: #d2d4deoin/bash: special: cemmand not found
+*.color15:      #d2d4de
