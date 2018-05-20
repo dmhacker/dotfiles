@@ -32,3 +32,4 @@ aesthetic (e.g. Source Sans Pro). See above.
 * adobe-source-code-pro-fonts [terminal font with powerline symbols]
 * adobe-source-serif-pro-fonts [completes the Adobe font suite]
 * vundle [vim package manager]
+* shadowfox-updater [completely dark UI for Firefox]
