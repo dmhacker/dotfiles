@@ -26,6 +26,9 @@ set cursorline
 " Vundle magic/plugins begin here
 filetype plugin indent on
 
+" Remap leader key
+let mapleader=","
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
