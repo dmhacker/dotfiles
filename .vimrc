@@ -37,6 +37,8 @@ Plugin 'itchyny/lightline.vim' " Airline at the bottom of the screen
 
 Plugin 'ARM9/arm-syntax-vim' " ARM syntax hightlighting
 Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
+Plugin 'pangloss/vim-javascript' " JavaScript syntax highlighting 
+Plugin 'mxw/vim-jsx' " JSX syntax highlighting
 
 Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
@@ -63,6 +65,11 @@ au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 " Enable C++ highlighting
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
+
+" Enable JS highlighting
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
 
 " Add spaces after comment delimiters
 let g:NERDSpaceDelims = 1
