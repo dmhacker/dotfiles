@@ -25,6 +25,10 @@ set cursorline
 " Remap leader key
 let mapleader=','
 
+" Remap copy and paste registers
+vnoremap <C-c> "+y
+noremap <C-v> "+p
+
 " Vundle magic/plugins begin here
 filetype plugin indent on
 
