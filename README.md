@@ -13,7 +13,7 @@ Another thing to note is that while I am using the i3 window manager, I'm also u
 Plasma 5 and SDDM in conjunction with i3. This gives me a fallback desktop environment and 
 a nice login screen respectively (so that I don't have to `xstart` i3 everytime). 
 Again, I'd recommend replacing Plasma/SDDM's default font (Hack) with something a bit more 
-aesthetic (e.g. Source Sans Pro). 
+aesthetic (e.g. Source Sans Pro). See above.
 
 ## Dependencies
 
