@@ -1,6 +1,6 @@
 [colors]
 base = ${xrdb:color4} 
-medium = ${xrdb:color3}  
+medium = ${xrdb:color5}  
 high = ${xrdb:color1} 
 
 background = ${xrdb:background}
@@ -230,13 +230,13 @@ label-close = "  "
 label-separator = "     "
 
 menu-0-0 = Hibernate 
-menu-0-0-foreground = ${colors.high}
+menu-0-0-foreground = ${colors.base}
 menu-0-0-exec = systemctl hibernate
 menu-0-1 = Reboot
-menu-0-1-foreground = ${colors.high} 
+menu-0-1-foreground = ${colors.base} 
 menu-0-1-exec = reboot
 menu-0-2 = Shutdown 
-menu-0-2-foreground = ${colors.high} 
+menu-0-2-foreground = ${colors.base} 
 menu-0-2-exec = shutdown -h now 
 
 ; vim:ft=dosini
