@@ -9,10 +9,9 @@ set shiftround
 set autoindent
 set smartindent
 
-" Set line size to be 80 (extra characters in a line are marked as errors)
+" Set line size to be 80 and highlight column at line 80
 " set textwidth=80
-" highlight ExtraCharacters ctermbg=red guibg=red
-" match ExtraCharacters /\%81v.\+/
+" set colorcolumn=81
 
 " Disable turning off vim and defaulting to vi
 set nocompatible
