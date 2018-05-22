@@ -13,7 +13,7 @@ class Color(DefaultColor):
     HOME_SPECIAL_DISPLAY = True
     HOME_BG = 4
     HOME_FG = 7
-    PATH_BG = 8  
+    PATH_BG = 8
     PATH_FG = 7 
     CWD_FG = 15
     SEPARATOR_FG = 12
@@ -24,6 +24,10 @@ class Color(DefaultColor):
     REPO_CLEAN_FG = 0  
     REPO_DIRTY_BG = 11
     REPO_DIRTY_FG = 0
+    GIT_AHEAD_BG = 8
+    GIT_AHEAD_FG = 7
+    GIT_BEHIND_BG = 8
+    GIT_BEHIND_FG = 7
 
     """ jobs segment """
 
