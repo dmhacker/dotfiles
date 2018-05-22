@@ -23,11 +23,11 @@ set number
 " Highlight current line
 set cursorline
 
+" Remap leader key
+let mapleader=','
+
 " Vundle magic/plugins begin here
 filetype plugin indent on
-
-" Remap leader key
-let mapleader=","
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -42,15 +42,18 @@ Plugin 'ARM9/arm-syntax-vim' " ARM syntax hightlighting
 Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
 Plugin 'pangloss/vim-javascript' " JavaScript syntax highlighting
 Plugin 'mxw/vim-jsx' " JSX syntax highlighting
+Plugin 'vim-latex/vim-latex' " LaTeX suite for vim 
 
 Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
 Plugin 'kshenoy/vim-signature' " Vim marks in the gutter 
 
-Plugin 'scrooloose/nerdcommenter' " Fast commenting
 Plugin 'tpope/vim-surround' " Mappings to edit parentheses, brackets, etc.
+Plugin 'tpope/vim-commentary' " Fast commenting
 Plugin 'justinmk/vim-sneak' " Fast file jumping
 Plugin 'dietsche/vim-lastplace' " Saves last edit line for a file
+
+Plugin 'jceb/vim-orgmode' " A port of Emac's Org Mode for note-taking
 
 call vundle#end()
 
@@ -68,18 +71,6 @@ au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 " Enable C++ highlighting
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
-
-" Add spaces after comment delimiters
-let g:NERDSpaceDelims = 1
-
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-
-" Allow commenting and inverting empty lines
-let g:NERDCommentEmptyLines = 1
-
-" Enale trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
 
 " Sneak labels which lines to we are looking at 
 let g:sneak#label = 1
