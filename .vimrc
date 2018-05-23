@@ -56,8 +56,6 @@ Plugin 'tpope/vim-commentary' " Fast commenting
 Plugin 'justinmk/vim-sneak' " Fast file jumping
 Plugin 'dietsche/vim-lastplace' " Saves last edit line for a file
 
-Plugin 'jceb/vim-orgmode' " A port of Emac's Org Mode for note-taking
-
 call vundle#end()
 
 " Enable syntax highlighting and use colorscheme
