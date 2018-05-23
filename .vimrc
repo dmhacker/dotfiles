@@ -17,7 +17,7 @@ set smartindent
 set nocompatible
 
 " Enable line numbers on the left hand side
-set number
+set relativenumber
 
 " Highlight current line
 set cursorline
