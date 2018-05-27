@@ -32,9 +32,6 @@ noremap <C-v> "+p
 " Remap Escape key to jj
 inoremap jj <Esc>
 
-" Not required but used to help me get used to using jj
-inoremap <Esc> <Nop> 
-
 " Vundle magic/plugins begin here
 filetype plugin indent on
 
