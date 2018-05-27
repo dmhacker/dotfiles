@@ -29,8 +29,11 @@ let mapleader=','
 vnoremap <C-c> "+y
 noremap <C-v> "+p
 
-" Remap Escape key to jj
+" Enable jj to get out of insert mode
 inoremap jj <Esc>
+
+" Disable exiting to normal mode using the escape key
+inoremap <Esc> <Nop>
 
 " Vundle magic/plugins begin here
 filetype plugin indent on
