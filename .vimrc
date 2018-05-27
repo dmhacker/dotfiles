@@ -33,7 +33,7 @@ noremap <C-v> "+p
 inoremap jj <Esc>
 
 " Not required but used to help me get used to using jj
-inoremap <Esc> <NOP> 
+inoremap <Esc> <Nop> 
 
 " Vundle magic/plugins begin here
 filetype plugin indent on
