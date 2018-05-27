@@ -29,6 +29,12 @@ let mapleader=','
 vnoremap <C-c> "+y
 noremap <C-v> "+p
 
+" Remap Escape key to jj
+inoremap jj <Esc>
+
+" Not required but used to help me get used to using jj
+inoremap <Esc> <NOP> 
+
 " Vundle magic/plugins begin here
 filetype plugin indent on
 
