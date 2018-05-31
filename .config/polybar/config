@@ -216,8 +216,8 @@ label-connected = %local_ip%
 type = internal/date
 interval = 1
 
-date = %%{F#777}%m-%d-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
-date-alt = %%{F#fff}%A, %B %d, %Y  %%{F#fff}%H:%M:%S%%{F-}
+date = %%{F#777}%m-%d-%Y%%{F-}  %%{F#fff}%I:%M %p%%{F-}
+date-alt = %%{F#fff}%A  |  %B %d, %Y  |  %%{F#fff}%I:%M:%S %p%%{F-}
 
 format-underline = ${colors.base}
 format-prefix = "  "
