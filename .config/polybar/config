@@ -28,8 +28,8 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
+border-color = #00000000
 border-size = 0
-border-color = #000000
 
 module-margin = 3
 padding-right = 6
@@ -39,7 +39,7 @@ font-1 = Source Code Pro:size=22;0
 font-2 = FontAwesome:size=22;0
 
 modules-left = i3
-modules-right = filesystem volume memory cpu wireless-network wihigh-network battery date powermenu
+modules-right = volume memory cpu filesystem wireless-network wifi-network battery date powermenu
 
 tray-position = right
 
@@ -70,16 +70,6 @@ label-visible-padding = 4
 label-urgent = %index%
 label-urgent-background = ${colors.high}
 label-urgent-padding = 4
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#81A1C1}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/volume]
 type = internal/volume
@@ -160,6 +150,15 @@ bar-used-empty = ─
 bar-used-empty-font = 1
 bar-used-empty-foreground = #444444
 
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+
+label-mounted = %percentage_used%%
+format-mounted-underline = ${colors.base}
+format-mounted-prefix = "  "
+
 [module/battery]
 type = internal/battery
 battery = BAT0
@@ -203,7 +202,7 @@ format-disconnected-underline = ${colors.base}
 label-disconnected = Wifi Disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-[module/wihigh-network]
+[module/wifi-network]
 type = internal/network
 interface = enp0s20f0u1u1u2
 interval = 3.0
@@ -220,7 +219,7 @@ date = %%{F#777}%m-%d-%Y%%{F-}  %%{F#fff}%I:%M %p%%{F-}
 date-alt = %%{F#fff}%A  |  %B %d, %Y  |  %%{F#fff}%I:%M:%S %p%%{F-}
 
 format-underline = ${colors.base}
-format-prefix = "  "
+format-prefix = "  "
 
 [module/powermenu]
 type = custom/menu

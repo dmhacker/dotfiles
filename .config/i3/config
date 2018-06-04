@@ -20,7 +20,7 @@ exec --no-startup-id redshift -l 32.8473:-117.2742 -t 6500:2700
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 
 # Miscellaneous settings for windows
 font pango:Source Sans Pro 12, FontAwesome 12
@@ -35,7 +35,7 @@ new_window pixel 2
 new_float pixel 2
 
 # Add gaps and enable smart borders
-gaps outer 20
+gaps outer 30
 gaps inner 20
 smart_borders on
 
