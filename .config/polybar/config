@@ -211,14 +211,22 @@ format-mounted-prefix = "  "
 format-mounted-underline = ${colors.base}
 
 label-mounted = %percentage_used%% of %total%
+label-mounted-foreground = ${colors.foreground}
 
 [module/temperature]
 type = internal/temperature
 interval = 0.5
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 
-format-prefix = " "
+format-prefix = "  "
 format-underline = ${colors.base}
+
+label-foreground = ${colors.foreground}
+
+format-warn-prefix = "  "
+format-warn-underline = ${colors.base}
+
+label-warn-foreground = ${colors.high}
 
 [module/battery]
 type = internal/battery
