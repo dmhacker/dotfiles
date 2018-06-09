@@ -39,9 +39,35 @@ font-1 = Source Code Pro:size=22;0
 font-2 = FontAwesome:size=22;0
 
 modules-left = i3
-modules-right = volume memory cpu filesystem wireless-network wifi-network battery date powermenu
+modules-right = wireless-network wifi-network battery date powermenu
 
-tray-position = right
+[bar/bottom]
+monitor = eDP1 
+width = 100%
+height = 60
+radius = 0
+bottom = true
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-color = #00000000
+border-size = 0
+
+module-margin = 3
+padding-left = 6
+padding-right = 6
+
+font-0 = Source Sans Pro:size=22;0
+font-1 = Source Code Pro:size=22;0
+font-2 = FontAwesome:size=22;0
+
+modules-left = volume backlight
+modules-right = cpu memory filesystem temperature 
 
 [module/i3]
 type = internal/i3
@@ -73,16 +99,15 @@ label-urgent-padding = 4
 
 [module/volume]
 type = internal/volume
+format-volume = <label-volume>  <bar-volume>
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = "  "
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = VOL Muted 
+label-muted =   Volume Muted 
+label-muted-foreground = ${colors.foreground-alt}
 
-bar-volume-width = 10
+bar-volume-width = 15
 bar-volume-foreground-0 = ${colors.base} 
 bar-volume-foreground-1 = ${colors.base} 
 bar-volume-foreground-2 = ${colors.base} 
@@ -101,11 +126,37 @@ bar-volume-empty = ─
 bar-volume-empty-font = 1
 bar-volume-empty-foreground = #444444 
 
+[module/backlight]
+type = internal/xbacklight
+format = <label> <bar>
+
+label = "  "
+label-foreground = ${root.foreground}
+
+bar-width = 15
+bar-foreground-0 = ${colors.base} 
+bar-foreground-1 = ${colors.base} 
+bar-foreground-2 = ${colors.base} 
+bar-foreground-3 = ${colors.base} 
+bar-foreground-4 = ${colors.base} 
+bar-foreground-5 = ${colors.base} 
+bar-foreground-6 = ${colors.medium} 
+bar-foreground-7 = ${colors.medium} 
+bar-foreground-8 = ${colors.high} 
+bar-gradient = false
+bar-indicator = |
+bar-indicator-font = 1
+bar-fill = ─
+bar-fill-font = 1
+bar-empty = ─
+bar-empty-font = 1
+bar-empty-foreground = #444444
+
 [module/cpu]
 type = internal/cpu
 interval = 0.5
 format = <label> <ramp-coreload>
-label = CPU
+label = "  "
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
@@ -135,9 +186,9 @@ ramp-coreload-7-foreground = ${colors.high}
 [module/memory]
 type = internal/memory
 format = <label> <bar-used>
-label = RAM
+label = "  "
 
-bar-used-width = 10
+bar-used-width = 20
 bar-used-foreground-0 = ${colors.base}
 bar-used-foreground-1 = ${colors.base}
 bar-used-foreground-2 = ${colors.medium} 
@@ -152,12 +203,22 @@ bar-used-empty-foreground = #444444
 
 [module/filesystem]
 type = internal/fs
-interval = 25
+interval = 30
 mount-0 = /
 
-label-mounted = %percentage_used%%
-format-mounted-underline = ${colors.base}
+format-mounted = <label-mounted>
 format-mounted-prefix = "  "
+format-mounted-underline = ${colors.base}
+
+label-mounted = %percentage_used%% of %total%
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 7
+
+format-prefix = " "
+format-underline = ${colors.base}
 
 [module/battery]
 type = internal/battery
@@ -189,7 +250,7 @@ animation-charging-framerate = 750
 [module/wireless-network]
 type = internal/network
 interface = wlp1s0 
-interval = 3.0
+interval = 3
 ping-interval = 10
 
 format-connected = <label-connected>
@@ -205,10 +266,10 @@ label-disconnected-foreground = ${colors.foreground-alt}
 [module/wifi-network]
 type = internal/network
 interface = enp0s20f0u1u1u2
-interval = 3.0
+interval = 3
 
-format-connected-underline = ${colors.base}
 format-connected-prefix = "  "
+format-connected-underline = ${colors.base}
 label-connected = %local_ip%
 
 [module/date]
