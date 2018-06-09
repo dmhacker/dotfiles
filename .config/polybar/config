@@ -215,7 +215,7 @@ label-mounted = %percentage_used%% of %total%
 [module/temperature]
 type = internal/temperature
 interval = 0.5
-thermal-zone = 7
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 
 format-prefix = " "
 format-underline = ${colors.base}
