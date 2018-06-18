@@ -264,12 +264,7 @@ ping-interval = 10
 format-connected = <label-connected>
 format-connected-prefix="  "   
 format-connected-underline = ${colors.base}
-label-connected = %essid%
-
-format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.base}
-label-disconnected = Wifi Disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
+label-connected = %essid%%{F#777}    %upspeed%    %downspeed%  
 
 [module/wifi-network]
 type = internal/network
@@ -278,7 +273,7 @@ interval = 3
 
 format-connected-prefix = "  "
 format-connected-underline = ${colors.base}
-label-connected = %local_ip%
+label-connected = %local_ip%%{F#777}    %upspeed%    %downspeed%  
 
 [module/date]
 type = internal/date
