@@ -39,7 +39,7 @@ font-1 = Source Code Pro:size=22;0
 font-2 = FontAwesome:size=22;0
 
 modules-left = i3
-modules-right = wireless-network wifi-network battery date powermenu
+modules-right = wireless-network wired-network battery date powermenu
 
 [bar/bottom]
 monitor = eDP1 
@@ -185,21 +185,12 @@ ramp-coreload-7-foreground = ${colors.high}
 
 [module/memory]
 type = internal/memory
-format = <label> <bar-used>
-label = "  "
 
-bar-used-width = 20
-bar-used-foreground-0 = ${colors.base}
-bar-used-foreground-1 = ${colors.base}
-bar-used-foreground-2 = ${colors.medium} 
-bar-used-foreground-3 = ${colors.high}
-bar-used-indicator = |
-bar-used-indicator-font = 1 
-bar-used-fill = ─
-bar-used-fill-font = 1
-bar-used-empty = ─
-bar-used-empty-font = 1
-bar-used-empty-foreground = #444444
+format = <label>
+format-prefix = "  "
+format-underline = ${colors.base}
+
+label = %gb_used% / %gb_total% 
 
 [module/filesystem]
 type = internal/fs
@@ -210,7 +201,7 @@ format-mounted = <label-mounted>
 format-mounted-prefix = "  "
 format-mounted-underline = ${colors.base}
 
-label-mounted = %percentage_used%% of %total%
+label-mounted = %used% / %total%
 label-mounted-foreground = ${colors.foreground}
 
 [module/temperature]
@@ -259,21 +250,21 @@ animation-charging-framerate = 750
 type = internal/network
 interface = wlp1s0 
 interval = 3
-ping-interval = 10
 
-format-connected = <label-connected>
 format-connected-prefix="  "   
 format-connected-underline = ${colors.base}
-label-connected = %essid%%{F#777}    %upspeed%    %downspeed%  
+label-connected = %essid%
+;%{F#777}    %upspeed%    %downspeed%  
 
-[module/wifi-network]
+[module/wired-network]
 type = internal/network
-interface = enp0s20f0u1u1u2
+interface = enp0s20f0u1u1u3
 interval = 3
 
-format-connected-prefix = "  "
+format-connected-prefix = "  "
 format-connected-underline = ${colors.base}
-label-connected = %local_ip%%{F#777}    %upspeed%    %downspeed%  
+label-connected = %local_ip%
+;%{F#777}    %upspeed%    %downspeed%  
 
 [module/date]
 type = internal/date
