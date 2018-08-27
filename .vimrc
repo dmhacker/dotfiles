@@ -42,7 +42,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' " Vundle package manager 
 
 " http://colorswat.ch/vim/
-Plugin 'arcticicestudio/nord-vim' " Colorscheme 
+Plugin 'cocopon/iceberg.vim' " Colorscheme
 Plugin 'itchyny/lightline.vim' " Airline at the bottom of the screen
 
 Plugin 'ARM9/arm-syntax-vim' " ARM syntax hightlighting
@@ -63,12 +63,14 @@ Plugin 'dietsche/vim-lastplace' " Saves last edit line for a file
 call vundle#end()
 
 " Enable syntax highlighting and use colorscheme
+set background=dark
 syntax enable 
-colorscheme nord 
+set termguicolors
+colorscheme iceberg 
 
 " Enable lightline status and use colorscheme
 set laststatus=2
-let g:lightline = { 'colorscheme': 'nord', }
+let g:lightline = { 'colorscheme': 'iceberg', }
 
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7

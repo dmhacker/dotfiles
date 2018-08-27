@@ -1,0 +1,66 @@
+[options]
+font = SauceCodePro Nerd Font 12
+allow_bold = true
+audible_bell = false
+clickable_url = true
+dynamic_title = true
+scroll_on_output = false
+scroll_on_keystroke = true
+scrollback_lines = 10000
+search_wrap = true
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+browser = firefox 
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# Hide links that are no longer valid in url select overlay mode
+filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+modify_other_keys = false
+
+# "off", "left" or "right"
+scrollbar = off
+
+[colors]
+# special
+foreground      = #d2d4de
+foreground_bold = #d2d4de
+cursor          = #d2d4de
+background      = #161821
+
+# black
+color0  = #161821
+color8  = #6b7089
+
+# red
+color1  = #e27878
+color9  = #e98989
+
+# green
+color2  = #b4be82
+color10 = #c0ca8e
+
+# yellow
+color3  = #e2a478
+color11 = #e9b189
+
+# blue
+color4  = #84a0c6
+color12 = #91acd1
+
+# magenta
+color5  = #a093c7
+color13 = #ada0d3
+
+# cyan
+color6  = #89b8c2
+color14 = #95c4ce
+
+# white
+color7  = #c6c8d1
+color15 = #d2d4de
+
+# vim: ft=dosini cms=#%s
