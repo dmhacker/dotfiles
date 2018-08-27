@@ -7,7 +7,7 @@
     "jobs",
     "root"
   ],
-  "theme": "~/.config/powerline-shell/themes/nord.py",
+  "theme": "~/.config/powerline-shell/themes/iceberg.py",
   "vcs": {
     "show_symbol": true 
   },

@@ -11,8 +11,8 @@ class Color(DefaultColor):
     """ cwd segment """
 
     HOME_SPECIAL_DISPLAY = True
-    HOME_BG = 4
-    HOME_FG = 7
+    HOME_BG = 12
+    HOME_FG = 15
     PATH_BG = 8
     PATH_FG = 7 
     CWD_FG = 15
@@ -36,7 +36,7 @@ class Color(DefaultColor):
 
     """ root segment """
 
-    CMD_PASSED_BG = 0
+    CMD_PASSED_BG = 4
     CMD_PASSED_FG = 15
     CMD_FAILED_BG = 1
     CMD_FAILED_FG = 15
