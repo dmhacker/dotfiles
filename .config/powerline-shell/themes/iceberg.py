@@ -36,7 +36,7 @@ class Color(DefaultColor):
 
     """ root segment """
 
-    CMD_PASSED_BG = 5
+    CMD_PASSED_BG = 13
     CMD_PASSED_FG = 0
     CMD_FAILED_BG = 1
     CMD_FAILED_FG = 0
