@@ -22,7 +22,7 @@ class Color(DefaultColor):
 
     REPO_CLEAN_BG = 2   
     REPO_CLEAN_FG = 0  
-    REPO_DIRTY_BG = 11
+    REPO_DIRTY_BG = 3
     REPO_DIRTY_FG = 0
     GIT_AHEAD_BG = 8
     GIT_AHEAD_FG = 7
