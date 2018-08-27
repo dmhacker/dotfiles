@@ -16,7 +16,7 @@ class Color(DefaultColor):
     PATH_BG = 4
     PATH_FG = 8
     CWD_FG = 0
-    SEPARATOR_FG = 4
+    SEPARATOR_FG = 12
 
     """ git segment """
 
