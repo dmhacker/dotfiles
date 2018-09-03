@@ -14,9 +14,7 @@
 * ranger [file manager with vim bindings]
 * redshift [flux for Arch Linux]
 * termite [terminal emulator]
-* ~~rxvt-unicode [terminal emulator]~~
-* ~~urxvt-perls-git [clipboard and vim key bindings for the terminal]~~
-* ~~urxvt-resize-font-git [key bindings for resizing fonts]~~
+* xfce4-terminal [terminal emulator for my RPI 3]
 * powerline-shell [fancy terminal prompt]
 * nerd-fonts-complete [patched fonts for powerline]
 * adobe-source-sans-pro-fonts [UI font for i3, SDDM, KDE, polybar]
