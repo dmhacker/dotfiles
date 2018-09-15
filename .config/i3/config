@@ -4,9 +4,6 @@ set $mod Mod4
 # SYSTEM TASKS #
 # ############ #
 
-# Set DPI scaling because Surface Book
-exec xrandr --dpi 100
-
 # Enable audio (otherwise, we won't be able to hear anything)
 exec --no-startup-id start-pulseaudio-x11 
 
