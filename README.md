@@ -6,19 +6,19 @@
 
 ## Dependencies
 
-* [i3-gaps](https://github.com/Airblader/i3) [window manager]
-* [glitchlock](https://github.com/xero/glitchlock/) [i3 locking mechanism]
-* [polybar](https://github.com/jaagr/polybar) [improved status bar]
-* [compton](https://github.com/chjj/compton) [window compositor]
-* [rofi](https://github.com/DaveDavenport/rofi) [replacement for dmenu]
-* [ranger](https://github.com/ranger/ranger) [file manager with vim bindings]
-* [redshift](https://github.com/jonls/redshift) [flux for Arch Linux]
-* [termite](https://github.com/thestinger/termite/) [terminal emulator]
-* [xfce4-terminal](https://git.xfce.org/apps/xfce4-terminal/) [terminal emulator for my RPI 3]
-* [powerline-shell](https://github.com/b-ryan/powerline-shell) [fancy terminal prompt]
-* [nerd-fonts-complete](https://github.com/ryanoasis/nerd-fonts) [patched fonts for powerline]
-* [vundle](https://github.com/VundleVim/Vundle.vim) [vim package manager]
-* [shadowfox-updater](https://github.com/overdodactyl/ShadowFox) [completely dark UI for Firefox]
+* [i3-gaps](https://github.com/Airblader/i3) <sub>window manager</sub>
+* [glitchlock](https://github.com/xero/glitchlock/) <sub>i3 locking mechanism</sub>
+* [polybar](https://github.com/jaagr/polybar) <sub>improved status bar</sub>
+* [compton](https://github.com/chjj/compton) <sub>window compositor</sub>
+* [rofi](https://github.com/DaveDavenport/rofi) <sub>replacement for dmenu</sub>
+* [ranger](https://github.com/ranger/ranger) <sub>file manager with vim bindings</sub>
+* [redshift](https://github.com/jonls/redshift) <sub>flux for Arch Linux</sub>
+* [termite](https://github.com/thestinger/termite/) <sub>terminal emulator</sub>
+* [xfce4-terminal](https://git.xfce.org/apps/xfce4-terminal/) <sub>terminal emulator for my RPI 3</sub>
+* [powerline-shell](https://github.com/b-ryan/powerline-shell) <sub>fancy terminal prompt</sub>
+* [nerd-fonts-complete](https://github.com/ryanoasis/nerd-fonts) <sub>patched fonts for powerline</sub>
+* [vundle](https://github.com/VundleVim/Vundle.vim) <sub>vim package manager</sub>
+* [shadowfox-updater](https://github.com/overdodactyl/ShadowFox) <sub>completely dark UI for Firefox</sub>
 
 ## Miscellaneous
 
