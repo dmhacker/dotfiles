@@ -6,7 +6,7 @@ URxvt.scrollTtyKeypress: true
 URxvt.scrollBar: false
 
 ! Standard fonts
-URxvt.font: xft:SauceCodePro Nerd Font:size=11:dpi=196
+URxvt.font: xft:SauceCodePro Nerd Font:size=12:dpi=168
 
 ! Save up to the last 10000 lines (you can scroll up to view them)
 URxvt.saveLines: 10000
