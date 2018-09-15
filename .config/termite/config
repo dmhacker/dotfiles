@@ -1,5 +1,5 @@
 [options]
-font = SauceCodePro Nerd Font 12
+font = SauceCodePro Nerd Font 11
 allow_bold = true
 audible_bell = false
 clickable_url = true
