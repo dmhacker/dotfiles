@@ -1,0 +1,18 @@
+# Dependencies 
+mafredri/zsh-async
+
+# Aliases 
+djui/alias-tips
+
+# Workflow 
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+
+# Git prompt 
+robbyrussell/oh-my-zsh folder:plugins/git
+
+# Themes
+denysdovhan/spaceship-prompt
+# sindresorhus/pure

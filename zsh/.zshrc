@@ -8,22 +8,12 @@
 # 
 # Author: David Hacker <dmhacker@protonmail.com>
 
-# oh-my-zsh variables
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ZSH="/home/dmhacker/.oh-my-zsh"
-ZSH_THEME="spaceship"
+# set up zsh completion, needed by plugins
+autoload -Uz compinit 
+compinit
 
-# oh-my-zsh plugins
-plugins=(
-  colored-man-pages
-  git
-  nvm 
-  zsh-syntax-highlighting
-  vi-mode
-)
-
-# oh-my-zsh source script
-source $ZSH/oh-my-zsh.sh
+# load auto-generated antibody plugins file
+source ~/.zsh_plugins.sh
 
 # load additonal user configuration files
 for config (~/.zsh/*.zsh) source $config
