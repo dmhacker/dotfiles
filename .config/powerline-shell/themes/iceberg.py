@@ -24,10 +24,10 @@ class Color(DefaultColor):
     REPO_CLEAN_FG = 0  
     REPO_DIRTY_BG = 3
     REPO_DIRTY_FG = 0
-    GIT_AHEAD_BG = 8
-    GIT_AHEAD_FG = 7
-    GIT_BEHIND_BG = 8
-    GIT_BEHIND_FG = 7
+    GIT_AHEAD_BG = 11
+    GIT_AHEAD_FG = 1
+    GIT_BEHIND_BG = 11
+    GIT_BEHIND_FG = 2
 
     """ jobs segment """
 
