@@ -1,6 +1,6 @@
 # dotfiles
 
-<a><img src="https://raw.githubusercontent.com/dmhacker/dankfiles/master/Pictures/screenshot.jpg" align="center"></a>
+<a><img src="https://raw.githubusercontent.com/dmhacker/dankfiles/master/screenshot.jpg" align="center"></a>
 
 **Configuration files for my main workstation.** I'm running Arch Linux on a 13" Surface Book 2.
 
