@@ -6,6 +6,7 @@
 # |_|   |_|  \___/|_| |_| |_| .__/ \__|
 #                           | |        
 #                           |_|        
+#
 function _update_ps1() {
     PS1=$(powerline-shell $?)
 }
