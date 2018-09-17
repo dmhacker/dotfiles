@@ -17,7 +17,7 @@ exec --no-startup-id redshift -l 32.8473:-117.2742 -t 6500:2700
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display wallpaper
-exec_always --no-startup-id feh --bg-scale ~/.dotfiles/wallpapers/main.jpg
+exec_always --no-startup-id feh --bg-scale ~/.dotfiles/wallpapers/blue_mountains.jpg
 
 # Miscellaneous settings for windows
 font pango:Source Sans Pro 12, FontAwesome 12
