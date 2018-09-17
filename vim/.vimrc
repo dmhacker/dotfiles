@@ -42,7 +42,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' " Vundle package manager 
 
 " http://colorswat.ch/vim/
-Plugin 'cocopon/iceberg.vim' " Colorscheme
+Plugin 'tyrannicaltoucan/vim-deep-space' " Colorscheme
 Plugin 'itchyny/lightline.vim' " Airline at the bottom of the screen
 
 Plugin 'ARM9/arm-syntax-vim' " ARM syntax hightlighting
@@ -66,11 +66,11 @@ call vundle#end()
 set background=dark
 syntax enable 
 set termguicolors
-colorscheme iceberg 
+colorscheme deep-space 
 
 " Enable lightline status and use colorscheme
 set laststatus=2
-let g:lightline = { 'colorscheme': 'iceberg', }
+let g:lightline = { 'colorscheme': 'deepspace', }
 
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7

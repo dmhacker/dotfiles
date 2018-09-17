@@ -16,5 +16,5 @@ robbyrussell/oh-my-zsh folder:plugins/nvm
 robbyrussell/oh-my-zsh folder:plugins/vi-mode
 
 # Themes
-denysdovhan/spaceship-prompt
-# sindresorhus/pure
+# denysdovhan/spaceship-prompt
+sindresorhus/pure
