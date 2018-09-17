@@ -8,4 +8,3 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch new polybar 
 polybar top &
-polybar bottom &
