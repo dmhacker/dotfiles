@@ -23,5 +23,5 @@
 
 ## Credits
 
-Thanks to [grahamsider](https://github.com/grahamsider/dotfiles) for his amazing polybar configuration, 
-which I adapted for my own use!
+I thank [grahamsider](https://github.com/grahamsider/dotfiles) for his amazing polybar configuration, 
+which I adapted for my own use.
