@@ -42,8 +42,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' " Vundle package manager 
 
 " http://colorswat.ch/vim/
-Plugin 'tyrannicaltoucan/vim-deep-space' " Colorscheme
-Plugin 'itchyny/lightline.vim' " Airline at the bottom of the screen
+Plugin 'chriskempson/base16-vim'
+Plugin 'daviesjamie/vim-base16-lightline'
+Plugin 'itchyny/lightline.vim' 
 
 Plugin 'ARM9/arm-syntax-vim' " ARM syntax hightlighting
 Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
@@ -66,11 +67,11 @@ call vundle#end()
 set background=dark
 syntax enable 
 set termguicolors
-colorscheme deep-space 
+colorscheme base16-default-dark 
 
 " Enable lightline status and use colorscheme
 set laststatus=2
-let g:lightline = { 'colorscheme': 'deepspace', }
+let g:lightline = { 'colorscheme': 'base16', }
 
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
