@@ -10,8 +10,10 @@ zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
 
-# Git prompt 
+# oh-my-zsh bare essentials 
 robbyrussell/oh-my-zsh folder:plugins/git
+robbyrussell/oh-my-zsh folder:plugins/nvm
+robbyrussell/oh-my-zsh folder:plugins/vi-mode
 
 # Themes
 denysdovhan/spaceship-prompt
