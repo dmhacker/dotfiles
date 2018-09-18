@@ -64,13 +64,17 @@ modules-right = cpu filesystem battery volume wlan eth powermenu
 [module/i3]
 type = internal/i3
 
-format = <label-state>
+format = <label-state> <label-mode>
 index-sort = true
 enable-click = true
 fuzzy-match = true
 wrapping-scroll = false
 strip-wsnumbers = true
 pin-workspaces = true
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = ${xrdb:color1}
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
@@ -119,7 +123,7 @@ label = %date% %time%
 type = internal/cpu
 interval = 0.5
 
-label =   %percentage%%
+label =   %percentage%%
 
 [module/filesystem]
 type = internal/fs
@@ -127,7 +131,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted =   %percentage_used%%
+label-mounted =   %percentage_used%%
 
 [module/battery]
 type = internal/battery
