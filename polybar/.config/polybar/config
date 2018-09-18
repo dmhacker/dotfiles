@@ -119,7 +119,7 @@ label = %date% %time%
 type = internal/cpu
 interval = 0.5
 
-label =   %percentage%
+label =   %percentage%%
 
 [module/filesystem]
 type = internal/fs
@@ -127,7 +127,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted =   %percentage_used%
+label-mounted =   %percentage_used%%
 
 [module/battery]
 type = internal/battery
