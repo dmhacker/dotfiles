@@ -36,6 +36,14 @@ gaps outer 25
 gaps inner 20
 smart_borders on
 
+# Toggle gaps on, toggle gaps off
+bindsym $mod+t gaps outer current set 25; gaps inner current set 20
+bindsym $mod+Shift+t gaps outer current set 0; gaps inner current set 0 
+
+# Increase, decrease gap size
+bindsym $mod+g gaps inner current plus 5 
+bindsym $mod+Shift+g gaps inner current minus 5 
+
 # ###### #
 # COLORS #
 # ###### #
@@ -83,7 +91,10 @@ bindsym XF86AudioPrev exec playerctl previous
 # ########### #
 
 # Start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec st 
+
+# Start a web browser
+bindsym $mod+e exec firefox 
 
 # Start rofi to launch external programs
 bindsym $mod+d exec rofi -show run 
@@ -121,11 +132,6 @@ bindsym $mod+v split v
 # Enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# Change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
 # Take screenshot
 bindsym $mod+p exec import -window root ~/Pictures/screenshot.jpg
 
@@ -137,6 +143,9 @@ bindsym $mod+Shift+space floating toggle
 
 # Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+# Reset layout to split mode
+bindsym $mod+s layout toggle split 
 
 # Focus the parent container
 bindsym $mod+a focus parent
@@ -175,6 +184,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+# Toggle resize mode
 bindsym $mod+r mode "resize"
 
 # ############# #
