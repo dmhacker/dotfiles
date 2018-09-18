@@ -14,6 +14,7 @@ zsh-users/zsh-history-substring-search
 robbyrussell/oh-my-zsh folder:plugins/git
 robbyrussell/oh-my-zsh folder:plugins/nvm
 robbyrussell/oh-my-zsh folder:plugins/vi-mode
+robbyrussell/oh-my-zsh folder:plugins/colored-man-pages
 
 # Themes
 # denysdovhan/spaceship-prompt

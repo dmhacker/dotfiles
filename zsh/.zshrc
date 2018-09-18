@@ -19,7 +19,7 @@ source ~/.zsh_plugins.sh
 for config (~/.zsh/*.zsh) source $config
 
 # load local configuration file
-local_zshrc="$HOME/.local.zshrc"
+local_zshrc="$HOME/.zshrc.local"
 if [[ -f $local_zshrc ]]; then
   source $local_zshrc
 fi

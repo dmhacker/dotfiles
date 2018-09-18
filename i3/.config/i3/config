@@ -151,7 +151,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to exit i3? This will take you back to the login screen.' -b 'Yes' 'i3-msg exit'"
 
 # Quick locking of the screen
-bindsym $mod+shift+x exec "GLITCHICON=~/.config/glitchlock/stop.png ~/.config/glitchlock/glitchlock"
+bindsym $mod+shift+x exec glitchlock
 
 # Resize window (you can also use the mouse for that)
 mode "resize" {
