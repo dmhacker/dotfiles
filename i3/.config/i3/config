@@ -83,7 +83,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # ########### #
 
 # Start a terminal
-bindsym $mod+Return exec termite 
+bindsym $mod+Return exec st
 
 # Start rofi to launch external programs
 bindsym $mod+d exec rofi -show run 

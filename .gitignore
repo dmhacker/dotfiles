@@ -1,2 +1,9 @@
 __pycache__
 *.pyc
+
+st/src
+st/pkg
+st/*.tar.gz
+st/*.tar.xz
+st/*.diff
+st/.SRCINFO

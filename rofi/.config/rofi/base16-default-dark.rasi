@@ -4,7 +4,7 @@
  * Copyright: Andrea Scarpino
  */
 * {
-    font: "SauceCodePro Nerd Font 30";
+    font: "SauceCodePro Nerd Font 28";
 
     selected-normal-foreground:  @lightbg;
     foreground:                  rgba ( 216, 216, 216, 100 % );
