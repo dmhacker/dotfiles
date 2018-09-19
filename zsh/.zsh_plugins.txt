@@ -17,5 +17,5 @@ robbyrussell/oh-my-zsh folder:plugins/vi-mode
 robbyrussell/oh-my-zsh folder:plugins/colored-man-pages
 
 # Themes
-# denysdovhan/spaceship-prompt
-sindresorhus/pure
+denysdovhan/spaceship-prompt
+# sindresorhus/pure

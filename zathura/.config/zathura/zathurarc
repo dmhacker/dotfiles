@@ -1,1 +1,2 @@
-set font "SauceCodePro Nerd Font normal 11"
+set font "SauceCodePro Nerd Font normal 12"
+set smooth-scroll true

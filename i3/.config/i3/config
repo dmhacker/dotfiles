@@ -20,7 +20,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/mist.jpg
 
 # Miscellaneous settings for windows
-font pango:Source Sans Pro 12, FontAwesome 12
+font pango:Cantarell 12, FontAwesome 12
 hide_edge_borders smart 
 
 # ####### #
