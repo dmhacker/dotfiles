@@ -88,3 +88,6 @@ let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 
 " Set buffer types to ignore for vim-lastplace
 let g:lastplace_ignore_buftype = "quickfix,nofile,help"
+
+" Set vim-latex to output pdfs by default
+let g:Tex_DefaultTargetFormat = "pdf"
