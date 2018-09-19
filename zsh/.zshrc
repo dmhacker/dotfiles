@@ -44,6 +44,11 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_VI_MODE_SUFFIX=""
 SPACESHIP_VI_MODE_INSERT=""
 
+GEOMETRY_SYMBOL_GIT_DIRTY="⬡ "                 # when repo has "dirty" state
+GEOMETRY_SYMBOL_GIT_CLEAN="⬢ "                 # when repo has "clean" state
+GEOMETRY_SYMBOL_GIT_BARE="⬢ "                  # when repo is bare (no working tree)
+PROMPT_GEOMETRY_EXEC_TIME=true
+
 # load auto-generated antibody plugins file
 source ~/.zsh_plugins.sh
 
