@@ -12,6 +12,9 @@
 autoload -Uz compinit
 compinit
 
+# load user configuration files before antibody 
+for config (~/.zsh/configs/*.zsh) source $config
+
 # fix wide symbols by adding a space after them
 GEOMETRY_SYMBOL_GIT_DIRTY="⬡ "
 GEOMETRY_SYMBOL_GIT_CLEAN="⬢ "
@@ -29,11 +32,11 @@ PROMPT_GEOMETRY_GIT_CONFLICTS=true
 # remove these sections from the rprompt 
 PROMPT_GEOMETRY_GIT_TIME=false
 
-# load auto-generated antibody plugins file
+# load auto-generated antibody file
 source ~/.zsh_plugins.sh
 
-# load user configuration files
-for config (~/.zsh/*.zsh) source $config
+# load third-party plugin files after antibody 
+for plugin (~/.zsh/plugins/*.zsh) source $plugin
 
 # load local configuration file
 local_zshrc="$HOME/.zshrc.local"

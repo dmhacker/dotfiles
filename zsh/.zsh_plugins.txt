@@ -9,6 +9,7 @@ zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-history-substring-search
 zdharma/fast-syntax-highlighting
+zimfw/completion
 
 # Essentials from oh-my-zsh 
 robbyrussell/oh-my-zsh folder:plugins/colored-man-pages
