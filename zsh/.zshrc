@@ -12,41 +12,17 @@
 autoload -Uz compinit
 compinit
 
-# improve performance by removing unnecessary prompt sections
-SPACESHIP_PROMPT_ORDER=(
-  user          # Username section
-  host          # Hostname section
-  dir           # Current directory section
-  git           # Git section (git_branch + git_status)
-  package       # Package version
-  node          # Node.js section
-  ruby          # Ruby section
-  golang        # Go section
-  php           # PHP section
-  rust          # Rust section
-  haskell       # Haskell Stack section
-  julia         # Julia section
-  docker        # Docker section
-  venv          # virtualenv section
-  conda         # conda virtualenv section
-  pyenv         # Pyenv section
-  dotnet        # .NET section
-  kubecontext   # Kubectl context section
-  exec_time     # Execution time
-  vi_mode       # Vi-mode indicator
-  line_sep      # Line break
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
+# fix wide symbols by adding a space after them
+GEOMETRY_SYMBOL_GIT_DIRTY="⬡ "
+GEOMETRY_SYMBOL_GIT_CLEAN="⬢ "
+GEOMETRY_SYMBOL_GIT_BARE="⬢ "
 
-# disable insert mode display on vi-mode prompt section
-SPACESHIP_VI_MODE_SUFFIX=""
-SPACESHIP_VI_MODE_INSERT=""
+# adjust prompt colors 
+GEOMETRY_COLOR_PROMPT="green"               
+GEOMETRY_COLOR_EXIT_VALUE="red"
+GEOMETRY_COLOR_ROOT="yellow"                   
 
-GEOMETRY_SYMBOL_GIT_DIRTY="⬡ "                 # when repo has "dirty" state
-GEOMETRY_SYMBOL_GIT_CLEAN="⬢ "                 # when repo has "clean" state
-GEOMETRY_SYMBOL_GIT_BARE="⬢ "                  # when repo is bare (no working tree)
+# display last execution time in the rprompt
 PROMPT_GEOMETRY_EXEC_TIME=true
 
 # load auto-generated antibody plugins file

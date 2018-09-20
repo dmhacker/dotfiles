@@ -7,17 +7,14 @@ djui/alias-tips
 # Workflow 
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
-# zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
 zdharma/fast-syntax-highlighting
 
-# oh-my-zsh bare essentials 
+# Essentials from oh-my-zsh 
+robbyrussell/oh-my-zsh folder:plugins/colored-man-pages
 robbyrussell/oh-my-zsh folder:plugins/git
 robbyrussell/oh-my-zsh folder:plugins/nvm
 robbyrussell/oh-my-zsh folder:plugins/vi-mode
-robbyrussell/oh-my-zsh folder:plugins/colored-man-pages
 
-# Themes
-# sindresorhus/pure
-# denysdovhan/spaceship-prompt
+# Prompt theme 
 geometry-zsh/geometry
