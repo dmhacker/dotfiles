@@ -25,6 +25,9 @@ GEOMETRY_COLOR_ROOT="yellow"
 # display last execution time in the rprompt
 PROMPT_GEOMETRY_EXEC_TIME=true
 
+# don't display last update time for a git repository 
+PROMPT_GEOMETRY_GIT_TIME=false
+
 # load auto-generated antibody plugins file
 source ~/.zsh_plugins.sh
 
