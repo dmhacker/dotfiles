@@ -57,7 +57,7 @@ module-margin-left = 6
 module-margin-right = 0
 modules-left = i3
 modules-center = date
-modules-right = cpu filesystem battery volume wlan eth powermenu
+modules-right = cpu filesystem volume wlan eth powermenu
 
 [module/i3]
 type = internal/i3
@@ -175,7 +175,7 @@ label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = ""
 format-muted-foreground = ${colors.foreground}
-label-muted = " "
+label-muted = "  off"
 label-muted-foreground = ${colors.foreground}
 
 [module/wlan]
@@ -212,37 +212,37 @@ menu-0-0-exec = reboot
 menu-0-1 = "" 
 menu-0-1-exec = shutdown -h now 
 
-; [module/mpd]
-; type = internal/mpd
+[module/mpd]
+type = internal/mpd
 
-; host = localhost
-; port = 6600
-; interval = 1
+host = localhost
+port = 6600
+interval = 1
 
-; format-online = <label-song>
+format-online = <label-song>
 
-; label-song = "  %artist% - %title%"
-; label-offline = mopidy is offline
+label-song = "  %artist% - %title%"
+label-offline = mopidy is offline
 
-; icon-prev = ""
-; icon-stop = ""
-; icon-play = ""
-; icon-pause = ""
-; icon-next = ""
+icon-prev = ""
+icon-stop = ""
+icon-play = ""
+icon-pause = ""
+icon-next = ""
 
-; icon-random = ""
-; icon-repeat = ""
+icon-random = ""
+icon-repeat = ""
 
-; toggle-on-foreground = ${colors.foreground}
-; toggle-off-foreground = ${colors.foreground-alt}
+toggle-on-foreground = ${colors.foreground}
+toggle-off-foreground = ${colors.foreground-alt}
 
-; bar-progress-width = 30
-; bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
-; bar-progress-indicator = >
-; bar-progress-indicator-foreground = ${colors.foreground}
-; bar-progress-fill = -
-; bar-progress-fill-foreground = ${colors.foreground}
-; bar-progress-empty = -
-; bar-progress-empty-foreground = ${colors.foreground}
+bar-progress-width = 30
+bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
+bar-progress-indicator = >
+bar-progress-indicator-foreground = ${colors.foreground}
+bar-progress-fill = -
+bar-progress-fill-foreground = ${colors.foreground}
+bar-progress-empty = -
+bar-progress-empty-foreground = ${colors.foreground}
 
 ; vim:ft=dosini

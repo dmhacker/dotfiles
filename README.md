@@ -19,7 +19,7 @@
 * [vundle](https://github.com/VundleVim/Vundle.vim) <sub>vim package manager</sub>
 * [shadowfox-updater](https://github.com/overdodactyl/ShadowFox) <sub>completely dark UI for Firefox</sub>
 * [antibody](https://github.com/getantibody/antibody) <sub>plugin manager for zsh</sub>
-* [pure](https://github.com/sindresorhus/pure) <sub>minimal, fast zsh prompt</sub>
+* [geometry](https://github.com/geometry-zsh/geometry) <sub>minimal, fast, customizable zsh prompt</sub>
 
 ## Credits
 
