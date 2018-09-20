@@ -1,12 +1,17 @@
+PROMPT_GEOMETRY_GIT_UNTRACKED_DIRTY=${PROMPT_GEOMETRY_GIT_UNTRACKED_DIRTY:-true}
+
 prompt_geometry_git_status() {
-  # Adjust the git status command so that it starts at the top level rather than the current subdirectory 
-  if test -z "$(git status --porcelain --ignore-submodules)"; then
-    if test -z "$(git ls-files --others --modified --exclude-standard)"; then
+  if [[ $PROMPT_GEOMETRY_GIT_UNTRACKED_DIRTY = false ]]; then
+    if command git diff --no-ext-diff --quiet --exit-code; then
       echo $GEOMETRY_GIT_CLEAN
     else
       echo $GEOMETRY_GIT_DIRTY
     fi
   else
-    echo $GEOMETRY_GIT_DIRTY
+    if test -z "$(command git status --porcelain --ignore-submodules -unormal)"; then
+      echo $GEOMETRY_GIT_CLEAN
+    else
+      echo $GEOMETRY_GIT_DIRTY
+    fi
   fi
 }
