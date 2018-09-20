@@ -12,13 +12,11 @@ screenchange-reload = true
 
 [colors]
 ; background = #22000000
-background = ${xrdb:background:#222}
+background = ${xrdb:background}
 foreground = #EEEEEEEE 
 foreground-alt = #EEEEEEEE
-;foreground-alt = ${xrdb:color7:#222}
-;primary = ${xrdb:color1:#222}
-;secondary = ${xrdb:color2:#222}
-;alert = ${xrdb:color3:#222}
+;foreground-alt = ${xrdb:color7}
+alert = ${xrdb:color1}
 
 [global/wm]
 margin-top = 0
@@ -74,31 +72,31 @@ pin-workspaces = true
 
 label-mode = %mode%
 label-mode-padding = 2
-label-mode-background = ${xrdb:color1}
+label-mode-background = ${colors.alert}
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
-label-focused-padding = 2
 label-focused-underline = ${colors.foreground-alt}
+label-focused-padding = 2
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.foreground}
-label-unfocused-padding = 2
 label-unfocused-underline = ${colors.background}
+label-unfocused-padding = 2
 
 label-urgent = %icon%
-label-urgent-background = ${colors.background}
+label-urgent-background = ${colors.alert}
 label-urgent-foreground = ${colors.foreground-alt}
+label-urgent-underline = ${colors.alert}
 label-urgent-padding = 2
-label-urgent-underline = ${colors.background}
 
 label-visible = %icon%
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.foreground}
-label-visible-padding = 2
 label-visible-underline = ${colors.background}
+label-visible-padding = 2
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
