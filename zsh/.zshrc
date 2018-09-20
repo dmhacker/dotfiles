@@ -22,10 +22,11 @@ GEOMETRY_COLOR_PROMPT="green"
 GEOMETRY_COLOR_EXIT_VALUE="red"
 GEOMETRY_COLOR_ROOT="yellow"                   
 
-# display last execution time in the rprompt
+# add these sections to the rprompt 
 PROMPT_GEOMETRY_EXEC_TIME=true
+PROMPT_GEOMETRY_GIT_CONFLICTS=true
 
-# don't display last update time for a git repository 
+# remove these sections from the rprompt 
 PROMPT_GEOMETRY_GIT_TIME=false
 
 # load auto-generated antibody plugins file
