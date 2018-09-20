@@ -1,4 +1,5 @@
 alias vimconfig="vim ~/.vimrc"
+alias viminstall="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall"
 alias zshconfig="vim ~/.zshrc"
 alias zshplugins="vim ~/.zsh_plugins.txt"
 alias zshupdate="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
