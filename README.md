@@ -13,9 +13,11 @@
 * [polybar](https://github.com/jaagr/polybar) <sub>improved status bar</sub>
 * [compton](https://github.com/chjj/compton) <sub>window compositor</sub>
 * [rofi](https://github.com/DaveDavenport/rofi) <sub>replacement for dmenu</sub>
-* [ranger](https://github.com/ranger/ranger) <sub>file manager with vim bindings</sub>
+* [ranger](https://github.com/ranger/ranger) <sub>file manager with vim-like bindings</sub>
+* [zathura](https://git.pwmt.org/pwmt/zathura-pdf-mupdf) <sub>PDF viewer with vim-like bindings</sub>
 * [redshift](https://github.com/jonls/redshift) <sub>flux for Arch Linux</sub>
 * [nerd-fonts-complete](https://github.com/ryanoasis/nerd-fonts) <sub>patched fonts for powerline</sub>
+* [pikaur](https://github.com/actionless/pikaur) <sub>AUR helper of choice</sub>
 * [vundle](https://github.com/VundleVim/Vundle.vim) <sub>vim package manager</sub>
 * [shadowfox-updater](https://github.com/overdodactyl/ShadowFox) <sub>completely dark UI for Firefox</sub>
 * [antibody](https://github.com/getantibody/antibody) <sub>plugin manager for zsh</sub>
