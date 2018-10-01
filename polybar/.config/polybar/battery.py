@@ -130,7 +130,8 @@ class Command:
             if rem == 0x08 and len(buf) >= 0x08:
                 hdr = buf[0:8]
 
-                assert hdr[0:3] == bytes([0xaa, 0x55, 0x80])
+                if hdr[0:3] != bytes([0xaa, 0x55, 0x80]):
+                    exit()
                 assert hdr[-2:] == bytes(crc(hdr[2:-2]))
 
                 rem += hdr[3] + 10          # len(payload) + frame + crc

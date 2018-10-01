@@ -57,7 +57,7 @@ module-margin-left = 6
 module-margin-right = 0
 modules-left = i3
 modules-center = date
-modules-right = cpu filesystem battery-tmp volume wlan eth powermenu
+modules-right = cpu filesystem volume wlan eth powermenu
 
 [module/i3]
 type = internal/i3
