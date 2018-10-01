@@ -1,5 +1,5 @@
 [Configuration]
-FontName=SauceCodePro Nerd Font Medium 12
+FontName=SauceCodePro Nerd Font 11
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -30,3 +30,4 @@ ColorCursor=#d8d8d8d8d8d8
 ColorForeground=#d8d8d8d8d8d8
 ColorBackground=#181818181818
 ColorPalette=#181818181818;#abab46464242;#a1a1b5b56c6c;#f7f7caca8888;#7c7cafafc2c2;#baba8b8bafaf;#8686c1c1b9b9;#d8d8d8d8d8d8;#585858585858;#abab46464242;#a1a1b5b56c6c;#f7f7caca8888;#7c7cafafc2c2;#baba8b8bafaf;#8686c1c1b9b9;#f8f8f8f8f8f8
+
