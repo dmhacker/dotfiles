@@ -57,7 +57,7 @@ module-margin-left = 6
 module-margin-right = 0
 modules-left = i3
 modules-center = date
-modules-right = cpu filesystem volume wlan eth powermenu
+modules-right = cpu filesystem battery-tmp volume wlan eth powermenu
 
 [module/i3]
 type = internal/i3
@@ -160,7 +160,13 @@ animation-charging-1 = ""
 animation-charging-2 = ""
 animation-charging-3 = ""
 animation-charging-4 = ""
-animation-charging-framerate = 650
+unimation-charging-framerate = 650
+
+[module/battery-tmp]
+type = custom/script
+
+exec = python3 ~/.config/polybar/battery.py
+interval = 10
 
 [module/volume]
 type = internal/volume
