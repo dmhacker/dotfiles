@@ -21,7 +21,7 @@ GEOMETRY_SYMBOL_GIT_CLEAN="⬢ "
 GEOMETRY_SYMBOL_GIT_BARE="⬢ "
 
 # adjust prompt colors 
-GEOMETRY_COLOR_PROMPT="green"               
+GEOMETRY_COLOR_PROMPT="magenta"               
 GEOMETRY_COLOR_EXIT_VALUE="red"
 GEOMETRY_COLOR_ROOT="yellow"                   
 
