@@ -189,7 +189,7 @@ type = internal/network
 interface = wlp1s0
 interval = 3
 
-label-connected = "  %essid%" 
+label-connected = " " 
 
 ramp-signal-0 = ""
 ramp-signal-1 = ""
@@ -202,7 +202,7 @@ type = internal/network
 interface = enp0s20f0u1u1u3 
 interval = 3
 
-label-connected = "  %local_ip%"
+label-connected = " "
 
 [module/powermenu]
 type = custom/menu
