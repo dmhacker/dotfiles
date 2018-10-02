@@ -321,13 +321,13 @@ def main():
         percentage = (res1['Current Capacity'] + res2['Current Capacity']) / (res1['Full Capacity'] + res2['Full Capacity']) * 100
         if percentage < 10:
             print("  {0:.0f}%".format(percentage))
-        elif percentage < 30:
+        elif percentage < 37:
             print("  {0:.0f}%".format(percentage))
-        elif percentage < 50:
+        elif percentage < 63:
             print("  {0:.0f}%".format(percentage))
-        elif percentage < 70:
-            print("  {0:.0f}%".format(percentage))
         elif percentage < 90:
+            print("  {0:.0f}%".format(percentage))
+        else: 
             print("  {0:.0f}%".format(percentage))
     finally:
         cnt.store()
