@@ -318,16 +318,19 @@ def main():
         res1 = cmd1.run(dev, cnt)
         res2 = cmd2.run(dev, cnt)
         percentage = (res1['Current Capacity'] + res2['Current Capacity']) / (res1['Full Capacity'] + res2['Full Capacity']) * 100
-        if percentage < 10:
-            print("  {0:.0f}%".format(percentage))
-        elif percentage < 37:
-            print("  {0:.0f}%".format(percentage))
-        elif percentage < 63:
-            print("  {0:.0f}%".format(percentage))
-        elif percentage < 90:
-            print("  {0:.0f}%".format(percentage))
-        else: 
-            print("  {0:.0f}%".format(percentage))
+        if res1['State'] != 'Discharging':
+            print("  {0:.0f}%".format(percentage))
+        else:
+            if percentage < 10:
+                print("  {0:.0f}%".format(percentage))
+            elif percentage < 37:
+                print("  {0:.0f}%".format(percentage))
+            elif percentage < 63:
+                print("  {0:.0f}%".format(percentage))
+            elif percentage < 90:
+                print("  {0:.0f}%".format(percentage))
+            else: 
+                print("  {0:.0f}%".format(percentage))
     finally:
         cnt.store()
 
