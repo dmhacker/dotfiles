@@ -318,7 +318,7 @@ def main():
         res1 = cmd1.run(dev, cnt)
         res2 = cmd2.run(dev, cnt)
         percentage = (res1['Current Capacity'] + res2['Current Capacity']) / (res1['Full Capacity'] + res2['Full Capacity']) * 100
-        if res1['State'] == 'Charging':
+        if res1['State'] == 'Charging' or (res1['State'] == 'None' and percentage == 100.0):
             print("  {0:.0f}%".format(percentage))
         else:
             if percentage < 10:
