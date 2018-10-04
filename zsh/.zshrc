@@ -35,8 +35,8 @@ PROMPT_GEOMETRY_GIT_TIME=false
 # load auto-generated antibody file
 source ~/.zsh_plugins.sh
 
-# load third-party plugin files after antibody 
-for plugin (~/.zsh/plugins/*.zsh) source $plugin
+# load geometry-zsh fixes after antibody 
+# for plugin (~/.zsh/geometry/*.zsh) source $plugin
 
 # load local configuration file
 local_zshrc="$HOME/.zshrc.local"
