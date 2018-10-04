@@ -1,8 +1,10 @@
 alias vimconfig="vim ~/.vimrc"
-alias viminstall="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall"
+alias vimupdate="vim +PluginInstall +qall"
+alias viminstall="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vimupdate"
 alias zshconfig="vim ~/.zshrc"
 alias zshplugins="vim ~/.zsh_plugins.txt"
 alias zshupdate="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
+alias battery="python3 ~/.config/polybar/battery.py"
 
 alias ls="ls --color=auto"
 alias la="ls -A"
