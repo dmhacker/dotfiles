@@ -18,5 +18,4 @@ robbyrussell/oh-my-zsh folder:plugins/nvm
 robbyrussell/oh-my-zsh folder:plugins/vi-mode
 
 # Prompt theme 
-sindresorhus/pure
-# geometry-zsh/geometry
+geometry-zsh/geometry
