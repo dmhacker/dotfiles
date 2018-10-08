@@ -11,15 +11,18 @@ from pathlib import Path
 import serial
 from serial import Serial
 
-DEFAULT_DEVICE = '/dev/ttyS0'
-CRC_FN = crcmod.predefined.mkCrcFun('crc-ccitt-false')
-DEBUG = False
+DEBUG = 0;
 
-def setup_device(port):
+DEFAULT_DEVICE = '/dev/ttyS0'
+DEFAULT_BAUD_RATE = 3000000
+CRC_FN = crcmod.predefined.mkCrcFun('crc-ccitt-false')
+
+
+def setup_device(port, baudrate):
     # definition from DSDT
     return Serial(
         port=port,
-        baudrate=3000000,
+        baudrate=baudrate,
         bytesize=serial.EIGHTBITS,
         parity=serial.PARITY_NONE,
         stopbits=serial.STOPBITS_ONE,
@@ -124,7 +127,7 @@ class Command:
         buf = bytes()
         rem = 0x08                          # begin with header length
         while len(buf) < rem:
-            buf += dev.read(0x0200)
+            buf += dev.read(0x0400)
 
             # if we got a header, validate it
             if rem == 0x08 and len(buf) >= 0x08:
@@ -135,11 +138,13 @@ class Command:
 
                 rem += hdr[3] + 10          # len(payload) + frame + crc
 
-        if DEBUG:
-            print("received: {}".format(buf.hex()))
-
         hdr = buf[0:8]
         msg = buf[8:hdr[3]+10]
+        rem = buf[hdr[3]+10:]
+
+        if DEBUG:
+            print("received: {}".format(hdr.hex()))
+            print("received: {}".format(msg.hex()))
 
         assert msg[0:8] == bytes([0x80, self.rtc, 0x00, 0x01, self.riid, cnt_lo, cnt_hi, self.rcid])
         assert msg[-2:] == bytes(crc(msg[:-2]))
@@ -147,9 +152,48 @@ class Command:
         seq = hdr[5]
         pld = msg[8:-2]
 
-        return seq, pld
+        return seq, pld, rem
+
+    def _read_clean(self, dev, buf=bytes()):
+        buf += dev.read(0x0400)                     # make sure we're not missing some bytes
+
+        while buf:
+            # get header / detect message type
+            if len(buf) >= 0x08:
+                if buf[0:3] == bytes([0xaa, 0x55, 0x40]):               # ACK
+                    while len(buf) < 0x0A:
+                        buf += dev.read(0x0400)
+
+                    if DEBUG:
+                        print("ignored ACK: {}".format(buf[:0x0a].hex()))
+                    buf = bytes(buf[0x0a:])
+
+                elif buf[0:3] == bytes([0xaa, 0x55, 0x80]):             # response
+                    buflen = 0x0a + buf[3]
+                    while len(buf) < buflen:
+                        buf += dev.read(0x0400)
+
+                    if DEBUG:
+                        print("ignored MSG: {}".format(buf[:buflen].hex()))
+                    buf = bytes(buf[buflen:])
+
+                elif buf[0:3] == bytes([0x4e, 0x00, 0x53]):             # control message?
+                    while len(buf) < 0x19:
+                        buf += dev.read(0x0400)
+
+                    if DEBUG:
+                        print("ignored CTRL: {}".format(buf[:0x19].hex()))
+                    buf = bytes(buf[0x19:])
+
+                else:                                                   # unknown
+                    if DEBUG:
+                        print("ignored unknown: {}".format(buf.hex()))
+                    assert False
+
+            buf += dev.read(0x0400)
 
     def run(self, dev, cnt):
+        self._read_clean(dev)
         self._write_msg(dev, cnt.seq, cnt.cnt)
         retry = self._read_ack(dev, cnt.seq)
 
@@ -163,8 +207,9 @@ class Command:
                 return
 
         try:
-            seq, pld = self._read_msg(dev, cnt.cnt)
+            seq, pld, rem = self._read_msg(dev, cnt.cnt)
             self._write_ack(dev, seq)
+            self._read_clean(dev, rem)
         finally:
             cnt.inc()
 
@@ -253,7 +298,6 @@ class PrettyBat:
 
     def run(self, dev, cnt):
         bix = self.bix.run(dev, cnt)
-        dev.reset_input_buffer()
         bst = self.bst.run(dev, cnt)
 
         state = int(bst['State'], 0)
@@ -262,9 +306,22 @@ class PrettyBat:
         full_cap = int(bix['Last Full Charge Capacity'], 0)
         rate = int(bst['Present Rate'], 0)
 
-        bat_state = ['None', 'Discharging', 'Charging'][state]
+        bat_states = {
+            0: 'None',
+            1: 'Discharging',
+            2: 'Charging',
+            4: 'Critical',
+            5: 'Critical (Discharging)',
+            6: 'Critical (Charging)',
+        }
+
+        bat_state = bat_states[state]
         bat_vol = vol / 1000
-        bat_rem_perc = int(rem_cap / full_cap * 100)
+
+        if full_cap <= 0:
+            bat_rem_perc = '<unavailable>'
+        else:
+            bat_rem_perc = "{}%".format(int(rem_cap / full_cap * 100))
 
         if state == 0x00 or rate == 0:
             bat_rem_life = '<unavailable>'
@@ -274,7 +331,7 @@ class PrettyBat:
         return {
             'State': bat_state,
             'Voltage': "{}V".format(bat_vol),
-            'Percentage': "{}%".format(bat_rem_perc),
+            'Percentage': bat_rem_perc,
             'Remaining': bat_rem_life,
             'Current Capacity': rem_cap,
             'Full Capacity': full_cap
@@ -290,6 +347,7 @@ COMMANDS = {
     'bat2._sta': Sta(0x02),
     'bat2._bst': Bst(0x02),
     'bat2._bix': Bix(0x02),
+
     'bat1.pretty': PrettyBat(0x01),
     'bat2.pretty': PrettyBat(0x02),
 }
@@ -298,21 +356,22 @@ COMMANDS = {
 def main():
     cli = ArgumentParser(description='Surface Book 2 / Surface Pro (2017) embedded controller requests.')
     cli.add_argument('-d', '--device', default=DEFAULT_DEVICE, metavar='DEV', help='the UART device')
+    cli.add_argument('-b', '--baud', default=DEFAULT_BAUD_RATE, type=lambda x: int(x, 0), metavar='BAUD', help='the baud rate')
     cli.add_argument('-c', '--cnt', type=lambda x: int(x, 0), help='overwrite CNT')
     cli.add_argument('-s', '--seq', type=lambda x: int(x, 0), help='overwrite SEQ')
 
     args = cli.parse_args()
 
-    dev = setup_device(args.device)
-
-    cmd1 = COMMANDS.get('bat1.pretty')
-    cmd2 = COMMANDS.get('bat2.pretty')
+    dev = setup_device(args.device, args.baud)
 
     cnt = Counters.load()
     if args.seq is not None:
         cnt.seq = args.seq
     if args.cnt is not None:
         cnt.cnt = args.cnt
+
+    cmd1 = COMMANDS.get('bat1.pretty')
+    cmd2 = COMMANDS.get('bat2.pretty')
 
     try:
         res1 = cmd1.run(dev, cnt)
@@ -333,7 +392,6 @@ def main():
                 print("  {0:.0f}%".format(percentage))
     finally:
         cnt.store()
-
 
 if __name__ == '__main__':
     main()
