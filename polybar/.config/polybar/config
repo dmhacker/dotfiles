@@ -165,8 +165,8 @@ unimation-charging-framerate = 650
 [module/battery-tmp]
 type = custom/script
 
-exec = ~/.config/polybar/battery.sh 
-interval = 5
+exec = zsh ~/.config/polybar/battery.sh 
+interval = 15
 
 [module/volume]
 type = internal/volume

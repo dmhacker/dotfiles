@@ -1,2 +1,2 @@
-pkill -9 -f ~/.config/polybar/battery.py
+sh ~/.config/polybar/battery_safeguard.sh &
 python3 ~/.config/polybar/battery.py
