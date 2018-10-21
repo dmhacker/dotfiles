@@ -165,7 +165,7 @@ unimation-charging-framerate = 650
 [module/battery-tmp]
 type = custom/script
 
-exec = python3 ~/.config/polybar/battery.py
+exec = ~/.config/polybar/battery.sh 
 interval = 5
 
 [module/volume]
