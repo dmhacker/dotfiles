@@ -1,6 +1,7 @@
 __pycache__
 *.pyc
 .counters.json
+.battery_error
 
 st/src
 st/pkg
