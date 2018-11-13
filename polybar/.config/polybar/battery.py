@@ -378,7 +378,7 @@ def main():
         res2 = cmd2.run(dev, cnt)
         percentage = (res1['Current Capacity'] + res2['Current Capacity']) / (res1['Full Capacity'] + res2['Full Capacity']) * 100
         if res1['State'] == 'Charging': 
-            print("  {0:.0f}%".format(percentage))
+            print("  {0:.0f}%".format(percentage))
         else:
             if percentage < 10:
                 print("  {0:.0f}%".format(percentage))
