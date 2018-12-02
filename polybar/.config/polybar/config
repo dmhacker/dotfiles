@@ -29,7 +29,7 @@ monitor = "eDP-1"
 locale = en_US.UTF-8
 
 width = 100%
-height = 60
+height = 66 
 border-size = 0
 border-top-size = 0
 border-left-size = 0
@@ -43,12 +43,12 @@ offset-y = 0
 padding-left = 0
 padding-right = 2
 
-font-0 = "Cantarell:style=Regular:pixelsize=22;3"
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=20;3"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=20;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=20;3"
-font-4 = "FontAwesome:style=Regular:pixelsize=20;3"
-font-5 = "Wuncon Siji:style=Regular:pixelsize=20;3"
+font-0 = "Cantarell:style=Regular:pixelsize=23;3"
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=21;3"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=21;3"
+font-3 = "Font Awesome 5 Brands:pixelsize=21;3"
+font-4 = "FontAwesome:style=Regular:pixelsize=21;3"
+font-5 = "Wuncon Siji:style=Regular:pixelsize=21;3"
 dpi = 96
 
 background = ${colors.background}
@@ -124,7 +124,7 @@ interval = 0.5
 label =   %percentage%%
 
 [module/filesystem]
-type = internal/fs
+type = internal/fs 
 interval = 25
 
 mount-0 = /
