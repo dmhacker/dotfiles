@@ -57,7 +57,7 @@ module-margin-left = 6
 module-margin-right = 0
 modules-left = i3
 modules-center = date
-modules-right = cpu filesystem battery-tmp volume wlan eth powermenu
+modules-right = cpu filesystem battery1 battery2 volume wlan eth powermenu
 
 [module/i3]
 type = internal/i3
@@ -131,13 +131,13 @@ mount-0 = /
 
 label-mounted =   %percentage_used%%
 
-[module/battery]
+[module/battery1]
 type = internal/battery
-battery = BAT0
-adapter = AT0
+battery = BAT1
+adapter = ADP1
 full-at = 98
 
-poll-interval = 60
+poll-interval = 5
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
@@ -145,9 +145,6 @@ format-full = <ramp-capacity> <label-full>
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
-format-charging-padding = 3
-format-discharging-padding = 3
-format-full-padding = 3
 
 ramp-capacity-0 = ""
 ramp-capacity-1 = ""
@@ -160,13 +157,35 @@ animation-charging-1 = ""
 animation-charging-2 = ""
 animation-charging-3 = ""
 animation-charging-4 = ""
-unimation-charging-framerate = 650
+animation-charging-framerate = 650
 
-[module/battery-tmp]
-type = custom/script
+[module/battery2]
+type = internal/battery
+battery = BAT2
+adapter = ADP1
+full-at = 98
 
-exec = zsh ~/.config/polybar/battery.sh 
-interval = 15
+poll-interval = 5
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+
+ramp-capacity-0 = ""
+ramp-capacity-1 = ""
+ramp-capacity-2 = ""
+ramp-capacity-3 = ""
+ramp-capacity-4 = ""
+
+animation-charging-0 = ""
+animation-charging-1 = ""
+animation-charging-2 = ""
+animation-charging-3 = ""
+animation-charging-4 = ""
+animation-charging-framerate = 650
 
 [module/volume]
 type = internal/volume
