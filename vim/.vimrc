@@ -1,3 +1,6 @@
+" Increase register buffer size
+set viminfo='50,<1000,s1000
+
 " Use 2 as the default spacing for tabs
 set tabstop=2
 set softtabstop=2
