@@ -16,7 +16,12 @@ background = ${xrdb:background}
 foreground = #EEEEEEEE 
 foreground-alt = #EEEEEEEE
 ;foreground-alt = ${xrdb:color7}
-alert = ${xrdb:color1}
+red = ${xrdb:color1}
+green = ${xrdb:color2}
+yellow = ${xrdb:color3}
+blue = ${xrdb:color4}
+purple = ${xrdb:color5}
+teal = ${xrdb:color6}
 
 [global/wm]
 margin-top = 0
@@ -53,7 +58,7 @@ dpi = 96
 
 background = ${colors.background}
 foreground = ${colors.foreground}
-module-margin-left = 6
+module-margin-left = 0
 module-margin-right = 0
 modules-left = i3
 modules-center = date
@@ -62,7 +67,7 @@ modules-right = cpu filesystem battery1 battery2 volume wlan eth powermenu
 [module/i3]
 type = internal/i3
 
-format = <label-state> <label-mode>
+format = <label-state><label-mode>
 index-sort = true
 enable-click = true
 fuzzy-match = true
@@ -71,31 +76,28 @@ strip-wsnumbers = true
 pin-workspaces = true
 
 label-mode = %mode%
+label-mode-background = ${colors.red}
+label-mode-foreground = ${colors.foreground}
 label-mode-padding = 2
-label-mode-background = ${colors.alert}
 
 label-focused = %icon%
-label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground}
-label-focused-underline = ${colors.foreground-alt}
+label-focused-background = ${colors.yellow}
+label-focused-foreground = ${colors.background}
 label-focused-padding = 2
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.foreground}
-label-unfocused-underline = ${colors.background}
 label-unfocused-padding = 2
 
 label-urgent = %icon%
-label-urgent-background = ${colors.alert}
-label-urgent-foreground = ${colors.foreground-alt}
-label-urgent-underline = ${colors.alert}
+label-urgent-background = ${colors.red}
+label-urgent-foreground = ${colors.foreground}
 label-urgent-padding = 2
 
 label-visible = %icon%
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.foreground}
-label-visible-underline = ${colors.background}
 label-visible-padding = 2
 
 ws-icon-0 = 1;
@@ -121,7 +123,13 @@ label = %date% %time%
 type = internal/cpu
 interval = 0.5
 
+label-margin-left = 3
+label-margin-right = 2
+
 label =   %percentage%%
+
+format-background = ${colors.green}
+format-foreground = ${colors.background}
 
 [module/filesystem]
 type = internal/fs 
@@ -129,7 +137,13 @@ interval = 25
 
 mount-0 = /
 
+label-mounted-margin-left = 2
+label-mounted-margin-right = 3
+
 label-mounted =   %percentage_used%%
+
+format-mounted-background = ${colors.green}
+format-mounted-foreground = ${colors.background}
 
 [module/battery1]
 type = internal/battery
@@ -139,9 +153,22 @@ full-at = 98
 
 poll-interval = 5
 
+ramp-capacity-margin-left = 3
+animation-charging-margin-left = 3
+label-charging-margin-right = 3
+label-discharging-margin-right = 2
+label-full-margin-right = 2
+
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
+format-charging-background = ${colors.teal}
+format-discharging-background = ${colors.teal}
+format-full-background = ${colors.teal}
+format-charging-foreground = ${colors.background}
+format-discharging-foreground = ${colors.background}
+format-full-foreground = ${colors.background}
+
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
@@ -167,9 +194,22 @@ full-at = 98
 
 poll-interval = 5
 
+ramp-capacity-margin-left = 2
+animation-charging-margin-left = 2
+label-charging-margin-right = 3
+label-discharging-margin-right = 3
+label-full-margin-right = 3
+
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
+format-charging-background = ${colors.teal}
+format-discharging-background = ${colors.teal}
+format-full-background = ${colors.teal}
+format-charging-foreground = ${colors.background}
+format-discharging-foreground = ${colors.background}
+format-full-foreground = ${colors.background}
+
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
@@ -190,23 +230,33 @@ animation-charging-framerate = 650
 [module/volume]
 type = internal/volume
 
+ramp-volume-margin-left = 3
+label-volume-margin-right = 3
+format-muted-prefix-margin-left = 3
+label-muted-margin-right = 3
+
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%
 ramp-volume-0 = ""
 ramp-volume-1 = ""
 ramp-volume-2 = ""
 ramp-volume-3 = ""
-label-volume-foreground = ${colors.foreground}
+format-volume-foreground = ${colors.background}
 
 format-muted-prefix = ""
-format-muted-foreground = ${colors.foreground}
+format-muted-foreground = ${colors.background}
 label-muted = "  off"
-label-muted-foreground = ${colors.foreground}
+
+format-volume-background = ${colors.blue}
+format-muted-background = ${colors.blue}
 
 [module/wlan]
 type = internal/network
 interface = wlp1s0
 interval = 3
+
+label-connected-margin-left = 3
+label-connected-margin-right = 3
 
 label-connected = " " 
 
@@ -220,6 +270,9 @@ ramp-signal-4 = ""
 type = internal/network
 interface = enp0s20f0u1u1u3 
 interval = 3
+
+label-connected-margin-left = 3
+label-connected-margin-right = 3
 
 label-connected = " "
 
