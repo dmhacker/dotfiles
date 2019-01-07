@@ -255,8 +255,7 @@ type = internal/network
 interface = wlp1s0
 interval = 3
 
-label-connected-margin-left = 3
-label-connected-margin-right = 3
+label-connected-margin-left = 4
 
 label-connected = " " 
 
@@ -271,8 +270,7 @@ type = internal/network
 interface = enp0s20f0u1u1u3 
 interval = 3
 
-label-connected-margin-left = 3
-label-connected-margin-right = 3
+label-connected-margin-left = 4
 
 label-connected = " "
 
@@ -280,6 +278,9 @@ label-connected = " "
 type = custom/menu
 
 format-spacing = 2
+
+label-open-margin-left = 4
+label-close-margin-left = 4
 
 label-open = ""
 label-close = "" 
