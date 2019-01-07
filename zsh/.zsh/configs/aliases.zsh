@@ -5,6 +5,9 @@ alias zshconfig="vim ~/.zshrc"
 alias zshplugins="vim ~/.zsh_plugins.txt"
 alias zshupdate="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
 
+alias optirun="vblank_mode=0 optirun"
+alias primusrun="vblank_mode=0 primusrun"
+
 alias ls="ls --color=auto"
 alias la="ls -A"
 alias ll="ls -l"
