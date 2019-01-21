@@ -15,3 +15,22 @@ prompt_geometry_git_status() {
     fi
   fi
 }
+
+prompt_geometry_git_remote_check() {
+  local_commit=$(git rev-parse "@" 2>/dev/null)
+  remote_commit=$(git rev-parse "@{u}" 2>/dev/null)
+  remote_branch_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null)
+
+  if [[ $remote_branch_name == "" || $local_commit == "@" || $local_commit == $remote_commit ]]; then
+    echo ""
+  else
+    common_base=$(git merge-base "@" "@{u}" 2>/dev/null) # last common commit
+    if [[ $common_base == $remote_commit ]]; then
+      echo $GEOMETRY_GIT_UNPUSHED
+    elif [[ $common_base == $local_commit ]]; then
+      echo $GEOMETRY_GIT_UNPULLED
+    else
+      echo "$GEOMETRY_GIT_UNPUSHED $GEOMETRY_GIT_UNPULLED"
+    fi
+  fi
+}
