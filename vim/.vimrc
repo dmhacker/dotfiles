@@ -54,6 +54,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
 Plugin 'pangloss/vim-javascript' " JavaScript syntax highlighting
 Plugin 'mxw/vim-jsx' " JSX syntax highlighting
 Plugin 'vim-latex/vim-latex' " LaTeX suite for vim 
+Plugin 'tikhomirov/vim-glsl' " OpenGL highlighting
 
 Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
@@ -78,6 +79,9 @@ let g:lightline = { 'colorscheme': 'base16', }
 
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
+
+" Enable GLSL syntax highlighting
+autocmd! BufNewFile,BufRead *.vert,*.frag,*.geom,*.glsl set ft=glsl
 
 " Enable C++ highlighting
 let g:cpp_class_scope_highlight = 1
