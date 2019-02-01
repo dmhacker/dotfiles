@@ -1,6 +1,3 @@
-" Increase register buffer size
-set viminfo='50,<1000,s1000
-
 " Use 2 as the default spacing for tabs
 set tabstop=2
 set softtabstop=2
@@ -24,6 +21,9 @@ set relativenumber
 
 " Highlight current line
 set cursorline
+
+" Increase register buffer size
+set viminfo='50,<1000,s1000,h
 
 " Remap leader key
 let mapleader=','
