@@ -47,6 +47,7 @@ Plugin 'VundleVim/Vundle.vim' " Vundle package manager
 " http://colorswat.ch/vim/
 Plugin 'chriskempson/base16-vim'
 Plugin 'daviesjamie/vim-base16-lightline'
+" Plugin 'nanotech/jellybeans.vim'
 Plugin 'itchyny/lightline.vim' 
 
 Plugin 'ARM9/arm-syntax-vim' " ARM syntax hightlighting
@@ -72,10 +73,12 @@ set background=dark
 syntax enable 
 set termguicolors
 colorscheme base16-default-dark 
+" colorscheme jellybeans
 
 " Enable lightline status and use colorscheme
 set laststatus=2
 let g:lightline = { 'colorscheme': 'base16', }
+" let g:lightline = { 'colorscheme': 'jellybeans', }
 
 " Enable ARM syntax highlighting
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
