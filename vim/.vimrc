@@ -44,19 +44,18 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " Vundle package manager 
 
+Plugin 'itchyny/lightline.vim' " Responsible for bottom info bar
+
 " http://colorswat.ch/vim/
 " Plugin 'chriskempson/base16-vim'
 Plugin 'danielwe/base16-vim' " Use fork of base16 to fix a:dict issues 
 Plugin 'daviesjamie/vim-base16-lightline'
 " Plugin 'nanotech/jellybeans.vim'
-Plugin 'itchyny/lightline.vim' 
 
-Plugin 'ARM9/arm-syntax-vim' " ARM syntax hightlighting
-Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
-Plugin 'pangloss/vim-javascript' " JavaScript syntax highlighting
-Plugin 'mxw/vim-jsx' " JSX syntax highlighting
 Plugin 'vim-latex/vim-latex' " LaTeX suite for vim 
-Plugin 'tikhomirov/vim-glsl' " OpenGL highlighting
+Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
+Plugin 'pangloss/vim-javascript' " JS syntax highlighting
+Plugin 'mxw/vim-jsx' " JSX syntax highlighting
 Plugin 'nikvdp/ejs-syntax' " EJS file highlighting
 
 Plugin 'tpope/vim-fugitive' " Git integration for vim
@@ -81,12 +80,6 @@ colorscheme base16-default-dark
 set laststatus=2
 let g:lightline = { 'colorscheme': 'base16', }
 " let g:lightline = { 'colorscheme': 'jellybeans', }
-
-" Enable ARM syntax highlighting
-au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
-
-" Enable GLSL syntax highlighting
-autocmd! BufNewFile,BufRead *.vert,*.frag,*.geom,*.glsl set ft=glsl
 
 " Enable EJS highlighting
 autocmd BufNewFile,BufRead *.ejs set filetype=ejs
