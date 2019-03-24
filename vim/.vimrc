@@ -53,12 +53,17 @@ Plugin 'daviesjamie/vim-base16-lightline'
 " Plugin 'nanotech/jellybeans.vim'
 
 Plugin 'vim-latex/vim-latex' " LaTeX suite for vim 
+Plugin 'vim-jp/vim-cpp' " C++ syntax highlighting
 Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
+Plugin 'pboettch/vim-cmake-syntax' " CMake syntax highlighting
 Plugin 'rust-lang/rust.vim' " Rust syntax highlighting
-Plugin 'hdima/python-syntax' " Python syntax highlighting
+Plugin 'vim-python/python-syntax' " Python syntax highlighting
 Plugin 'pangloss/vim-javascript' " JS syntax highlighting
 Plugin 'maxmellon/vim-jsx-pretty' " JSX syntax highlighting
-Plugin 'nikvdp/ejs-syntax' " EJS file highlighting
+Plugin 'elzr/vim-json' " JSON syntax highlighting
+Plugin 'godlygeek/tabular' " Markdown dependency
+Plugin 'plasticboy/vim-markdown' " Markdown file highlighting
+Plugin 'mboughaba/i3config.vim' " i3 config highlighting
 
 Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
@@ -83,18 +88,24 @@ set laststatus=2
 let g:lightline = { 'colorscheme': 'base16', }
 " let g:lightline = { 'colorscheme': 'jellybeans', }
 
-" Enable C++ highlighting
+" C++ highlighting
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let c_no_curly_error=1
 
-" Enable Python highlighting
+" Python highlighting
 let python_highlight_all = 1
 
-" Enable EJS highlighting
-autocmd BufNewFile,BufRead *.ejs set filetype=ejs
+" Markdown highlighting 
+let g:vim_markdown_json_frontmatter = 1
+
+" i3 config highlighting
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+aug end
 
 " Sneak labels which lines to we are looking at 
 let g:sneak#label = 1
