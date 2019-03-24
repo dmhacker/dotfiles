@@ -1,16 +1,13 @@
 " File type, plugin detection  
 filetype plugin indent on
 
-" Use 2 as the default spacing for tabs
+" Set global indenting
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 set shiftround
-
-" Proper indenting
 set autoindent
-set smartindent
 
 " Set line size to be 80 and highlight column at line 80
 " set textwidth=80
