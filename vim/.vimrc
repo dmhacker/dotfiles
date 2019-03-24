@@ -54,6 +54,8 @@ Plugin 'daviesjamie/vim-base16-lightline'
 
 Plugin 'vim-latex/vim-latex' " LaTeX suite for vim 
 Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
+Plugin 'rust-lang/rust.vim' " Rust syntax highlighting
+Plugin 'hdima/python-syntax' " Python syntax highlighting
 Plugin 'pangloss/vim-javascript' " JS syntax highlighting
 Plugin 'maxmellon/vim-jsx-pretty' " JSX syntax highlighting
 Plugin 'nikvdp/ejs-syntax' " EJS file highlighting
@@ -81,15 +83,18 @@ set laststatus=2
 let g:lightline = { 'colorscheme': 'base16', }
 " let g:lightline = { 'colorscheme': 'jellybeans', }
 
-" Enable EJS highlighting
-autocmd BufNewFile,BufRead *.ejs set filetype=ejs
-
 " Enable C++ highlighting
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let c_no_curly_error=1
+
+" Enable Python highlighting
+let python_highlight_all = 1
+
+" Enable EJS highlighting
+autocmd BufNewFile,BufRead *.ejs set filetype=ejs
 
 " Sneak labels which lines to we are looking at 
 let g:sneak#label = 1
