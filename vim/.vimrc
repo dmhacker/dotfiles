@@ -1,3 +1,6 @@
+" File type, plugin detection  
+filetype plugin indent on
+
 " Use 2 as the default spacing for tabs
 set tabstop=2
 set softtabstop=2
@@ -25,6 +28,9 @@ set cursorline
 " Increase register buffer size
 set viminfo='50,<1000,s1000,h
 
+" Fold files using default vim folding unless we get a Python file 
+au BufNewFile,BufRead * if &filetype != "python" | set foldmethod=syntax foldnestmax=10 foldlevel=2 | endif 
+
 " Remap leader key
 let mapleader=','
 
@@ -36,15 +42,19 @@ noremap <C-v> "+p
 inoremap kj <Esc>
 inoremap jk <Esc>
 
-" Vundle magic/plugins begin here
-filetype plugin indent on
+" Navigate autocomplete menu without using arrow keys
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 
+" Vundle magic/plugins begin here
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " Vundle package manager 
 
-Plugin 'itchyny/lightline.vim' " Responsible for bottom info bar
+Plugin 'itchyny/lightline.vim' " Status line at the bottom 
 
 " http://colorswat.ch/vim/
 " Plugin 'chriskempson/base16-vim'
@@ -64,6 +74,9 @@ Plugin 'elzr/vim-json' " JSON syntax highlighting
 Plugin 'godlygeek/tabular' " Markdown dependency
 Plugin 'plasticboy/vim-markdown' " Markdown file highlighting
 Plugin 'mboughaba/i3config.vim' " i3 config highlighting
+
+Plugin 'maralla/completor.vim' " Completion engine (jedi, clang, racer)
+Plugin 'tmhedberg/SimpylFold' " Better Python folding
 
 Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
@@ -107,6 +120,9 @@ aug i3config_ft_detection
   au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
 
+" Preview docstrings for folded code
+let g:SimpylFold_docstring_preview=1
+
 " Sneak labels which lines to we are looking at 
 let g:sneak#label = 1
 
@@ -118,3 +134,4 @@ let g:lastplace_ignore_buftype = "quickfix,nofile,help"
 
 " Set vim-latex to output pdfs by default
 let g:Tex_DefaultTargetFormat = "pdf"
+
