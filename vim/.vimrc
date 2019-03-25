@@ -22,9 +22,6 @@ set nocompatible
 " Enable line numbers on the left hand side
 set relativenumber
 
-" Highlight current line
-set cursorline
-
 " Increase register buffer size
 set viminfo='50,<1000,s1000,h
 
@@ -66,14 +63,16 @@ Plugin 'maxmellon/vim-jsx-pretty' " JSX syntax highlighting
 Plugin 'Valloric/YouCompleteMe' " Fast autocompletion engine
 Plugin 'rdnetto/YCM-Generator' " Generates C-semantic files for projects
 
-Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-syntastic/syntastic' " Code linting, syntax checking
 Plugin 'tmhedberg/SimpylFold' " Better Python folding
 Plugin 'kien/ctrlp.vim' " File search engine 
 
+Plugin 'nathanaelkane/vim-indent-guides' " Add visual indent guides 
 Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
 Plugin 'kshenoy/vim-signature' " Vim marks in the gutter 
 
+Plugin 'wincent/terminus' " Enable mouse, change cursor mode, etc. 
 Plugin 'tpope/vim-surround' " Mappings to edit parentheses, brackets, etc.
 Plugin 'tpope/vim-commentary' " Fast commenting
 Plugin 'justinmk/vim-sneak' " Fast file jumping
@@ -125,6 +124,20 @@ let g:ycm_disable_for_files_larger_than_kb = 5000
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_key_list_select_completion = ['<TAB>', '<C-N>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-P>', '<Up>']
+
+" Linting options
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Indent guide settings
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 3
+let g:indent_guides_guide_size = 1
 
 " Preview docstrings for folded code
 let g:SimpylFold_docstring_preview = 1
