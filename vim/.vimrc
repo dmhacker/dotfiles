@@ -5,12 +5,18 @@ filetype plugin indent on
 set encoding=utf-8
 
 " Set global indenting
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set shiftround
 set autoindent
+
+" Set indenting for frontend development 
+aug fullstack_ft_indenting
+au!
+au BufNewFile,BufRead *.js,*.html,*.css set tabstop=2 softtabstop=2 shiftwidth=2
+aug end
 
 " Set line size to be 80 and highlight column at line 80
 " set textwidth=80
@@ -24,11 +30,6 @@ set relativenumber
 
 " Increase register buffer size
 set viminfo='50,<1000,s1000,h
-
-" Default vim folding (exclude python, latex)
-au BufNewFile,BufRead * 
-      \ if &ft != "python" && &ft != "latex" && &ft != "tex"
-      \ | set foldmethod=syntax foldnestmax=10 foldlevel=2 | endif 
 
 " Remap leader key
 let mapleader=','
@@ -44,7 +45,6 @@ inoremap jk <Esc>
 " Vundle magic/plugins begin here
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim' " Vundle package manager 
 
 Plugin 'itchyny/lightline.vim' " Status line at the bottom 
@@ -60,18 +60,20 @@ Plugin 'sheerun/vim-polyglot' " Syntax highlighting for many languages
 Plugin 'vim-latex/vim-latex' " LaTeX suite 
 Plugin 'maxmellon/vim-jsx-pretty' " JSX syntax highlighting
 
+" IMPORTANT: these require external dependencies to work  
 Plugin 'Valloric/YouCompleteMe' " Fast autocompletion engine
 Plugin 'rdnetto/YCM-Generator' " Generates C-semantic files for projects
+Plugin 'w0rp/ale' " Code linting, syntax checking
+Plugin 'Chiel92/vim-autoformat' " Proper auto-formatting
+Plugin 'majutsushi/tagbar' " Tagbar for viewing functions in file
 
-Plugin 'vim-syntastic/syntastic' " Code linting, syntax checking
-Plugin 'tmhedberg/SimpylFold' " Better Python folding
-Plugin 'kien/ctrlp.vim' " File search engine 
-
+Plugin 'maximbaz/lightline-ale' " Lightline integration for linter 
 Plugin 'nathanaelkane/vim-indent-guides' " Add visual indent guides 
 Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
 Plugin 'kshenoy/vim-signature' " Vim marks in the gutter 
 
+Plugin 'kien/ctrlp.vim' " File search engine 
 Plugin 'wincent/terminus' " Enable mouse, change cursor mode, etc. 
 Plugin 'tpope/vim-surround' " Mappings to edit parentheses, brackets, etc.
 Plugin 'tpope/vim-commentary' " Fast commenting
@@ -91,6 +93,28 @@ colorscheme base16-default-dark
 set laststatus=2
 let g:lightline = { 'colorscheme': 'base16', }
 " let g:lightline = { 'colorscheme': 'jellybeans', }
+let g:lightline.tabline = {
+\   'left': [ ['tabs'] ],
+\   'right': [ ['close'] ]
+\ }
+set showtabline=2  " Show tabline
+set guioptions-=e  " Don't use GUI tabline
+
+" Extend lightline to integrate with ALE
+let g:lightline.component_expand = {
+    \  'linter_checking': 'lightline#ale#checking',
+    \  'linter_warnings': 'lightline#ale#warnings',
+    \  'linter_errors': 'lightline#ale#errors',
+    \  'linter_ok': 'lightline#ale#ok',
+    \ }
+let g:lightline.component_type = {
+    \     'linter_checking': 'left',
+    \     'linter_warnings': 'warning',
+    \     'linter_errors': 'error',
+    \     'linter_ok': 'left',
+    \ }
+let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
+
 " Disable unnecessary language highlighting
 let g:polyglot_disabled = ['jsx']
 
@@ -112,9 +136,15 @@ let g:graphql_javascript_tags = ["gql", "graphql", "Relay.QL"]
 
 " i3config highlighting
 aug i3config_ft_detection
-  au!
-  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+au!
+au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
+
+" Disable default vim indenting
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+nmap <Leader>f :Autoformat<CR>
 
 " Autocompletion options 
 " let g:ycm_use_clangd = 0
@@ -126,21 +156,18 @@ let g:ycm_key_list_select_completion = ['<TAB>', '<C-N>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-P>', '<Up>']
 
 " Linting options
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:ale_completion_enabled = 0
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s'
+let g:ale_lint_delay = 1500
 
 " Indent guide settings
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 3
+let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
-" Preview docstrings for folded code
-let g:SimpylFold_docstring_preview = 1
+" Open tagbar easily 
+nmap <Leader>t :TagbarToggle<CR>
 
 " Sneak labels which lines to we are looking at 
 let g:sneak#label = 1
@@ -153,4 +180,3 @@ let g:lastplace_ignore_buftype = "quickfix,nofile,help"
 
 " Set vim-latex to output pdfs by default
 let g:Tex_DefaultTargetFormat = "pdf"
-
