@@ -1,6 +1,9 @@
 " File type, plugin detection  
 filetype plugin indent on
 
+" Encoding must be UTF-8 on all files for YCM to work 
+set encoding=utf-8
+
 " Set global indenting
 set tabstop=2
 set softtabstop=2
@@ -25,8 +28,10 @@ set cursorline
 " Increase register buffer size
 set viminfo='50,<1000,s1000,h
 
-" Fold files using default vim folding unless we get a Python file 
-au BufNewFile,BufRead * if &filetype != "python" | set foldmethod=syntax foldnestmax=10 foldlevel=2 | endif 
+" Default vim folding (exclude python, latex)
+au BufNewFile,BufRead * 
+      \ if &ft != "python" && &ft != "latex" && &ft != "tex"
+      \ | set foldmethod=syntax foldnestmax=10 foldlevel=2 | endif 
 
 " Remap leader key
 let mapleader=','
@@ -38,12 +43,6 @@ noremap <C-v> "+p
 " Alternative way to get out of normal mode 
 inoremap kj <Esc>
 inoremap jk <Esc>
-
-" Navigate autocomplete menu without using arrow keys
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 
 " Vundle magic/plugins begin here
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -59,21 +58,17 @@ Plugin 'danielwe/base16-vim' " Use fork of base16 to fix a:dict issues
 Plugin 'daviesjamie/vim-base16-lightline'
 " Plugin 'nanotech/jellybeans.vim'
 
-Plugin 'vim-latex/vim-latex' " LaTeX suite for vim 
-Plugin 'vim-jp/vim-cpp' " C++ syntax highlighting
-Plugin 'octol/vim-cpp-enhanced-highlight' " C++ syntax highlighting
-Plugin 'pboettch/vim-cmake-syntax' " CMake syntax highlighting
-Plugin 'rust-lang/rust.vim' " Rust syntax highlighting
-Plugin 'vim-python/python-syntax' " Python syntax highlighting
-Plugin 'pangloss/vim-javascript' " JS syntax highlighting
-Plugin 'maxmellon/vim-jsx-pretty' " JSX syntax highlighting
-Plugin 'elzr/vim-json' " JSON syntax highlighting
 Plugin 'godlygeek/tabular' " Markdown dependency
-Plugin 'plasticboy/vim-markdown' " Markdown file highlighting
-Plugin 'mboughaba/i3config.vim' " i3 config highlighting
+Plugin 'sheerun/vim-polyglot' " Syntax highlighting for many languages 
+Plugin 'vim-latex/vim-latex' " LaTeX suite 
+Plugin 'maxmellon/vim-jsx-pretty' " JSX syntax highlighting
 
-Plugin 'maralla/completor.vim' " Completion engine (jedi, clang, racer)
+Plugin 'Valloric/YouCompleteMe' " Fast autocompletion engine
+Plugin 'rdnetto/YCM-Generator' " Generates C-semantic files for projects
+
+Plugin 'vim-syntastic/syntastic'
 Plugin 'tmhedberg/SimpylFold' " Better Python folding
+Plugin 'kien/ctrlp.vim' " File search engine 
 
 Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
@@ -97,13 +92,15 @@ colorscheme base16-default-dark
 set laststatus=2
 let g:lightline = { 'colorscheme': 'base16', }
 " let g:lightline = { 'colorscheme': 'jellybeans', }
+" Disable unnecessary language highlighting
+let g:polyglot_disabled = ['jsx']
 
 " C++ highlighting
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:cpp_experimental_template_highlight = 1
-let c_no_curly_error=1
+let c_no_curly_error = 1
 
 " Python highlighting
 let python_highlight_all = 1
@@ -111,14 +108,26 @@ let python_highlight_all = 1
 " Markdown highlighting 
 let g:vim_markdown_json_frontmatter = 1
 
-" i3 config highlighting
+" GraphQL highlighting
+let g:graphql_javascript_tags = ["gql", "graphql", "Relay.QL"]
+
+" i3config highlighting
 aug i3config_ft_detection
   au!
   au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
 
+" Autocompletion options 
+" let g:ycm_use_clangd = 0
+let g:ycm_autoclose_preview_window_after_completion = 1 
+let g:ycm_confirm_extra_conf = 0 
+let g:ycm_disable_for_files_larger_than_kb = 5000
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_key_list_select_completion = ['<TAB>', '<C-N>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-P>', '<Up>']
+
 " Preview docstrings for folded code
-let g:SimpylFold_docstring_preview=1
+let g:SimpylFold_docstring_preview = 1
 
 " Sneak labels which lines to we are looking at 
 let g:sneak#label = 1
