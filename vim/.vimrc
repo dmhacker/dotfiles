@@ -15,7 +15,8 @@ set autoindent
 " Set indenting for frontend development 
 aug fullstack_ft_indenting
 au!
-au BufNewFile,BufRead *.js,*.html,*.css set tabstop=2 softtabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.js,*.html,*.css
+            \ set tabstop=2 softtabstop=2 shiftwidth=2
 aug end
 
 " Set line size to be 80 and highlight column at line 80
