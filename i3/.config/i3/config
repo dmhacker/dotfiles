@@ -13,6 +13,9 @@ exec --no-startup-id compton -f -D 6 --xrender-sync --xrender-sync-fence
 # Enable redshift (flux) to remove blue light at night
 exec --no-startup-id redshift -l 32.8473:-117.2742 -t 6500:2700
 
+# Scale external monitor resolution to match HiDPI laptop screen
+exec --no-startup-id xrandr --output DP1 --scale 1.5626x1.5626 --same-as eDP1
+
 # Enable polybar (top status bar - used instead of i3status)
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
@@ -75,6 +78,11 @@ floating_modifier $mod
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+
+# Additional audio controls
+bindsym $mod+plus exec --no-startup-id pactl -- set-sink-volume 0 +5%
+bindsym $mod+minus exec --no-startup-id pactl -- set-sink-volume 0 -5%
+bindsym $mod+backslash exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 2

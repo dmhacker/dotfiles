@@ -30,7 +30,6 @@ fixed-center = true
 override-redirect = true
 
 [bar/top]
-monitor = "eDP-1"
 locale = en_US.UTF-8
 
 width = 100%
@@ -73,7 +72,6 @@ enable-click = true
 fuzzy-match = true
 wrapping-scroll = false
 strip-wsnumbers = true
-pin-workspaces = true
 
 label-mode = %mode%
 label-mode-background = ${colors.red}

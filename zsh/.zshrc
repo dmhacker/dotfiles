@@ -32,6 +32,8 @@ PROMPT_GEOMETRY_GIT_CONFLICTS=true
 # remove these sections from the rprompt 
 PROMPT_GEOMETRY_GIT_TIME=false
 
+GEOMETRY_PROMPT_PLUGINS=(virtualenv exec_time git hg)
+
 # load auto-generated antibody file
 source ~/.zsh_plugins.sh
 
