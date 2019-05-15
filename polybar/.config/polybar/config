@@ -16,6 +16,7 @@ background = ${xrdb:background}
 foreground = #EEEEEEEE 
 foreground-alt = #EEEEEEEE
 ;foreground-alt = ${xrdb:color7}
+gray = ${xrdb:color0}
 red = ${xrdb:color1}
 green = ${xrdb:color2}
 yellow = ${xrdb:color3}
@@ -60,8 +61,7 @@ foreground = ${colors.foreground}
 module-margin-left = 0
 module-margin-right = 0
 modules-left = i3
-modules-center = date
-modules-right = cpu filesystem battery1 battery2 volume wlan eth powermenu
+modules-right = date cpu filesystem battery1 battery2 volume wlan eth powermenu
 
 [module/i3]
 type = internal/i3
@@ -74,40 +74,40 @@ wrapping-scroll = false
 strip-wsnumbers = true
 
 label-mode = %mode%
-label-mode-background = ${colors.red}
+label-mode-background = ${colors.gray}
 label-mode-foreground = ${colors.foreground}
-label-mode-padding = 2
+label-mode-padding = 5
 
 label-focused = %icon%
-label-focused-background = ${colors.yellow}
+label-focused-background = ${colors.red}
 label-focused-foreground = ${colors.background}
-label-focused-padding = 2
+label-focused-padding = 5
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.foreground}
-label-unfocused-padding = 2
+label-unfocused-padding = 5
 
 label-urgent = %icon%
-label-urgent-background = ${colors.red}
+label-urgent-background = ${colors.gray}
 label-urgent-foreground = ${colors.foreground}
-label-urgent-padding = 2
+label-urgent-padding = 5
 
 label-visible = %icon%
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.foreground}
-label-visible-padding = 2
+label-visible-padding = 5
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
-ws-icon-3 = 4;
+ws-icon-3 = 4;
 ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 0;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 0;
 
 [module/date]
 type = internal/date
@@ -116,6 +116,12 @@ interval = 1
 date = "%m/%d/%Y"
 time = " %I:%M %p"
 label = %date% %time%
+
+label-margin-left = 3
+label-margin-right = 3
+
+format-foreground = ${colors.background}
+format-background = ${colors.yellow}
 
 [module/cpu]
 type = internal/cpu
@@ -160,9 +166,9 @@ label-full-margin-right = 2
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
-format-charging-background = ${colors.teal}
-format-discharging-background = ${colors.teal}
-format-full-background = ${colors.teal}
+format-charging-background = ${colors.blue}
+format-discharging-background = ${colors.blue}
+format-full-background = ${colors.blue}
 format-charging-foreground = ${colors.background}
 format-discharging-foreground = ${colors.background}
 format-full-foreground = ${colors.background}
@@ -201,9 +207,9 @@ label-full-margin-right = 3
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
-format-charging-background = ${colors.teal}
-format-discharging-background = ${colors.teal}
-format-full-background = ${colors.teal}
+format-charging-background = ${colors.blue}
+format-discharging-background = ${colors.blue}
+format-full-background = ${colors.blue}
 format-charging-foreground = ${colors.background}
 format-discharging-foreground = ${colors.background}
 format-full-foreground = ${colors.background}
@@ -245,8 +251,8 @@ format-muted-prefix = ""
 format-muted-foreground = ${colors.background}
 label-muted = "  off"
 
-format-volume-background = ${colors.blue}
-format-muted-background = ${colors.blue}
+format-volume-background = ${colors.purple}
+format-muted-background = ${colors.purple}
 
 [module/wlan]
 type = internal/network
@@ -270,7 +276,7 @@ interval = 3
 
 label-connected-margin-left = 4
 
-label-connected = " "
+label-connected = " "
 
 [module/powermenu]
 type = custom/menu

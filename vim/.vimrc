@@ -51,10 +51,7 @@ Plugin 'VundleVim/Vundle.vim' " Vundle package manager
 Plugin 'itchyny/lightline.vim' " Status line at the bottom 
 
 " http://colorswat.ch/vim/
-" Plugin 'chriskempson/base16-vim'
-Plugin 'danielwe/base16-vim' " Use fork of base16 to fix a:dict issues 
-Plugin 'daviesjamie/vim-base16-lightline'
-" Plugin 'nanotech/jellybeans.vim'
+Plugin 'ajh17/Spacegray.vim' " Spacegray colorscheme
 
 Plugin 'godlygeek/tabular' " Markdown dependency
 Plugin 'sheerun/vim-polyglot' " Syntax highlighting for many languages 
@@ -83,17 +80,42 @@ Plugin 'dietsche/vim-lastplace' " Saves last edit line for a file
 
 call vundle#end()
 
+" Spacegray colorscheme for lightline courtesy of rigaspapas
+let s:yellow  = [ '#e8a96e', 0 ]
+let s:red     = [ '#bf6162', 1 ]
+let s:blue    = [ '#789aad', 2 ]
+let s:green   = [ '#a1a464', 3 ]
+let s:gray0 = [ '#111314', 4 ]
+let s:gray1 = [ '#393d42', 5 ]
+let s:gray2 = [ '#5d6269', 6 ]
+let s:gray3 = [ '#b3b8c4', 7 ]
+let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
+let s:p.normal.left = [ [ s:gray0, s:green ], [ s:gray3, s:gray2 ] ]
+let s:p.normal.middle = [ [ s:gray3, s:gray1 ] ]
+let s:p.normal.right = [ [ s:gray0, s:gray3 ], [ s:gray3, s:gray2 ] ]
+let s:p.normal.error = [ [ s:gray0, s:red ] ]
+let s:p.normal.warning = [ [ s:gray0, s:yellow ] ]
+let s:p.inactive.left =  [ [ s:gray3, s:gray2 ], [ s:gray3, s:gray2 ] ]
+let s:p.inactive.middle = [ [ s:gray3, s:gray1 ] ]
+let s:p.inactive.right = [ [ s:gray0, s:gray3 ], [ s:gray3, s:gray2 ] ]
+let s:p.insert.left = [ [ s:gray0, s:blue ], [ s:gray3, s:gray2 ] ]
+let s:p.replace.left = [ [ s:gray0, s:red ], [ s:gray3, s:gray2 ] ]
+let s:p.visual.left = [ [ s:gray0, s:yellow ], [ s:gray3, s:gray2 ] ]
+let s:p.tabline.left = [ [ s:gray2, s:gray1] ]
+let s:p.tabline.tabsel = [ [ s:gray3, s:gray2 ] ]
+let s:p.tabline.middle = [ [ s:gray2, s:gray1] ]
+let s:p.tabline.right = [ [ s:gray0, s:gray3 ] ]
+let g:lightline#colorscheme#spacegray#palette = lightline#colorscheme#flatten(s:p)
+
 " Enable syntax highlighting and use colorscheme
 set background=dark
 syntax enable 
 set termguicolors
-colorscheme base16-default-dark 
-" colorscheme jellybeans
+colorscheme spacegray 
 
 " Enable lightline status and use colorscheme
 set laststatus=2
-let g:lightline = { 'colorscheme': 'base16', }
-" let g:lightline = { 'colorscheme': 'jellybeans', }
+let g:lightline = { 'colorscheme': 'spacegray', }
 let g:lightline.tabline = {
 \   'left': [ ['tabs'] ],
 \   'right': [ ['close'] ]

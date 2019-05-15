@@ -20,7 +20,7 @@ exec --no-startup-id xrandr --output DP1 --scale 1.5626x1.5626 --same-as eDP1
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display wallpaper
-exec_always --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/mist.jpg
+exec_always --no-startup-id feh --bg-fill ~/.dotfiles/wallpapers/spacex.jpg
 
 # Miscellaneous settings for windows
 font pango:Cantarell 12, FontAwesome 12
