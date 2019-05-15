@@ -74,27 +74,27 @@ strip-wsnumbers = true
 label-mode = %mode%
 label-mode-background = ${colors.gray}
 label-mode-foreground = ${colors.foreground}
-label-mode-padding = 5
+label-mode-padding = 6
 
 label-focused = %icon%
 label-focused-background = ${colors.red}
 label-focused-foreground = ${colors.background}
-label-focused-padding = 5
+label-focused-padding = 6
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.foreground}
-label-unfocused-padding = 5
+label-unfocused-padding = 6
 
 label-urgent = %icon%
 label-urgent-background = ${colors.gray}
 label-urgent-foreground = ${colors.foreground}
-label-urgent-padding = 5
+label-urgent-padding = 6
 
 label-visible = %icon%
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.foreground}
-label-visible-padding = 5
+label-visible-padding = 6
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
@@ -142,7 +142,7 @@ mount-0 = /
 label-mounted-margin-left = 2
 label-mounted-margin-right = 3
 
-label-mounted =   %percentage_used%%
+label-mounted =   %used%
 
 format-mounted-background = ${colors.green}
 format-mounted-foreground = ${colors.background}
