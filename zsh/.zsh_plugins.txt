@@ -19,3 +19,4 @@ robbyrussell/oh-my-zsh path:plugins/vi-mode/vi-mode.plugin.zsh
 
 # Prompt theme 
 sindresorhus/pure
+# geometry-zsh/geometry
