@@ -26,8 +26,7 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-ColorCursor=#d8d8d8d8d8d8
-ColorForeground=#d8d8d8d8d8d8
-ColorBackground=#181818181818
-ColorPalette=#181818181818;#abab46464242;#a1a1b5b56c6c;#f7f7caca8888;#7c7cafafc2c2;#baba8b8bafaf;#8686c1c1b9b9;#d8d8d8d8d8d8;#585858585858;#abab46464242;#a1a1b5b56c6c;#f7f7caca8888;#7c7cafafc2c2;#baba8b8bafaf;#8686c1c1b9b9;#f8f8f8f8f8f8
-
+ColorCursor=#b3b3b8b8c4c4
+ColorForeground=#b3b3b8b8c4c4
+ColorBackground=#111113131414
+ColorPalette=#3a3a3e3e4242;#bfbf62626262;#a2a2a5a56565;#e9e9a9a96f6f;#78789b9badad;#9f9f7a7aa5a5;#63638e8e8a8a;#737376767373;#5d5d63636969;#bfbf62626262;#a5a5a7a76e6e;#e9e9a9a96f6f;#78789b9badad;#9f9f7a7aa5a5;#63638e8e8a8a;#e3e3e8e8e3e3
