@@ -9,6 +9,7 @@
 # Author: David Hacker <dmhacker@protonmail.com>
 
 ZSHHOME="${ZSHHOME:-$HOME}"
+ANTIBODY="${ANTIBODY:-antibody}"
 
 # load autocompletion system
 autoload -Uz compinit

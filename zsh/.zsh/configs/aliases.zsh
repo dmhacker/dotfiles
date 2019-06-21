@@ -4,7 +4,7 @@ alias viminstall="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/b
 
 alias zshconfig="vim ~/.zshrc"
 alias zshplugins="vim ~/.zsh_plugins.txt"
-alias zshupdate="/home/dhacker1/antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
+alias zshupdate="$ANTIBODY bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
 
 alias venvrun="source venv/bin/activate"
 
