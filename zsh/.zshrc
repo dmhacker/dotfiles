@@ -26,10 +26,3 @@ local_zshrc="$ZSHHOME/.zshrc.local"
 if [[ -f $local_zshrc ]]; then
   source $local_zshrc
 fi
-
-if [[ $ZSHHOME != $HOME ]]; then
-    user_local_zshrc="$HOME/.zshrc.local"
-    if [[ -f $user_local_zshrc ]]; then
-        source $user_local_zshrc
-    fi
-fi
