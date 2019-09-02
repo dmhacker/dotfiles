@@ -14,8 +14,8 @@ alias surfaceverify="sbverify --cert ~/.secboot/mok/MOK.crt /boot/vmlinuz-linux-
 alias optirun="vblank_mode=0 optirun"
 alias primusrun="vblank_mode=0 primusrun"
 
-alias dkkillall="docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)"
-alias dksysprune="docker system prune"
+alias dkrclean="docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)"
+alias dkrprune="docker system prune"
 
 alias ls="ls --color=auto"
 alias la="ls -A"
