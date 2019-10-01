@@ -32,8 +32,9 @@ set relativenumber
 " Increase register buffer size
 set viminfo='50,<1000,s1000,h
 
-" Remap leader key
+" Remap leader keys
 let mapleader=','
+let maplocalleader=';'
 
 " Remap copy and paste registers
 vnoremap <C-c> "+y
@@ -55,7 +56,7 @@ Plugin 'ajh17/Spacegray.vim' " Spacegray colorscheme
 
 Plugin 'godlygeek/tabular' " Markdown dependency
 Plugin 'sheerun/vim-polyglot' " Syntax highlighting for many languages 
-Plugin 'vim-latex/vim-latex' " LaTeX suite 
+Plugin 'lervag/vimtex' " LaTeX suite 
 Plugin 'maxmellon/vim-jsx-pretty' " JSX syntax highlighting
 
 " IMPORTANT: these require external dependencies to work  
@@ -139,7 +140,7 @@ let g:lightline.component_type = {
 let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
 
 " Disable unnecessary language highlighting
-let g:polyglot_disabled = ['jsx']
+let g:polyglot_disabled = ['jsx', 'latex']
 
 " C++ highlighting
 let g:cpp_class_scope_highlight = 1
@@ -201,5 +202,7 @@ let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 " Set buffer types to ignore for vim-lastplace
 let g:lastplace_ignore_buftype = "quickfix,nofile,help"
 
-" Set vim-latex to output pdfs by default
-let g:Tex_DefaultTargetFormat = "pdf"
+" Set vimtex to use my viewer and compiler of choice
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_method = 'arara'
