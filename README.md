@@ -1,6 +1,6 @@
 # dotfiles
 
-<a><img src="https://raw.githubusercontent.com/dmhacker/dankfiles/master/screenshot.jpg" align="center"></a>
+<a><img src="https://raw.githubusercontent.com/dmhacker/dotfiles/master/screenshot.jpg" align="center"></a>
 
 **Configuration files for my main workstation.** I'm running Arch Linux on a 13" Surface Book 2.
 
@@ -21,7 +21,8 @@
 * [vundle](https://github.com/VundleVim/Vundle.vim) <sub>vim package manager</sub>
 * [shadowfox-updater](https://github.com/overdodactyl/ShadowFox) <sub>completely dark UI for Firefox</sub>
 * [antibody](https://github.com/getantibody/antibody) <sub>plugin manager for zsh</sub>
-* [geometry](https://github.com/geometry-zsh/geometry) <sub>minimal, fast, customizable zsh prompt</sub>
+* [pure](https://github.com/sindresorhus/pure) <sub>minimal, fast, customizable zsh prompt</sub>
+
 
 ## Credits
 
