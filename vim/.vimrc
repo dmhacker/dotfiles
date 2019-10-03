@@ -205,4 +205,4 @@ let g:lastplace_ignore_buftype = "quickfix,nofile,help"
 " Set vimtex to use my viewer and compiler of choice
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
-let g:vimtex_compiler_method = 'arara'
+let g:vimtex_compiler_method = 'latexrun'
