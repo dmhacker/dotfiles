@@ -142,6 +142,7 @@ bindsym $mod+f fullscreen toggle
 
 # Take screenshot
 bindsym $mod+p exec import -window root ~/Pictures/screenshot.jpg
+bindsym $mod+Shift+p exec flameshot gui
 
 # Kill focused window
 bindsym $mod+Shift+q kill
