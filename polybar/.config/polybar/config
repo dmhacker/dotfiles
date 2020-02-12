@@ -30,9 +30,10 @@ margin-bottom = 0
 fixed-center = true
 override-redirect = true
 
-[bar/top]
+[bar/main]
 locale = en_US.UTF-8
 
+bottom = true
 width = 100%
 height = 55
 border-size = 0
@@ -59,7 +60,7 @@ foreground = ${colors.foreground}
 module-margin-left = 0
 module-margin-right = 0
 modules-left = i3
-modules-right = date cpu filesystem battery1 battery2 volume wlan eth powermenu
+modules-right = date cpu memory filesystem battery1 battery2 volume wlan eth powermenu
 
 [module/i3]
 type = internal/i3
@@ -113,7 +114,7 @@ interval = 1
 
 date = " %m/%d/%Y"
 time = " %I:%M %p"
-label = %date%    %time%
+label = %date%   %time%
 
 label-margin-left = 3
 label-margin-right = 3
@@ -123,12 +124,24 @@ format-background = ${colors.yellow}
 
 [module/cpu]
 type = internal/cpu
-interval = 0.5
+interval = 1
 
 label-margin-left = 3
-label-margin-right = 2
+label-margin-right = 0
 
 label =   %percentage%%
+
+format-background = ${colors.green}
+format-foreground = ${colors.background}
+
+[module/memory]
+type = internal/memory
+interval = 3
+
+label-margin-left = 3
+label-margin-right = 0
+
+label =   %gb_used%
 
 format-background = ${colors.green}
 format-foreground = ${colors.background}
@@ -139,7 +152,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted-margin-left = 2
+label-mounted-margin-left = 3
 label-mounted-margin-right = 3
 
 label-mounted =   %used%
@@ -157,9 +170,9 @@ poll-interval = 5
 
 ramp-capacity-margin-left = 3
 animation-charging-margin-left = 3
-label-charging-margin-right = 3
-label-discharging-margin-right = 2
-label-full-margin-right = 2
+label-charging-margin-right = 0
+label-discharging-margin-right = 0
+label-full-margin-right = 0
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
@@ -196,8 +209,8 @@ full-at = 98
 
 poll-interval = 5
 
-ramp-capacity-margin-left = 2
-animation-charging-margin-left = 2
+ramp-capacity-margin-left = 3
+animation-charging-margin-left = 3
 label-charging-margin-right = 3
 label-discharging-margin-right = 3
 label-full-margin-right = 3
