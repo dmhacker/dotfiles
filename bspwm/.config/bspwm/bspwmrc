@@ -4,13 +4,14 @@
 
 killall -q sxhkd
 killall -q polybar 
+killall -q picom 
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Spawn new processes
 
 sxhkd &
 start-pulseaudio-x11
-picom --xrender-sync --xrender-sync-fence &
+picom -f -D 0 --xrender-sync --xrender-sync-fence &
 polybar main &
 feh --bg-fill ~/.dotfiles/wallpapers/akira.jpg &
 
