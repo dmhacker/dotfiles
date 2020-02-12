@@ -83,6 +83,10 @@ super + y
 super + g
 	bspc node -s biggest
 
+# rotate the desktop
+super + r
+    bspc node @/ -R 90
+
 #
 # state/flags
 #
