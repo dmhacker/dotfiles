@@ -11,6 +11,7 @@
 * [st](https://st.suckless.org/) <sub>terminal emulator</sub>
 * [glitchlock](https://github.com/xero/glitchlock/) <sub>screen locking mechanism</sub>
 * [polybar](https://github.com/jaagr/polybar) <sub>improved status bar</sub>
+* [picom](https://github.com/yshui/picom) <sub>window compositor</sub>
 * [rofi](https://github.com/DaveDavenport/rofi) <sub>replacement for dmenu</sub>
 * [ranger](https://github.com/ranger/ranger) <sub>file manager with vim-like bindings</sub>
 * [zathura](https://git.pwmt.org/pwmt/zathura-pdf-mupdf) <sub>PDF viewer with vim-like bindings</sub>
