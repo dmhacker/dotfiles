@@ -26,9 +26,6 @@ aug end
 " Disable turning off vim and defaulting to vi
 set nocompatible
 
-" Enable line numbers on the left hand side
-set relativenumber
-
 " Increase register buffer size
 set viminfo='50,<1000,s1000,h
 
@@ -71,6 +68,7 @@ Plugin 'nathanaelkane/vim-indent-guides' " Add visual indent guides
 Plugin 'tpope/vim-fugitive' " Git integration for vim
 Plugin 'airblade/vim-gitgutter' " Git marks in the gutter 
 Plugin 'kshenoy/vim-signature' " Vim marks in the gutter 
+Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Hybrid mode for numbers
 
 Plugin 'kien/ctrlp.vim' " File search engine 
 Plugin 'wincent/terminus' " Enable mouse, change cursor mode, etc. 
@@ -206,3 +204,10 @@ let g:lastplace_ignore_buftype = "quickfix,nofile,help"
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_method = 'latexrun'
+
+" Enable hybrid mode for vim line numbres
+set number relativenumber
+
+" Bold current line number
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+se cursorline

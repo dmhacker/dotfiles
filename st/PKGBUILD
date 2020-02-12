@@ -13,16 +13,18 @@ url="http://st.suckless.org"
 patches=("https://st.suckless.org/patches/scrollback/st-scrollback-0.8.1.diff"
          "https://st.suckless.org/patches/scrollback/st-scrollback-mouse-0.8.diff"
          "https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-0.8.diff"
-         "https://st.suckless.org/patches/anysize/st-anysize-0.8.1.diff")
+         "https://st.suckless.org/patches/anysize/st-anysize-0.8.1.diff"
+         "https://st.suckless.org/patches/rightclickpaste/st-rightclickpaste-0.8.2.diff")
 source=("http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz"
         "config.h"
         "${patches[@]}")
 sha256sums=('c4fb0fe2b8d2d3bd5e72763e80a8ae05b7d44dbac8f8e3bb18ef0161c7266926'
-            '312ac6d827fe7365746f9f6ff1041df12cd0bc6a004676b1356d471cea991bb6'
+            'SKIP'
             'ddc26e8e6dcce1a51f8aa8ed33072afcf4ff2d20f64ea24d96409479e86e8750'
             '3fb38940cc3bad3f9cd1e2a0796ebd0e48950a07860ecf8523a5afd0cd1b5a44'
             'bcfc106089d9eb75aa014d4915ed3e6842f1df54edd8b75597154096333df6fa'
-            '8118dbc50d2fe07ae10958c65366476d5992684a87a431f7ee772e27d5dee50f')
+            '8118dbc50d2fe07ae10958c65366476d5992684a87a431f7ee772e27d5dee50f'
+            'SKIP')
 
 prepare() {
   cd $srcdir/$pkgname-$pkgver
@@ -32,13 +34,8 @@ prepare() {
 
   cp $srcdir/config.h config.h
 
-  # rename all occurences of config.def.h to config.h in patch files
-  sed -i 's/config.def.h/config.h/g' "$srcdir/$(basename ${patches[0]})"
-  sed -i 's/config.def.h/config.h/g' "$srcdir/$(basename ${patches[1]})"
-  sed -i 's/config.def.h/config.h/g' "$srcdir/$(basename ${patches[2]})"
-
   for patch in "${patches[@]}"; do
-    echo "Applying $patch ..."
+    sed -i 's/config.def.h/config.h/g' "$srcdir/$(basename $patch)"
     patch -Np1 -i "$srcdir/$(basename $patch)"
   done
 }
