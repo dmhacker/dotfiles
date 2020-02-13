@@ -11,6 +11,9 @@
 ZSHHOME="${ZSHHOME:-$HOME}"
 ANTIBODY="${ANTIBODY:-antibody}"
 
+# update prompt formatting
+PURE_PROMPT_PATH_FORMATTING="%2d"
+
 # load autocompletion system
 autoload -Uz compinit
 compinit -u
