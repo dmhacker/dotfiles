@@ -20,10 +20,10 @@ super + shift + x
 
 # take screenshot
 super + p
-    import -window root ~/Pictures/screenshot.jpg
+    flameshot gui
 
 super + shift + p
-    flameshot gui
+    import -window root ~/Pictures/screenshot.jpg
 
 # make sxhkd reload its configuration files:
 super + Escape
