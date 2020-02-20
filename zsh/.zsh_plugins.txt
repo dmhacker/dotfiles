@@ -19,4 +19,3 @@ robbyrussell/oh-my-zsh path:plugins/fzf/fzf.plugin.zsh
 
 # Prompt theme 
 sindresorhus/pure
-dfurnes/purer

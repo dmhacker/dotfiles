@@ -87,6 +87,10 @@ super + g
 super + r
     bspc node @/ -R 90
 
+# change floating/tiling mode of window
+super + Tab
+    bspc window focused -f next
+
 #
 # state/flags
 #
