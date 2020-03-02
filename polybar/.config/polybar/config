@@ -33,7 +33,7 @@ override-redirect = true
 [bar/main]
 locale = en_US.UTF-8
 
-bottom = true
+; bottom = true
 width = 100%
 height = 55
 border-size = 0

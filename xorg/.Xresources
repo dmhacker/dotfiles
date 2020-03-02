@@ -1,36 +1,44 @@
-! special
-*.foreground:   #b3b8c4
-*.background:   #111314
-*.cursorColor:  #b3b8c4
-
-! black
-*.color0:       #3a3e42
-*.color8:       #5d6369
-
-! red
-*.color1:       #bf6262
-*.color9:       #bf6262
-
-! green
-*.color2:       #a2a565
-*.color10:      #a5a76e
-
-! yellow
-*.color3:       #e9a96f
-*.color11:      #e9a96f
-
-! blue
-*.color4:       #789bad
-*.color12:      #789bad
-
-! magenta
-*.color5:       #9f7aa5
-*.color13:      #9f7aa5
-
-! cyan
-*.color6:       #638e8a
-*.color14:      #638e8a
-
-! white
-*.color7:       #737673
-*.color15:      #e3e8e3
+!
+! Generated with :
+! XRDB2Xreources.py
+!
+*.foreground:  #8f93a2
+*.background:  #0f111a
+*.cursorColor: #ffcc00
+!
+! Black
+*.color0:      #546e7a
+*.color8:      #546e7a
+!
+! Red
+*.color1:      #ff5370
+*.color9:      #ff5370
+!
+! Green
+*.color2:      #c3e88d
+*.color10:     #c3e88d
+!
+! Yellow
+*.color3:      #ffcb6b
+*.color11:     #ffcb6b
+!
+! Blue
+*.color4:      #82aaff
+*.color12:     #82aaff
+!
+! Magenta
+*.color5:      #c792ea
+*.color13:     #c792ea
+!
+! Cyan
+*.color6:      #89ddff
+*.color14:     #89ddff
+!
+! White
+*.color7:      #ffffff
+*.color15:     #ffffff
+!
+! Bold, Italic, Underline
+*.colorBD:     #8f93a2
+!*.colorIT:
+!*.colorUL:

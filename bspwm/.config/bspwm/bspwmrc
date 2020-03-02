@@ -13,7 +13,7 @@ sxhkd &
 start-pulseaudio-x11
 picom -f -D 0 --xrender-sync --xrender-sync-fence &
 polybar main &
-feh --bg-fill ~/.dotfiles/wallpapers/akira.jpg &
+feh --bg-fill ~/.dotfiles/wallpapers/blade_runner.jpg &
 
 # X configuration
 
