@@ -1,12 +1,12 @@
 [Configuration]
-FontName=SauceCodePro Nerd Font 11
+FontName=Source Code Pro 11
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
 MiscBordersDefault=TRUE
 MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
-MiscDefaultGeometry=80x24
+MiscDefaultGeometry=120x40
 MiscInheritGeometry=FALSE
 MiscMenubarDefault=FALSE
 MiscMouseAutohide=FALSE
@@ -26,7 +26,10 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-ColorCursor=#b3b3b8b8c4c4
-ColorForeground=#b3b3b8b8c4c4
-ColorBackground=#111113131414
-ColorPalette=#3a3a3e3e4242;#bfbf62626262;#a2a2a5a56565;#e9e9a9a96f6f;#78789b9badad;#9f9f7a7aa5a5;#63638e8e8a8a;#737376767373;#5d5d63636969;#bfbf62626262;#a5a5a7a76e6e;#e9e9a9a96f6f;#78789b9badad;#9f9f7a7aa5a5;#63638e8e8a8a;#e3e3e8e8e3e3
+ColorCursor=#8f8f9393a2a2
+ColorForeground=#8f8f9393a2a2
+ColorBackground=#0f0f11111a1a
+ColorPalette=#54546e6e7a7a;#ffff53537070;#c3c3e8e88d8d;#ffffcbcb6b6b;#8282aaaaffff;#c7c79292eaea;#8989ddddffff;#ffffffffffff;#54546e6e7a7a;#ffff53537070;#c3c3e8e88d8d;#ffffcbcb6b6b;#8282aaaaffff;#c7c79292eaea;#8989ddddffff;#ffffffffffff
+MiscSearchDialogOpacity=100
+MiscShowUnsafePasteDialog=TRUE
+
