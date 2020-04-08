@@ -11,6 +11,10 @@
 ZSHHOME="${ZSHHOME:-$HOME}"
 ANTIBODY="${ANTIBODY:-antibody}"
 
+# fixes some errors from importing oh-my-zsh snippets
+DISABLE_AUTO_UPDATE=true
+ZSH="${HOME}/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+
 # update prompt formatting
 PURE_PROMPT_PATH_FORMATTING="%2d"
 
