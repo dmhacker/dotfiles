@@ -55,7 +55,6 @@ Plugin 'godlygeek/tabular' " Markdown dependency
 Plugin 'sheerun/vim-polyglot' " Syntax highlighting for many languages 
 Plugin 'lervag/vimtex' " LaTeX suite 
 Plugin 'maxmellon/vim-jsx-pretty' " JSX syntax highlighting
-Plugin 'bfrg/vim-cuda-syntax' " CUDA syntax highlighting
 
 " IMPORTANT: these require external dependencies to work  
 Plugin 'Valloric/YouCompleteMe' " Fast autocompletion engine
@@ -137,12 +136,6 @@ aug i3config_ft_detection
 au!
 au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
-
-" CUDA highlighting
-let g:cuda_runtime_api_highlight = 1
-let g:cuda_driver_api_highlight = 1
-let g:cuda_thrust_highlight = 1
-let g:cuda_no_kernel_highlight = 1
 
 " Disable default vim indenting
 let g:autoformat_autoindent = 0
