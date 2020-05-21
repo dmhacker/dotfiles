@@ -36,11 +36,12 @@ export LS_COLORS='no=00;37:fi=01;34:rs=00;37:di=00;34:ln=00;36:mh=00;37:pi=40;33
 ############# ALIASES ############# 
 
 alias vimconfig="vim ~/.vimrc"
-alias vimupdate="vim +PluginInstall +qall"
 alias viminstall="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vimupdate"
+alias vimupdate="vim +PluginInstall +qall"
 
 alias zshconfig="vim ~/.zshrc"
 alias zshinstall='sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"'
+alias zshupdate="zinit self-update; zinit update --all --parallel"
 
 alias venvrun="source venv/bin/activate"
 
