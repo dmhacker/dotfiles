@@ -53,7 +53,6 @@ alias viminstall="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/b
 alias vimupdate="vim +PluginInstall +qall"
 
 alias zshconfig="vim ~/.zshrc"
-alias zshinstall='sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"'
 alias zshupdate="zinit self-update; zinit update --all --parallel"
 
 alias venvrun="source venv/bin/activate"
