@@ -35,7 +35,7 @@ export LS_COLORS='no=00;37:fi=01;34:rs=00;37:di=00;34:ln=00;36:mh=00;37:pi=40;33
 
 # History setup taken from oh-my-zsh's library
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
-HISTSIZE=50000
+HISTSIZE=10000
 SAVEHIST=10000
 setopt extended_history       # record timestamp of command in HISTFILE
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
