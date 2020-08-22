@@ -70,7 +70,7 @@ alias lla="ls -lA"
 
 bindkey -v
 
-zinit ice pick"async.zsh" src"pure.zsh"
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
 # Selectively loading the fzf plugin fixes an OMZ warning message
