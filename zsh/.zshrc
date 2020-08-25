@@ -69,6 +69,9 @@ alias lla="ls -lA"
 ############# PLUGINS ############# 
 
 bindkey -v
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey -M viins 'jk' vi-cmd-mode
 
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
