@@ -30,10 +30,42 @@ margin-bottom = 0
 fixed-center = true
 override-redirect = true
 
-[bar/main]
+[bar/top_edp1]
 locale = en_US.UTF-8
 
-; bottom = true
+monitor = eDP1
+width = 100%
+height = 50
+border-size = 0
+border-top-size = 0
+border-left-size = 0
+border-right-size = 0
+border-bottom-size = 0
+radius = 0
+line-size = 2
+spacing = 1
+offset-x = 0
+offset-y = 0
+padding-left = 0
+padding-right = 2
+
+font-0 = "Source Sans Pro:style=Regular:pixelsize=22;3"
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=20;3"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=20;3"
+font-3 = "Font Awesome 5 Brands:pixelsize=20;3"
+dpi = 96
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+module-margin-left = 0
+module-margin-right = 0
+modules-left = bspwm
+modules-right = date cpu memory filesystem battery1 battery2 volume wlan eth powermenu
+
+[bar/top_dp1]
+locale = en_US.UTF-8
+
+monitor = DP1
 width = 100%
 height = 50
 border-size = 0

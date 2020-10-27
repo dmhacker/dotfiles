@@ -1,6 +1,9 @@
 #!/bin/sh
 
-# Old process removal
+# Set up monitors
+
+large_monitor_line=$(xrandr --query | grep -e '^DP1')
+
 
 killall -q sxhkd
 killall -q polybar 
@@ -9,20 +12,27 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Spawn new processes
 
-sxhkd &
 start-pulseaudio-x11
 picom -f -D 0 --xrender-sync --xrender-sync-fence &
-polybar main &
 feh --bg-fill ~/.dotfiles/wallpapers/blade_runner.jpg &
 
-# X configuration
+# Monitor configuation
 
-xrandr --output DP1 --scale 1.5626x1.5626 --same-as eDP1
 xsetroot -cursor_name left_ptr
+large_monitor_line=$(xrandr --query | grep -e '^DP1')
+if [[ $large_monitor_line = *connected* ]]; then
+    xrandr --output eDP1 --primary --mode 3000x2000 --rotate normal --output DP1 --mode 3840x2160 --rotate normal --right-of eDP1
+    bspc monitor eDP1 -d 1 2 3 4 5
+    bspc monitor DP1 -d 6 7 8 9 0
+    polybar top_edp1 & 
+    polybar top_dp1 & 
+else
+    xrandr --output eDP1 --primary --mode 3000x2000 --rotate normal
+    bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 0
+    polybar top_edp1 & 
+fi
 
 # BSPC configuation
-
-bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
 bspc config border_width         3
 bspc config window_gap          25
@@ -35,3 +45,7 @@ bspc config gapless_monocle      true
 
 bspc rule -r "*"
 bspc rule -a Zathura state=tiled
+
+# Allow user to press hotkeys
+
+sxhkd &
