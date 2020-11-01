@@ -1,20 +1,16 @@
 #!/bin/sh
 
-# Set up monitors
-
-large_monitor_line=$(xrandr --query | grep -e '^DP1')
-
+# Kill previous processes
 
 killall -q sxhkd
 killall -q polybar 
 killall -q picom 
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Spawn new processes
+# Set up audio & window compositor
 
 start-pulseaudio-x11
 picom -f -D 0 --xrender-sync --xrender-sync-fence &
-feh --bg-fill ~/.dotfiles/wallpapers/blade_runner.jpg &
 
 # Monitor configuation
 
@@ -31,6 +27,7 @@ else
     bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 0
     polybar top_edp1 & 
 fi
+feh --bg-fill ~/.dotfiles/wallpapers/blade_runner.jpg &
 
 # BSPC configuation
 
