@@ -21,9 +21,9 @@ feh --bg-fill ~/.dotfiles/wallpapers/blade_runner.jpg &
 xsetroot -cursor_name left_ptr
 large_monitor_line=$(xrandr --query | grep -e '^DP1')
 if [[ $large_monitor_line = *connected* ]]; then
-    xrandr --output eDP1 --primary --mode 3000x2000 --rotate normal --output DP1 --mode 3840x2160 --rotate normal --right-of eDP1
-    bspc monitor eDP1 -d 1 2 3 4 5
-    bspc monitor DP1 -d 6 7 8 9 0
+    xrandr --output eDP1 --primary --mode 3000x2000 --rotate normal --output DP1 --mode 3840x2160 --rotate normal --left-of eDP1
+    bspc monitor DP1 -d 1 2 3 4 5
+    bspc monitor eDP1 -d 6 7 8 9 0
     polybar top_edp1 & 
     polybar top_dp1 & 
 else
