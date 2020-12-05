@@ -1,0 +1,31 @@
+colors:
+  # Default colors
+  primary:
+    background: '0x0f111a'
+    foreground: '0x8f93a2'
+
+  # Normal colors
+  normal:
+    black:   '0x546e7a'
+    red:     '0xff5370'
+    green:   '0xc3e88d'
+    yellow:  '0xffcb6b'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x89ddff'
+    white:   '0xffffff'
+
+  # Bright colors
+  bright:
+    black:   '0x546e7a'
+    red:     '0xff5370'
+    green:   '0xc3e88d'
+    yellow:  '0xffcb6b'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x89ddff'
+    white:   '0xffffff'
+
+font:
+  # Point size
+  size: 14.0

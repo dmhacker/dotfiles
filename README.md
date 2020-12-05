@@ -8,7 +8,7 @@
 
 * [bspwm](https://github.com/baskerville/bspwm) <sub>window manager</sub>
 * [sxhkd](https://github.com/baskerville/sxhkd) <sub>hotkey daemon</sub>
-* [st](https://st.suckless.org/) <sub>terminal emulator</sub>
+* [alacritty](https://github.com/alacritty/alacritty) <sub>terminal emulator</sub>
 * [glitchlock](https://github.com/xero/glitchlock/) <sub>screen locking mechanism</sub>
 * [polybar](https://github.com/jaagr/polybar) <sub>improved status bar</sub>
 * [picom](https://github.com/yshui/picom) <sub>window compositor</sub>

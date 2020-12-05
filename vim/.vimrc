@@ -19,10 +19,6 @@ au BufNewFile,BufRead *.js,*.html,*.css
             \ set tabstop=2 softtabstop=2 shiftwidth=2
 aug end
 
-" Set line size to be 80 and highlight column at line 80
-" set textwidth=80
-" set colorcolumn=81
-
 " Disable turning off vim and defaulting to vi
 set nocompatible
 
@@ -86,6 +82,10 @@ syntax enable
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'ocean'
 colorscheme material
+
+" Enable true colors on alacritty 
+execute "set t_8f=\e[38;2;%lu;%lu;%lum"
+execute "set t_8b=\e[48;2;%lu;%lu;%lum"
 
 " Enable lightline status and use colorscheme
 set laststatus=2
