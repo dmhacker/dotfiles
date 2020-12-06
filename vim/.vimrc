@@ -44,8 +44,7 @@ Plugin 'VundleVim/Vundle.vim' " Vundle package manager
 
 Plugin 'itchyny/lightline.vim' " Status line at the bottom 
 
-" http://colorswat.ch/vim/
-Plugin 'kaicataldo/material.vim' " Material collection of colorschemes
+Plugin 'nanotech/jellybeans.vim' " Classic Jellybeans colorscheme
 
 Plugin 'godlygeek/tabular' " Markdown dependency
 Plugin 'sheerun/vim-polyglot' " Syntax highlighting for many languages 
@@ -79,9 +78,7 @@ call vundle#end()
 set background=dark
 set termguicolors
 syntax enable 
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'ocean'
-colorscheme material
+colorscheme jellybeans
 
 " Enable true colors on alacritty 
 execute "set t_8f=\e[38;2;%lu;%lu;%lum"
@@ -89,15 +86,9 @@ execute "set t_8b=\e[48;2;%lu;%lu;%lum"
 
 " Enable lightline status and use colorscheme
 set laststatus=2
-let g:lightline = { 'colorscheme': 'material_vim', }
-let g:lightline.tabline = {
-\   'left': [ ['tabs'] ],
-\   'right': [ ['close'] ]
-\ }
 set showtabline=2  " Show tabline
 set guioptions-=e  " Don't use GUI tabline
-
-" Extend lightline to integrate with ALE
+let g:lightline = { 'colorscheme': 'jellybeans', }
 let g:lightline.component_expand = {
     \  'linter_checking': 'lightline#ale#checking',
     \  'linter_warnings': 'lightline#ale#warnings',
@@ -110,7 +101,14 @@ let g:lightline.component_type = {
     \     'linter_errors': 'error',
     \     'linter_ok': 'left',
     \ }
-let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
+let g:lightline.tabline = {
+\   'left': [ ['tabs'] ],
+\   'right': [ ['close'] ]
+\ }
+let g:lightline.active = { 
+\    'left': [[ 'mode', 'paste' ], [ 'filename' ], [ 'modified', 'readonly' ]],
+\    'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ], [ 'percent' ], ['lineinfo']] 
+\ }
 
 " Disable unnecessary language highlighting
 let g:polyglot_disabled = ['jsx', 'latex']

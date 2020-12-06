@@ -1,31 +1,32 @@
+# Colors (Jellybeans)
 colors:
-  # Default colors
-  primary:
-    background: '0x0f111a'
-    foreground: '0x8f93a2'
-
-  # Normal colors
-  normal:
-    black:   '0x546e7a'
-    red:     '0xff5370'
-    green:   '0xc3e88d'
-    yellow:  '0xffcb6b'
-    blue:    '0x82aaff'
-    magenta: '0xc792ea'
-    cyan:    '0x89ddff'
-    white:   '0xffffff'
-
-  # Bright colors
   bright:
-    black:   '0x546e7a'
-    red:     '0xff5370'
-    green:   '0xc3e88d'
-    yellow:  '0xffcb6b'
-    blue:    '0x82aaff'
-    magenta: '0xc792ea'
-    cyan:    '0x89ddff'
-    white:   '0xffffff'
+    black: '#bdbdbd'
+    blue: '#b1d8f6'
+    cyan: '#1ab2a8'
+    green: '#bddeab'
+    magenta: '#fbdaff'
+    red: '#ffa1a1'
+    white: '#ffffff'
+    yellow: '#ffdca0'
+  cursor:
+    cursor: '#ffa560'
+    text: '#ffffff'
+  normal:
+    black: '#929292'
+    blue: '#97bedc'
+    cyan: '#00988e'
+    green: '#94b979'
+    magenta: '#e1c0fa'
+    red: '#e27373'
+    white: '#dedede'
+    yellow: '#ffba7b'
+  primary:
+    background: '#121212'
+    foreground: '#dedede'
+  selection:
+    background: '#474e91'
+    text: '#f4f4f4'
 
 font:
-  # Point size
   size: 14.0

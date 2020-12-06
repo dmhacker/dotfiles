@@ -105,7 +105,7 @@ wrapping-scroll = false
 strip-wsnumbers = true
 
 label-focused = %name%
-label-focused-background = ${colors.red}
+label-focused-background = ${colors.yellow}
 label-focused-foreground = ${colors.background}
 label-focused-padding = 5
 
@@ -133,8 +133,8 @@ label = %date%   %time%
 label-margin-left = 3
 label-margin-right = 3
 
-format-foreground = ${colors.background}
 format-background = ${colors.yellow}
+format-foreground = ${colors.background}
 
 [module/cpu]
 type = internal/cpu
@@ -145,7 +145,7 @@ label-margin-right = 0
 
 label =   %percentage%%
 
-format-background = ${colors.green}
+format-background = ${colors.blue}
 format-foreground = ${colors.background}
 
 [module/memory]
@@ -157,7 +157,7 @@ label-margin-right = 0
 
 label =   %gb_used%
 
-format-background = ${colors.green}
+format-background = ${colors.blue}
 format-foreground = ${colors.background}
 
 [module/filesystem]
@@ -171,7 +171,7 @@ label-mounted-margin-right = 3
 
 label-mounted =   %used%
 
-format-mounted-background = ${colors.green}
+format-mounted-background = ${colors.blue}
 format-mounted-foreground = ${colors.background}
 
 [module/battery1]
@@ -191,9 +191,9 @@ label-full-margin-right = 0
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
-format-charging-background = ${colors.blue}
-format-discharging-background = ${colors.blue}
-format-full-background = ${colors.blue}
+format-charging-background = ${colors.purple}
+format-discharging-background = ${colors.purple}
+format-full-background = ${colors.purple}
 format-charging-foreground = ${colors.background}
 format-discharging-foreground = ${colors.background}
 format-full-foreground = ${colors.background}
@@ -225,16 +225,16 @@ poll-interval = 5
 
 ramp-capacity-margin-left = 3
 animation-charging-margin-left = 3
-label-charging-margin-right = 3
-label-discharging-margin-right = 3
-label-full-margin-right = 3
+label-charging-margin-right = 0
+label-discharging-margin-right = 0
+label-full-margin-right = 0
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
-format-charging-background = ${colors.blue}
-format-discharging-background = ${colors.blue}
-format-full-background = ${colors.blue}
+format-charging-background = ${colors.purple}
+format-discharging-background = ${colors.purple}
+format-full-background = ${colors.purple}
 format-charging-foreground = ${colors.background}
 format-discharging-foreground = ${colors.background}
 format-full-foreground = ${colors.background}
