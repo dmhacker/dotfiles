@@ -2,13 +2,13 @@
 
 <a><img src="https://raw.githubusercontent.com/dmhacker/dotfiles/master/screenshot.jpg" align="center"></a>
 
-**Configuration files for my main workstation.** I'm running Arch Linux on a 13" Surface Book 2.
+**Configuration files for my main workstation.** I'm running Arch Linux on a 13" Surface Book 2 with an external monitor
 
 ## Dependencies
 
 * [bspwm](https://github.com/baskerville/bspwm) <sub>window manager</sub>
 * [sxhkd](https://github.com/baskerville/sxhkd) <sub>hotkey daemon</sub>
-* [alacritty](https://github.com/alacritty/alacritty) <sub>terminal emulator</sub>
+* [kitty](https://sw.kovidgoyal.net/kitty/) <sub>terminal emulator</sub>
 * [glitchlock](https://github.com/xero/glitchlock/) <sub>screen locking mechanism</sub>
 * [polybar](https://github.com/jaagr/polybar) <sub>improved status bar</sub>
 * [picom](https://github.com/yshui/picom) <sub>window compositor</sub>
