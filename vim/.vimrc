@@ -80,10 +80,6 @@ set termguicolors
 syntax enable 
 colorscheme jellybeans
 
-" Enable true colors on alacritty 
-execute "set t_8f=\e[38;2;%lu;%lu;%lum"
-execute "set t_8b=\e[48;2;%lu;%lu;%lum"
-
 " Enable lightline status and use colorscheme
 set laststatus=2
 set showtabline=2  " Show tabline
