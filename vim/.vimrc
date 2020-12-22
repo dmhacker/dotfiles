@@ -65,12 +65,13 @@ Plugin 'airblade/vim-gitgutter' " Git marks in the gutter
 Plugin 'kshenoy/vim-signature' " Vim marks in the gutter 
 Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Hybrid mode for numbers
 
-Plugin 'kien/ctrlp.vim' " File search engine 
+Plugin 'ctrlpvim/ctrlp.vim' " File search engine 
 Plugin 'wincent/terminus' " Enable mouse, change cursor mode, etc. 
 Plugin 'tpope/vim-surround' " Mappings to edit parentheses, brackets, etc.
 Plugin 'tpope/vim-commentary' " Fast commenting
 Plugin 'justinmk/vim-sneak' " Fast file jumping
 Plugin 'dietsche/vim-lastplace' " Saves last edit line for a file
+Plugin 'terryma/vim-multiple-cursors' " Start up multiple cursors
 
 call vundle#end()
 
