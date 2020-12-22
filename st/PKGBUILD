@@ -29,36 +29,7 @@ _makeopts="--directory=$_sourcedir"
 prepare() {
   patch --directory="$_sourcedir" --strip=0 < terminfo.patch
 
-  # This package provides a mechanism to provide a custom config.h. Multiple
-  # configuration states are determined by the presence of two files in
-  # $BUILDDIR:
-  #
-  # config.h  config.def.h  state
-  # ========  ============  =====
-  # absent    absent        Initial state. The user receives a message on how
-  #                         to configure this package.
-  # absent    present       The user was previously made aware of the
-  #                         configuration options and has not made any
-  #                         configuration changes. The package is built using
-  #                         default values.
-  # present                 The user has supplied his or her configuration. The
-  #                         file will be copied to $srcdir and used during
-  #                         build.
-  #
-  # After this test, config.def.h is copied from $srcdir to $BUILDDIR to
-  # provide an up to date template for the user.
-  if [ -e "$BUILDDIR/config.h" ]
-  then
-    cp "$BUILDDIR/config.h" "$_sourcedir"
-  elif [ ! -e "$BUILDDIR/config.def.h" ]
-  then
-    msg='This package can be configured in config.h. Copy the config.def.h '
-    msg+='that was just placed into the package directory to config.h and '
-    msg+='modify it to change the configuration. Or just leave it alone to '
-    msg+='continue to use default values.'
-    warning "$msg"
-  fi
-  cp "$_sourcedir/config.def.h" "$BUILDDIR"
+  cp "$BUILDDIR/config.h" "$_sourcedir"
 
   sed -i 's/config.def.h/config.h/g' st-scrollback-20201205-4ef0cbd.diff
   sed -i 's/config.def.h/config.h/g' st-scrollback-mouse-20191024-a2c479c.diff
