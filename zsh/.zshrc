@@ -44,6 +44,13 @@ setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 setopt share_history          # share command history data
 
+# Set up default golang environment variables if installed
+if which go > /dev/null 2>&1; then
+    GOPATH=$(go env GOPATH)
+    GOROOT=$(go env GOROOT)
+    PATH="$PATH:$GOPATH/bin"
+fi
+
 ############# ALIASES ############# 
 
 alias vimconfig="vim ~/.vimrc"
@@ -87,6 +94,7 @@ zinit wait lucid for \
     OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh \
     OMZ::plugins/git/git.plugin.zsh \
     OMZ::plugins/nvm/nvm.plugin.zsh \
+    OMZ::plugins/golang/golang.plugin.zsh \
     djui/alias-tips \
     atinit"zicompinit; zicdreplay" \
         zdharma/fast-syntax-highlighting \
