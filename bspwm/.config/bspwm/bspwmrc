@@ -5,6 +5,7 @@
 killall -q sxhkd
 killall -q polybar 
 killall -q picom 
+killall -q redshift
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Set up audio & window compositor
@@ -28,7 +29,7 @@ else
     polybar top_dp1 &
 fi
 feh --bg-fill ~/.dotfiles/wallpapers/white_sand.jpg &
-redshift -l 34.052235:-118.243683 &
+redshift -l 34.052235:-118.243683 -t 6500:4000 &
 
 # BSPC configuation
 
