@@ -75,11 +75,6 @@ alias lla="ls -lA"
 
 ############# PLUGINS ############# 
 
-bindkey -v
-bindkey '^A' beginning-of-line
-bindkey '^E' end-of-line
-bindkey -M viins 'jk' vi-cmd-mode
-
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
@@ -95,6 +90,7 @@ zinit wait lucid for \
     OMZ::plugins/git/git.plugin.zsh \
     OMZ::plugins/nvm/nvm.plugin.zsh \
     OMZ::plugins/golang/golang.plugin.zsh \
+    jeffreytse/zsh-vi-mode \
     djui/alias-tips \
     atinit"zicompinit; zicdreplay" \
         zdharma/fast-syntax-highlighting \
