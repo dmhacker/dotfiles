@@ -78,18 +78,12 @@ alias lla="ls -lA"
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
-# Selectively loading the fzf plugin fixes an OMZ warning message
-if command -v fzf > /dev/null 2>&1; then
-    export FZF_BASE="/usr/share/fzf"
-    zinit wait lucid for \
-        OMZ::plugins/fzf/fzf.plugin.zsh
-fi
-
 zinit wait lucid for \
     OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh \
     OMZ::plugins/git/git.plugin.zsh \
     OMZ::plugins/nvm/nvm.plugin.zsh \
     OMZ::plugins/golang/golang.plugin.zsh \
+    OMZ::plugins/fzf/fzf.plugin.zsh \
     jeffreytse/zsh-vi-mode \
     djui/alias-tips \
     atinit"zicompinit; zicdreplay" \
