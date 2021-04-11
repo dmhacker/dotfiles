@@ -8,7 +8,7 @@
 # 
 # Author: David Hacker <dmhacker@protonmail.com>
 
-############# ZINIT ############# 
+############# ZINIT #############
 
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -52,7 +52,7 @@ if which go > /dev/null 2>&1; then
     PATH="$PATH:$GOPATH/bin"
 fi
 
-############# ALIASES ############# 
+############# ALIASES #############
 
 alias vimconfig="vim ~/.vimrc"
 alias viminstall="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vimupdate"
@@ -74,7 +74,14 @@ alias la="ls -A"
 alias ll="ls -l"
 alias lla="ls -lA"
 
-############# PLUGINS ############# 
+############# BINDINGS #############
+
+bindkey -v
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey -M viins 'jk' vi-cmd-mode
+
+############# PLUGINS #############
 
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
@@ -85,7 +92,6 @@ zinit wait lucid for \
     OMZ::plugins/nvm/nvm.plugin.zsh \
     OMZ::plugins/golang/golang.plugin.zsh \
     OMZ::plugins/fzf/fzf.plugin.zsh \
-    jeffreytse/zsh-vi-mode \
     djui/alias-tips \
     atinit"zicompinit; zicdreplay" \
         zdharma/fast-syntax-highlighting \
@@ -95,7 +101,7 @@ zinit wait lucid for \
         zsh-users/zsh-completions \
         zimfw/completion
 
-############# LOCAL FILES ############# 
+############# LOCAL FILES #############
 
 local_zshrc="$HOME/.zshrc.local"
 if [[ -f $local_zshrc ]]; then
