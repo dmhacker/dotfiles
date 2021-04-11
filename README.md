@@ -14,6 +14,7 @@
 * [polybar](https://github.com/jaagr/polybar) <sub>improved status bar</sub>
 * [picom](https://github.com/yshui/picom) <sub>window compositor</sub>
 * [rofi](https://github.com/DaveDavenport/rofi) <sub>replacement for dmenu</sub>
+* [rofi-pass](https://github.com/carnager/rofi-pass) <sub>rofi extension for password store</sub>
 * [ranger](https://github.com/ranger/ranger) <sub>file manager with vim-like bindings</sub>
 * [zathura](https://git.pwmt.org/pwmt/zathura-pdf-mupdf) <sub>PDF viewer with vim-like bindings</sub>
 * [redshift](https://github.com/jonls/redshift) <sub>flux for Arch Linux</sub>
