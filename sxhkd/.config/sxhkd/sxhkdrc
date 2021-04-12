@@ -8,11 +8,7 @@ super + Return
 
 # program launcher
 super + d
-	rofi -show run
-
-# password store
-super + f
-	rofi-pass -show run
+	rofi
 
 # web browser
 super + e
