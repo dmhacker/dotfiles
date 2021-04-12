@@ -9,7 +9,6 @@
 * [bspwm](https://github.com/baskerville/bspwm) <sub>window manager</sub>
 * [sxhkd](https://github.com/baskerville/sxhkd) <sub>hotkey daemon</sub>
 * [st](https://st.suckless.org/) <sub>terminal emulator</sub>
-* [kitty](https://sw.kovidgoyal.net/kitty/) <sub>backup terminal emulator</sub>
 * [glitchlock](https://github.com/xero/glitchlock/) <sub>screen locking mechanism</sub>
 * [polybar](https://github.com/jaagr/polybar) <sub>improved status bar</sub>
 * [picom](https://github.com/yshui/picom) <sub>window compositor</sub>
@@ -17,7 +16,6 @@
 * [rofi-pass](https://github.com/carnager/rofi-pass) <sub>rofi extension for password store</sub>
 * [ranger](https://github.com/ranger/ranger) <sub>file manager with vim-like bindings</sub>
 * [zathura](https://git.pwmt.org/pwmt/zathura-pdf-mupdf) <sub>PDF viewer with vim-like bindings</sub>
-* [redshift](https://github.com/jonls/redshift) <sub>flux for Arch Linux</sub>
 * [nerd-fonts-complete](https://github.com/ryanoasis/nerd-fonts) <sub>patched fonts for powerline</sub>
 * [pikaur](https://github.com/actionless/pikaur) <sub>AUR helper of choice</sub>
 * [vundle](https://github.com/VundleVim/Vundle.vim) <sub>vim package manager</sub>

@@ -29,7 +29,6 @@ else
     polybar top_dp1 &
 fi
 feh --bg-fill ~/.dotfiles/wallpapers/white_sand.jpg &
-redshift -l 39.952583:-75.165222 -t 6500:2700 &
 
 # BSPC configuation
 
