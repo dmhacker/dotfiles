@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + d
-	rofi
+	rofi -show run
 
 # web browser
 super + e
