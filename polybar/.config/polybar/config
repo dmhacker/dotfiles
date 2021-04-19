@@ -60,7 +60,7 @@ foreground = ${colors.foreground}
 module-margin-left = 0
 module-margin-right = 0
 modules-left = bspwm
-modules-right = date cpu memory filesystem battery1 battery2 volume wlan eth powermenu
+modules-right = date cpu memory filesystem battery1 battery2 volume wg wlan eth powermenu
 
 [bar/top_dp1]
 locale = en_US.UTF-8
@@ -92,7 +92,7 @@ foreground = ${colors.foreground}
 module-margin-left = 0
 module-margin-right = 0
 modules-left = bspwm
-modules-right = date cpu memory filesystem battery1 battery2 volume wlan eth powermenu
+modules-right = date cpu memory filesystem battery1 battery2 volume wg wlan eth powermenu
 
 [module/bspwm]
 type = internal/bspwm
@@ -293,6 +293,19 @@ ramp-signal-1 = ""
 ramp-signal-2 = ""
 ramp-signal-3 = ""
 ramp-signal-4 = ""
+
+[module/wg]
+type = internal/network
+interface = wg0
+interval = 3
+
+# WireGuard's interface is reported as disconnected
+# However, the presence of the interface suggests that WireGuard is online
+label-connected-margin-left = 4
+label-disconnected-margin-left = 4
+
+label-connected = ""
+label-disconnected = ""
 
 [module/eth]
 type = internal/network
