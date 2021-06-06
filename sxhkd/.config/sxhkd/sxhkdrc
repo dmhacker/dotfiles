@@ -16,7 +16,7 @@ super + e
 
 # lock screen
 super + shift + x
-    glitchlock
+    betterlockscreen -l
 
 # take screenshot
 super + p
