@@ -57,6 +57,7 @@ Plugin 'rdnetto/YCM-Generator' " Generates C-semantic files for projects
 Plugin 'w0rp/ale' " Code linting, syntax checking
 Plugin 'Chiel92/vim-autoformat' " Proper auto-formatting
 Plugin 'majutsushi/tagbar' " Tagbar for viewing functions in file
+Plugin 'prettier/vim-prettier' " Auto-formatting for JS and TS projects
 
 Plugin 'maximbaz/lightline-ale' " Lightline integration for linter 
 Plugin 'nathanaelkane/vim-indent-guides' " Add visual indent guides 

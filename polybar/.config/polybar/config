@@ -33,7 +33,7 @@ override-redirect = true
 [bar/top_edp1]
 locale = en_US.UTF-8
 
-monitor = eDP1
+monitor = eDP-1
 width = 100%
 height = 50
 border-size = 0
