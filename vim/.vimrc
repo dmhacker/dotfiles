@@ -50,6 +50,7 @@ Plugin 'godlygeek/tabular' " Markdown dependency
 Plugin 'sheerun/vim-polyglot' " Syntax highlighting for many languages 
 Plugin 'lervag/vimtex' " LaTeX suite 
 Plugin 'maxmellon/vim-jsx-pretty' " JSX syntax highlighting
+Plugin 'katusk/vim-qkdb-syntax' " Kdb+/Q syntax highlighting
 
 " IMPORTANT: these require external dependencies to work  
 Plugin 'Valloric/YouCompleteMe' " Fast autocompletion engine
@@ -132,6 +133,13 @@ aug i3config_ft_detection
 au!
 au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
+
+" q/kdb+ highlighting
+augroup kdb_q_ft_detection
+au!
+au BufRead,BufNewFile *.k set filetype=k
+au BufRead,BufNewFile *.q set filetype=q
+augroup end
 
 " Disable default vim indenting
 let g:autoformat_autoindent = 0
